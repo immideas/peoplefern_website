@@ -1,0 +1,23 @@
+/* Mega Menu Styles */
+.mega-menu {
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Mega Menu Styles */
+@media (max-width: 991.98px) {
+  .mega-menu {
+
+
+    &.show {
+      display: block;
+    }
+
+
+
+  }
+}

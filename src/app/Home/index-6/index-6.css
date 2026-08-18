@@ -1,0 +1,46 @@
+/* Wobble Animation */
+@keyframes wobble {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-25%) rotate(-5deg); }
+  30% { transform: translateX(20%) rotate(3deg); }
+  45% { transform: translateX(-15%) rotate(-3deg); }
+  60% { transform: translateX(10%) rotate(2deg); }
+  75% { transform: translateX(-5%) rotate(-1deg); }
+  100% { transform: translateX(0); }
+}
+
+.animation-item:hover .animate__wobble {
+  animation-name: wobble;
+  animation-duration: 1s; /* Adjust duration */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /* Or 1 for one-time */
+}
+
+/* FlipInY Animation */
+@keyframes flipInY {
+  0% {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotateY(-20deg);
+    opacity: 1;
+  }
+  60% {
+    transform: perspective(400px) rotateY(10deg);
+  }
+  80% {
+    transform: perspective(400px) rotateY(-5deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+
+.animation-item:hover .animate__flipInY {
+  animation-name: flipInY;
+  animation-duration: 1s; /* Adjust duration */
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; /* Keeps the end state */
+  animation-iteration-count: 1; /* Change to infinite if needed */
+}

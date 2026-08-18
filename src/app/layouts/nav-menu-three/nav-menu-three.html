@@ -1,0 +1,131 @@
+<!-- Nav menu Three Start -->
+<ul class="nav-menu d-lg-flex align-items-center" [ngClass]="class">
+    <li class="nav-menu__item has-submenu" [routerLinkActive]="'activePage'" [routerLinkActiveOptions]="{exact: true}">
+        <a [routerLink]="['/']"
+            class="nav-menu__link hover--translate-y-1 tw-pe-5 text-white tw-py-9 fw-semibold w-100">Home</a>
+        <app-mega-menu></app-mega-menu>
+    </li>
+    <li class="nav-menu__item has-submenu position-relative" [class.activePage]="isPagesActive()">
+        <a href="javascript:void(0)" (click)="$event.preventDefault()"
+            class="nav-menu__link hover--translate-y-1 tw-pe-5 text-white tw-py-9 fw-semibold w-100">Pages</a>
+        <ul
+            class="nav-submenu scroll-sm position-absolute tw-start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99">
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/pricing-plan'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Pricing
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/about'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    About Us
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/app-intigration'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    App Integration
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/intigration-details'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Integration Details
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/policy-privacy'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Privacy Policy
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/faq'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    FAQ
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/project-details'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Project Details
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/service-details'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Service Details
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-menu__item has-submenu position-relative">
+        <a href="javascript:void(0)" (click)="$event.preventDefault()"
+            class="nav-menu__link hover--translate-y-1 tw-pe-5 text-white tw-py-9 fw-semibold w-100">Portfolio</a>
+        <ul
+            class="nav-submenu scroll-sm position-absolute tw-start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99">
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+                 <a href="javascript:void(0)" (click)="$event.preventDefault()"
+                     class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                     Portfolio
+                 </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-menu__item has-submenu position-relative" [class.activePage]="isShopActive()">
+        <a href="javascript:void(0)" (click)="$event.preventDefault()"
+            class="nav-menu__link hover--translate-y-1 tw-pe-5 text-white tw-py-9 fw-semibold w-100">Shop</a>
+        <ul
+            class="nav-submenu scroll-sm position-absolute tw-start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99">
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/shop'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Shop
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/shop-details'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Shop Details
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/cart'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Cart
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/checkout'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Checkout
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-menu__item has-submenu position-relative" [class.activePage]="isBlogActive()">
+        <a href="javascript:void(0)" (click)="$event.preventDefault()"
+            class="nav-menu__link hover--translate-y-1 tw-pe-5 text-white tw-py-9 fw-semibold w-100">Blog</a>
+        <ul
+            class="nav-submenu scroll-sm position-absolute tw-start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99">
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/blog'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Blog
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
+                <a [routerLink]="'/blog-details'"
+                    class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Blog Details
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-menu__item" [routerLinkActive]="'activePage'">
+        <a [routerLink]="'/contact'"
+            class="nav-menu__link hover--translate-y-1 text-white tw-py-9 fw-semibold w-100">Contact</a>
+    </li>
+</ul>
+<!-- Nav menu Three End  -->

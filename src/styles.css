@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+/* In styles.css or styles.scss */
+
+/* src/styles.scss */
+@import "assets/css/bootstrap.min.css";
+@import "assets/css/aos.css";
+@import "assets/css/magnific-popup.css";
+@import "assets/css/satoshi.css";
+@import 'swiper/swiper-bundle.css';
+

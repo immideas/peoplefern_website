@@ -1,0 +1,50 @@
+<!-- ==================== Header Two Start Here ==================== -->
+  <header class="header home-two-header" [ngClass]="headerClass">
+    <div class="container">
+      <div
+        class="header-box-inner py-2 py-lg-0 tw-gap-4 tw-lg-ps-12 tw-ps-6 tw-pe-705 bg-white transition-all tw-rounded-lg">
+        <nav class="d-flex align-items-center justify-content-between position-relative">
+          <!-- Logo Start -->
+          <div class="logo">
+            <a [routerLink]="'/index'" class="link hover--translate-y-1 active--translate-y-scale-9">
+              <img [src]="'assets/images/logo/' + logoText" class="max-w-200-px">
+            </a>
+          </div>
+          <!-- Logo End  -->
+
+          <!-- Menu Start  -->
+          <div class="header-menu d-lg-block d-none">
+            <app-nav-menu *ngIf="navMenu === 'nav-menu'" [menuClass]="'tw-gap-14'"></app-nav-menu>
+            <app-nav-menu-two *ngIf="navMenu === 'nav-menu-two'" class="tw-gap-7"></app-nav-menu-two>
+            <app-nav-menu-three *ngIf="navMenu === 'nav-menu-three'" class="tw-gap-7"></app-nav-menu-three>
+          </div>
+          <!-- Menu End  -->
+
+          <!-- Header Right start -->
+          <div class="d-flex align-items-center tw-gap-6">
+            <div class="d-flex align-items-center tw-gap-6">
+              <a [routerLink]="'/login'"
+                class="d-flex align-items-center tw-gap-105 d-xl-flex d-none text-heading hover-text-main-600">
+                <span class="tw-text-base text-main-600 d-flex tw-leading-none">
+                  <i class="ph-bold ph-user"></i>
+                </span>
+                <span class="fw-semibold tw-text-sm ">Sign in</span>
+              </a>
+
+              <a [routerLink]="'/register'"
+                class="hover--translate-y-1 active--translate-y-scale-9 btn button--stroke d-lg-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 px-xxl-5 px-xl-4 px-3 tw-py-405 fw-medium"
+                [ngClass]="btnClass" data-block="button">
+                <span class="button__flair"></span>
+                <span class="button__label">Get Started</span>
+              </a>
+            </div>
+            <button type="button" class="toggle-mobileMenu leading-none d-lg-none text-neutral-800 tw-text-9" (click)="toggleMobileMenu()">
+              <i class="ph ph-list"></i>
+            </button>
+          </div>
+          <!-- Header Right End  -->
+        </nav>
+      </div>
+    </div>
+  </header>
+<!-- ==================== Header Two End Here ==================== -->

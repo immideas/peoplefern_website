@@ -1,0 +1,24 @@
+<!-- ==================== Mobile Menu Start Here ==================== -->
+<!-- Mobile Menu Overlay -->
+<div #overlay class="mobile-menu-overlay" (click)="closeMobileMenu()"></div>
+
+<div #mobileMenu class="mobile-menu scroll-sm position-fixed bg-white tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw-pb-68">
+
+  <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white" (click)="closeMobileMenu()">
+      <i class="ph ph-x"></i>
+  </button>
+
+  <div class="mobile-menu__inner">
+      <a [routerLink]="'/index'" class="mobile-menu__logo" (click)="closeMobileMenu()">
+          <img src="assets/images/logo/logo.png" alt="Logo">
+      </a>
+      <div class="mobile-menu__menu">
+          <app-nav-menu [menuClass]="'nav-menu--mobile d-block tw-mt-8'" (mobileMenuClose)="closeMobileMenu()"></app-nav-menu>
+      </div>
+      <a [routerLink]="'/register'" class="btn btn-main-two hover-style-two button--stroke d-sm-none d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-8 rounded-pill tw-mt-6" data-block="button" (click)="closeMobileMenu()">
+          <span class="button__flair"></span>
+          <span class="button__label">Sign Up Now</span>
+      </a>
+  </div>
+</div>
+<!-- ==================== Mobile Menu End Here ==================== -->

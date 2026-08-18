@@ -1,0 +1,49 @@
+<!-- ==================== Header Three Start Here ==================== -->
+<div class="home-six">
+    <header class="header py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 position-absolute">
+        <div class="container max-w-1720-px">
+            <div class="header-three__inner py-2 py-lg-0 transition-all">
+                <nav class="d-flex align-items-center justify-content-between position-relative">
+                    <!-- Logo Start -->
+                    <div class="logo">
+                        <a [routerLink]="'/index'" class="link hover--translate-y-1 active--translate-y-scale-9">
+                            <img src="assets/images/logo/logo-white-three.png" alt="Logo" class="max-w-200-px">
+                        </a>
+                    </div>
+                    <!-- Logo End  -->
+
+                    <!-- Menu Start  -->
+                    <div class="header-menu d-lg-block d-none">
+                        <app-nav-menu-three class="tw-gap-7"></app-nav-menu-three>
+                    </div>
+                    <!-- Menu End  -->
+
+                    <!-- Header Right start -->
+                    <div class="d-flex align-items-center tw-gap-6">
+                            <div class="d-flex align-items-center tw-gap-6">
+                                <a [routerLink]="'/login'"
+                                    class="d-flex align-items-center tw-gap-105 d-xl-flex d-none text-white hover-text-main-600">
+                                    <span class="tw-text-base text-main-600 d-flex tw-leading-none">
+                                        <i class="ph-bold ph-user"></i>
+                                    </span>
+                                    <span class="fw-semibold tw-text-sm ">Sign in</span>
+                                </a>
+
+                                <a [routerLink]="'/register'"
+                                    class="hover--translate-y-1 active--translate-y-scale-9 btn button--stroke d-lg-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 px-xxl-5 px-xl-4 px-3 tw-py-405 fw-medium rounded-pill btn-main hover-style-one common-shadow-inset-one text-heading hover-text-white"
+                                    data-block="button">
+                                    <span class="button__flair"></span>
+                                    <span class="button__label">Get Started</span>
+                                </a>
+                            </div>
+                            <button type="button" class="toggle-mobileMenu leading-none d-lg-none text-white tw-text-9" (click)="toggleMobileMenu()">
+                                <i class="ph ph-list"></i>
+                            </button>
+                        </div>
+                    <!-- Header Right End  -->
+                </nav>
+            </div>
+        </div>
+    </header>
+</div>
+<!-- ==================== Header Three End Here ==================== -->

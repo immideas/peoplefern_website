@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "skipLibCheck": true  // ✅ ignore type mismatches in node_modules
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/types/**/*.d.ts"   // ✅ include custom type declarations
+  ],
+  "exclude": [
+    "src/**/*.spec.ts"
+  ]
+}
