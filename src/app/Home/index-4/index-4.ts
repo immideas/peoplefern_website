@@ -28,90 +28,103 @@ export class Index4 implements AfterViewInit {
     { src: 'assets/images/thumbs/brand-three-img3.png', aosDuration: 800 },
     { src: 'assets/images/thumbs/brand-three-img4.png', aosDuration: 600 },
     { src: 'assets/images/thumbs/brand-three-img5.png', aosDuration: 700 },
-    { src: 'assets/images/thumbs/brand-three-img6.png', aosDuration: 800 },
-    { src: 'assets/images/thumbs/brand-three-img7.png', aosDuration: 600 },
-    { src: 'assets/images/thumbs/brand-three-img5.png', aosDuration: 700 }
+    { src: 'assets/images/thumbs/brand-three-img6.png', aosDuration: 800 }
   ];
+
   features = [
     {
       aosDuration: 1000,
-      title: 'Lead & Contact Management',
+      title: 'Employee Management',
       titleClass: 'max-w-250-px',
-      paragraph: 'Sassly-CRM in the past allowing you to',
-      link: 'Transfer domain',
+      paragraph:
+        'Manage employee profiles, departments, designations and workforce information from one connected HR platform.',
+      link: 'Explore Employee Management',
       image1: 'assets/images/thumbs/features-four-thumb101.png',
-      image1Class: 'max-w-40-percent position-absolute top-0 tw-mt-5 tw-end-0 tw-me-5 common-shadow-twentyFive tw-rounded-2xl d-xl-block d-none',
+      image1Class:
+        'max-w-40-percent position-absolute top-0 tw-mt-5 tw-end-0 tw-me-5 common-shadow-twentyFive tw-rounded-2xl d-xl-block d-none',
       image2: 'assets/images/thumbs/features-four-thumb102.png',
-      image2Class: 'max-w-40-percent position-absolute bottom-0 tw-start-45 tw-me-5 common-shadow-twentyFive tw-rounded-2xl'
+      image2Class:
+        'max-w-40-percent position-absolute bottom-0 tw-start-45 tw-me-5 common-shadow-twentyFive tw-rounded-2xl'
     },
     {
       aosDuration: 1200,
-      title: 'Automate Workflows and Monitor your Sales.',
+      title: 'Attendance & Leave Management',
       titleClass: 'max-w-400-px',
-      paragraph: 'Sassly-CRM in the past allowing you to',
-      link: 'Transfer domain',
+      paragraph:
+        'Track attendance, working hours, leave requests, approvals and workforce availability with less manual effort.',
+      link: 'Explore Attendance & Leave',
       image1: 'assets/images/thumbs/features-four-thumb2.png',
-      image1Class: 'max-w-40-percent position-absolute bottom-0 tw-end-0 tw-me-8 tw-rounded-2xl'
+      image1Class:
+        'max-w-40-percent position-absolute bottom-0 tw-end-0 tw-me-8 tw-rounded-2xl'
     },
     {
       aosDuration: 1000,
-      title: 'Artificial Intelligence',
+      title: 'Payroll Management',
       titleClass: 'max-w-400-px',
-      paragraph: 'Sassly-CRM in the past allowing you to',
-      link: 'Transfer domain',
+      paragraph:
+        'Simplify salary processing, salary components and payroll workflows using centralized employee information.',
+      link: 'Explore Payroll',
       image1: 'assets/images/thumbs/features-four-thumb3.png',
-      image1Class: 'max-w-40-percent position-absolute bottom-0 tw-end-0 tw-me-10 tw-rounded-2xl'
+      image1Class:
+        'max-w-40-percent position-absolute bottom-0 tw-end-0 tw-me-10 tw-rounded-2xl'
     },
     {
       aosDuration: 1200,
-      title: 'involves organizing, tracking, and optimizing sales',
+      title: 'Reports & Analytics',
       titleClass: 'max-w-432-px',
-      paragraph: 'Sassly-CRM in the past allowing you to',
-      link: 'Transfer domain',
+      paragraph:
+        'Turn workforce data into useful insights with reports that help HR teams and business leaders make better decisions.',
+      link: 'Explore Reports',
       image1: 'assets/images/thumbs/features-four-thumb4.png',
-      image1Class: 'max-w-40-percent position-absolute bottom-0 tw-end-0 tw-me-8 tw-rounded-2xl'
+      image1Class:
+        'max-w-40-percent position-absolute bottom-0 tw-end-0 tw-me-8 tw-rounded-2xl'
     }
   ];
 
   slides2 = [
     {
       logo: 'assets/images/thumbs/website-owner-img1.png',
-      text: '“Sasstech hires great people from a widely variety of backgrounds, which simply makes our compan stronger, and we couldn\'t be prouder of that.”',
+      text:
+        'PeopleVault brings employee information and HR processes together in one connected platform, making everyday HR operations simpler.',
       userImg: 'assets/images/thumbs/testimonials-short-img1.png',
-      name: 'Robiul Hasan',
-      designation: 'CEO',
-      subtitle: 'and Founder',
+      name: 'PeopleVault Customer',
+      designation: 'HR Team',
+      subtitle: '',
       rating: 'assets/images/icons/ratings.svg'
     },
     {
       logo: 'assets/images/thumbs/website-owner-img2.png',
-      text: '“Sasstech hires great people from a wide range of backgrounds, which simply strengthens our company, and we couldn\'t be prouder of that,” the company says.',
+      text:
+        'A connected HR platform gives our team better visibility into employees, attendance, leave and workforce operations.',
       userImg: 'assets/images/thumbs/testimonials-short-img2.png',
-      name: 'John Doe',
-      designation: 'CEO',
-      subtitle: 'and Founder',
+      name: 'PeopleVault Customer',
+      designation: 'Business Team',
+      subtitle: '',
       rating: 'assets/images/icons/ratings.svg'
     },
     {
       logo: 'assets/images/thumbs/website-owner-img3.png',
-      text: '"Sasstech brings together talented individuals from diverse backgrounds, strengthening our company in the best way possible.',
+      text:
+        'PeopleVault helps reduce repetitive HR work and gives managers a simpler way to manage people and processes.',
       userImg: 'assets/images/thumbs/testimonials-short-img3.png',
-      name: 'James anderson',
-      designation: 'CEO',
-      subtitle: 'and Founder',
+      name: 'PeopleVault Customer',
+      designation: 'Organization',
+      subtitle: '',
       rating: 'assets/images/icons/ratings.svg'
     }
   ];
 
   tabs = [
-    { id: 'pills-data', label: 'data', active: true },
-    { id: 'pills-Automation', label: 'Automation', active: false },
-    { id: 'pills-Pipeline', label: 'Pipeline', active: false },
-    { id: 'pills-Productivity', label: 'Productivity', active: false },
-    { id: 'pills-Reporting', label: 'Reporting', active: false }
+    { id: 'pills-dashboard', label: 'HR Dashboard', active: true },
+    { id: 'pills-employee', label: 'Employee Management', active: false },
+    { id: 'pills-attendance', label: 'Attendance', active: false },
+    { id: 'pills-leave', label: 'Leave Management', active: false },
+    { id: 'pills-payroll', label: 'Payroll', active: false },
+    { id: 'pills-reports', label: 'Reports & Analytics', active: false }
   ];
+  activeTab = 'pills-dashboard';
 
-  // Counter values
+    // Counter values
   integrationCount = 0;
   clientsCount1 = 0;
   percentageCount = 0;
@@ -121,20 +134,23 @@ export class Index4 implements AfterViewInit {
   faqItems = [
     {
       id: 'collapseTwo',
-      title: 'Automate everything',
-      content: 'ERP provides a complete leave management system for your HR. Upcoming holidays and remaining leave balances.',
+      title: 'Can PeopleVault manage employee information?',
+      content:
+        'PeopleVault provides a centralized HR platform for employee profiles, departments, designations and workforce records.',
       expanded: false
     },
     {
       id: 'collapseOne',
-      title: 'Deploy AI',
-      content: 'ERP provides a complete leave management system for your HR. Upcoming holidays and remaining leave balances.',
+      title: 'Can we manage attendance and leave?',
+      content:
+        'Yes. PeopleVault is designed to support attendance tracking, leave requests, approvals and related HR workflows.',
       expanded: true
     },
     {
       id: 'collapseThree',
-      title: 'Powerful reporting',
-      content: 'ERP provides a complete leave management system for your HR. Upcoming holidays and remaining leave balances.',
+      title: 'Can PeopleVault help with payroll and reporting?',
+      content:
+        'PeopleVault brings payroll-related workflows and HR reporting into one connected platform so teams can manage operations and gain useful workforce insights.',
       expanded: false
     }
   ];
@@ -151,11 +167,6 @@ export class Index4 implements AfterViewInit {
       this.initCounters();
     }, 100);
     
-    // Also test counters immediately for debugging
-    setTimeout(() => {
-      this.testCounters();
-    }, 2000);
-
     new Swiper(this.brandSlider.nativeElement, {
       modules: [Navigation],
       autoplay: {
@@ -304,7 +315,64 @@ export class Index4 implements AfterViewInit {
     // Toggle current item
     item.expanded = !item.expanded;
   }
+selectTab(selectedTab: any): void {
 
+  // Update active tab styling
+  this.tabs.forEach(tab => {
+    tab.active = tab.id === selectedTab.id;
+  });
+
+  // Update the preview content
+  this.activeTab = selectedTab.id;
+}
+getPreviewTitle(): string {
+
+  switch (this.activeTab) {
+
+    case 'pills-employee':
+      return 'Employee Management';
+
+    case 'pills-attendance':
+      return 'Attendance';
+
+    case 'pills-leave':
+      return 'Leave Management';
+
+    case 'pills-payroll':
+      return 'Payroll';
+
+    case 'pills-reports':
+      return 'Reports & Analytics';
+
+    default:
+      return 'HR Dashboard';
+  }
+}
+
+
+getPreviewDescription(): string {
+
+  switch (this.activeTab) {
+
+    case 'pills-employee':
+      return 'Manage employees, departments and workforce information.';
+
+    case 'pills-attendance':
+      return 'Track employee attendance and workforce presence.';
+
+    case 'pills-leave':
+      return 'Manage employee leave requests and approvals.';
+
+    case 'pills-payroll':
+      return 'Process payroll, salary and employee deductions.';
+
+    case 'pills-reports':
+      return 'Monitor workforce performance with powerful analytics.';
+
+    default:
+      return "Welcome back! Here's what's happening today.";
+  }
+}
   // Test counter animation manually
   testCounters(): void {
     ;
