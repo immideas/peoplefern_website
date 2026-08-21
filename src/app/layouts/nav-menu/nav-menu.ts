@@ -1,17 +1,30 @@
-import { Component, Input, OnInit, OnDestroy, HostListener, ElementRef, Output, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnDestroy,
+  HostListener,
+  ElementRef,
+  Output,
+  EventEmitter,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
+
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { MegaMenu } from '../mega-menu/mega-menu';
+
 import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
-  imports: [CommonModule, MegaMenu, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   standalone: true,
   templateUrl: './nav-menu.html',
-  styleUrl: './nav-menu.scss'
+  styleUrl: './nav-menu.scss',
 })
 export class NavMenu implements OnInit, OnDestroy {
   @Input() menuClass: string = '';
+
   @Output() mobileMenuClose = new EventEmitter<void>();
 
   // State management for submenus
@@ -21,7 +34,7 @@ export class NavMenu implements OnInit, OnDestroy {
   constructor(
     private elementRef: ElementRef,
     private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnInit() {
@@ -43,7 +56,9 @@ export class NavMenu implements OnInit, OnDestroy {
       this.isMobile = false;
       return;
     }
+
     this.isMobile = window.innerWidth <= 991;
+
     if (!this.isMobile) {
       this.activeSubmenu = null;
     }
@@ -109,28 +124,66 @@ export class NavMenu implements OnInit, OnDestroy {
     this.mobileMenuClose.emit();
   }
 
-  // Check if any of the submenu routes are active
-  isPagesActive(): boolean {
-    const pagesRoutes = ['/pricing-plan', '/about', '/app-intigration', '/intigration-details', '/policy-privacy', '/faq', '/project-details', '/service-details'];
+  // Check if Features section is active
+  isFeaturesActive(): boolean {
+    const featuresRoutes = ['/features', '/feature-details'];
+
     const currentPath = this.router.url;
-    return pagesRoutes.some(route => currentPath === route);
+
+    return featuresRoutes.some((route) => currentPath === route);
   }
 
-  isShopActive(): boolean {
-    const shopRoutes = ['/shop', '/shop-details', '/cart', '/checkout'];
+  // Check if Pricing section is active
+  isPricingActive(): boolean {
+    const pricingRoutes = ['/pricing', '/pricing-plan'];
+
     const currentPath = this.router.url;
-    return shopRoutes.some(route => currentPath === route);
+
+    return pricingRoutes.some((route) => currentPath === route);
   }
 
-  isBlogActive(): boolean {
-    const blogRoutes = ['/blog', '/blog-details'];
+  // Check if Resources section is active
+  isResourcesActive(): boolean {
+    const resourcesRoutes = ['/case-studies', '/blog', '/blog-details', '/help-center', '/faq'];
+
     const currentPath = this.router.url;
-    return blogRoutes.some(route => currentPath === route);
+
+    return resourcesRoutes.some((route) => currentPath === route);
   }
 
+  // Check if Security is active
+  isSecurityActive(): boolean {
+    const securityRoutes = ['/security'];
+
+    const currentPath = this.router.url;
+
+    return securityRoutes.some((route) => currentPath === route);
+  }
+
+  // Check if About Us is active
+  isAboutActive(): boolean {
+    const aboutRoutes = ['/about'];
+
+    const currentPath = this.router.url;
+
+    return aboutRoutes.some((route) => currentPath === route);
+  }
+
+  // Check if Contact is active
+  isContactActive(): boolean {
+    const contactRoutes = ['/contact'];
+
+    const currentPath = this.router.url;
+
+    return contactRoutes.some((route) => currentPath === route);
+  }
+
+  // Check if Home is active
   isHomeActive(): boolean {
     const homeRoutes = ['/', '/index', '/index-2', '/index-3', '/index-4', '/index-5', '/index-6'];
+
     const currentPath = this.router.url;
-    return homeRoutes.some(route => currentPath === route);
+
+    return homeRoutes.some((route) => currentPath === route);
   }
 }

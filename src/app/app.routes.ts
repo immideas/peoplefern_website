@@ -29,16 +29,11 @@ export const routes: Routes = [
         path: '',
         component: MainLayout,
         children: [
-            {
-                path: '',
-                component: Index,
-                data: {
-                    pageClass:'home-one',
-                    header: 'header1',
-                    footer: 'footer1',
-                    topHeader: 'topHeader1'
-                }
-            },
+         {
+    path: '',
+    redirectTo: 'index-4',
+    pathMatch: 'full'
+},
             {
                 path: 'index-2',
                 component: Index2,
@@ -102,7 +97,7 @@ export const routes: Routes = [
                 }
             },
             {
-                path: 'pricing-plan',
+                path: 'pricing',
                 component: PricingPlan,
                 data: {
                     pageClass:'heading-black',
@@ -111,9 +106,9 @@ export const routes: Routes = [
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two',
-                        navMenu: 'nav-menu-three'
+                        navMenu: 'nav-menu'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
@@ -129,16 +124,16 @@ export const routes: Routes = [
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two',
-                        navMenu: 'nav-menu-three'
+                        navMenu: 'nav-menu'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
             {
-                path: 'app-intigration',
+                path: 'features',
                 component: AppIntigration,
                 data: {
                     pageClass:'heading-black',
@@ -146,18 +141,18 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two',
 
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
             {
-                path: 'intigration-details',
+                path: 'feature-details',
                 component: IntigrationDetails,
                 data: {
                     pageClass:'heading-black',
@@ -165,10 +160,10 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
@@ -201,17 +196,17 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
             {
-                path: 'cart',
+                path: 'compare',
                 component: Cart,
                 data: {
                     pageClass:'heading-black',
@@ -219,17 +214,17 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
             {
-                path: 'checkout',
+                path: 'security',
                 component: Checkout,
                 data: {
                     pageClass:'heading-black',
@@ -237,10 +232,10 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
@@ -255,10 +250,10 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
@@ -273,10 +268,10 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
@@ -309,17 +304,17 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
             {
-                path: 'project-details',
+                path: 'case-studies',
                 component: ProjectDetails,
                 data: {
                     pageClass:'heading-black',
@@ -327,15 +322,33 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
+            {
+    path: 'help-center',
+    component: Faq,
+    data: {
+        pageClass: 'heading-black',
+        header: 'header2',
+        headerProps: {
+            headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
+            logoText: 'logo-four.png',
+            navMenu: 'nav-menu',
+            btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
+        },
+        footer: 'footer4',
+        footerProps: {
+            sectionClass: 'bg-neutral-light'
+        }
+    }
+},
             {
                 path: 'register',
                 component: Register,
@@ -355,7 +368,7 @@ export const routes: Routes = [
                 }
             },
             {
-                path: 'service-details',
+                path: 'sitemap',
                 component: ServiceDetails,
                 data: {
                     pageClass:'heading-black',
@@ -363,17 +376,17 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
             {
-                path: 'shop-details',
+                path: 'eula',
                 component: ShopDetails,
                 data: {
                     pageClass:'heading-black',
@@ -381,17 +394,17 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
             {
-                path: 'shop',
+                path: 'terms-and-conditions',
                 component: Shop,
                 data: {
                     pageClass:'heading-black',
@@ -399,16 +412,16 @@ export const routes: Routes = [
                     headerProps: {
                         headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
                         logoText: 'logo-four.png',
-                        navMenu: 'nav-menu-three',
+                        navMenu: 'nav-menu',
                         btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
                     },
-                    footer: 'footer3',
+                    footer: 'footer4',
                     footerProps: {
                         sectionClass: 'bg-neutral-light'
                     },
                 }
             },
-            { path: '**', redirectTo: '', pathMatch: 'full' } 
+            // { path: '**', redirectTo: '', pathMatch: 'full' } 
             
         ]
     }

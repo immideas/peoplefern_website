@@ -1,4 +1,14 @@
-import { Component, OnDestroy, HostListener, ViewChild, ElementRef, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  HostListener,
+  ViewChild,
+  ElementRef,
+  Renderer2,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
+
 import { NavMenu } from '../nav-menu/nav-menu';
 import { RouterLink } from '@angular/router';
 import { MobileMenuAnimationService } from '../../services/mobile-menu-animation.service';
@@ -9,72 +19,151 @@ import { isPlatformBrowser } from '@angular/common';
   standalone: true,
   imports: [NavMenu, RouterLink],
   templateUrl: './mobile-menu.html',
-  styleUrl: './mobile-menu.scss'
+  styleUrl: './mobile-menu.scss',
 })
-export class MobileMenu implements  OnDestroy {
-  @ViewChild('mobileMenu', { static: false }) mobileMenuRef!: ElementRef;
-  @ViewChild('overlay', { static: false }) overlayRef!: ElementRef;
+export class MobileMenu implements OnDestroy {
+  @ViewChild('mobileMenu', { static: false })
+  mobileMenuRef!: ElementRef;
+
+  @ViewChild('overlay', { static: false })
+  overlayRef!: ElementRef;
 
   constructor(
     private mobileMenuAnimationService: MobileMenuAnimationService,
     private renderer: Renderer2,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnDestroy() {
-    // Cleanup - ensure body scroll is restored
     if (isPlatformBrowser(this.platformId)) {
       this.renderer.removeClass(document.body, 'mobile-menu-open');
     }
   }
 
-  closeMobileMenu() {
-    if (!isPlatformBrowser(this.platformId)) return;
+  // =========================================================
+  // OPEN MOBILE MENU
+  // =========================================================
+
+  openMobileMenu(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
 
     const mobileMenu = this.mobileMenuRef?.nativeElement;
     const overlay = this.overlayRef?.nativeElement;
 
-    if (mobileMenu && overlay) {
-      // Remove show classes immediately for CSS transitions
-      this.renderer.removeClass(mobileMenu, 'show');
-      this.renderer.removeClass(overlay, 'show');
-      this.renderer.removeClass(document.body, 'mobile-menu-open');
-
-      // Use GSAP animation if available (for enhanced animations)
-      this.mobileMenuAnimationService.reverseMobileMenuAnimation();
+    if (!mobileMenu || !overlay) {
+      return;
     }
+
+    // Add show classes
+    this.renderer.addClass(mobileMenu, 'show');
+
+    this.renderer.addClass(overlay, 'show');
+
+    // Prevent body scrolling
+    this.renderer.addClass(document.body, 'mobile-menu-open');
+
+    // Start GSAP animation
+    this.mobileMenuAnimationService.playMobileMenuAnimation();
   }
 
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: Event) {
-    if (!isPlatformBrowser(this.platformId)) return;
+  // =========================================================
+  // CLOSE MOBILE MENU
+  // =========================================================
+
+  closeMobileMenu(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
 
     const mobileMenu = this.mobileMenuRef?.nativeElement;
-    const toggleButton = document.querySelector('.toggle-mobileMenu') as HTMLElement;
+    const overlay = this.overlayRef?.nativeElement;
 
-    if (mobileMenu && this.renderer.parentNode(mobileMenu) && mobileMenu.classList.contains('show')) {
-      const target = event.target as HTMLElement;
+    if (!mobileMenu || !overlay) {
+      return;
+    }
 
-      // Close menu if clicking outside of it and not on the toggle button
-      if (!mobileMenu.contains(target) && !toggleButton?.contains(target)) {
+    this.renderer.removeClass(mobileMenu, 'show');
+
+    this.renderer.removeClass(overlay, 'show');
+
+    this.renderer.removeClass(document.body, 'mobile-menu-open');
+
+    // Reverse GSAP animation
+    this.mobileMenuAnimationService.reverseMobileMenuAnimation();
+  }
+
+  // =========================================================
+  // HAMBURGER CLICK
+  // =========================================================
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    const target = event.target as HTMLElement;
+
+    const mobileMenu = this.mobileMenuRef?.nativeElement;
+
+    const toggleButton = target.closest('.toggle-mobileMenu');
+
+    // -----------------------------------------
+    // HAMBURGER CLICK
+    // -----------------------------------------
+
+    if (toggleButton) {
+      event.stopPropagation();
+
+      if (mobileMenu && mobileMenu.classList.contains('show')) {
         this.closeMobileMenu();
+      } else {
+        this.openMobileMenu();
       }
+
+      return;
+    }
+
+    // -----------------------------------------
+    // MENU NOT OPEN
+    // -----------------------------------------
+
+    if (!mobileMenu || !mobileMenu.classList.contains('show')) {
+      return;
+    }
+
+    // -----------------------------------------
+    // CLICK OUTSIDE MENU
+    // -----------------------------------------
+
+    if (!mobileMenu.contains(target)) {
+      this.closeMobileMenu();
     }
   }
 
-  @HostListener('window:resize', ['$event'])
-  onWindowResize(event: Event) {
-    if (!isPlatformBrowser(this.platformId)) return;
+  // =========================================================
+  // DESKTOP RESIZE
+  // =========================================================
 
-    // Close mobile menu on desktop resize
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     if (window.innerWidth > 991) {
       this.closeMobileMenu();
     }
   }
 
-  @HostListener('document:keydown.escape', ['$event'])
-  onEscapeKey(event: Event) {
-    // Close mobile menu on escape key
+  // =========================================================
+  // ESCAPE KEY
+  // =========================================================
+
+  @HostListener('document:keydown.escape')
+  onEscapeKey(): void {
     this.closeMobileMenu();
   }
 }

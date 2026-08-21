@@ -86,6 +86,11 @@ export class SettingPanel implements  AfterViewInit {
     this.isBrowser = isPlatformBrowser(this.platformId);
     if (this.isBrowser) {
       this.windowWidth = window.innerWidth;
+       // Default cursor
+    this.renderer.addClass(
+      document.body,
+      'remove-animate-cursor'
+    );
     }
   }
 
@@ -96,7 +101,7 @@ export class SettingPanel implements  AfterViewInit {
     }
   }
 
-  cursorType: 'animate' | 'default' = 'animate';
+cursorType: 'animate' | 'default' = 'default';
   direction: 'ltr' | 'rtl' = 'ltr';
   isSettingsPanelOpen: boolean = false;
   isSettingsButtonActive: boolean = false;

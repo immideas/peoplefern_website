@@ -1,0 +1,32 @@
+.peoplevault-footer-logo {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.peoplevault-powered-by {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.peoplevault-powered-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.peoplevault-powered-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.peoplevault-powered-logo img {
+  width: 130px;
+  height: auto;
+  max-height: 42px;
+  object-fit: contain;
+  display: block;
+}

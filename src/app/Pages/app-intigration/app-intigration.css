@@ -1,0 +1,826 @@
+/* ==========================================
+   PEOPLEVAULT HERO - FINAL FIX
+========================================== */
+
+.peoplevault-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px !important;
+  padding-bottom: 90px !important;
+}
+
+/* Network background */
+.peoplevault-hero-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 380px;
+  transform: translateX(-50%);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.peoplevault-hero-background img {
+  width: 100%;
+  max-width: 1500px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.8;
+}
+
+/* Main hero area */
+.peoplevault-hero-stage {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 110px;
+  z-index: 2;
+}
+
+/* Hero content */
+.peoplevault-hero-content {
+  position: relative !important;
+  z-index: 10 !important;
+  width: 100%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Badge */
+.peoplevault-hero-content > div:first-child {
+  margin-bottom: 24px;
+}
+
+/* Heading */
+.peoplevault-hero-content h1 {
+  position: relative;
+  z-index: 10;
+
+  max-width: 900px;
+  margin: 0 auto;
+
+  font-size: clamp(48px, 5vw, 78px);
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+/* Gradient heading line */
+.peoplevault-hero-content h1 span {
+  display: inline;
+}
+
+/* Description */
+.peoplevault-hero-content p {
+  position: relative;
+  z-index: 10;
+
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Buttons */
+.peoplevault-hero-content .d-flex {
+  position: relative;
+  z-index: 20;
+}
+
+/* Floating icons */
+.peoplevault-hero-stage .distraction-icon {
+  position: absolute;
+  z-index: 5;
+}
+
+.peoplevault-hero-stage .distraction-icon img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* Individual icon positions */
+
+.peoplevault-hero-stage .distraction-icon.one {
+  top: 150px;
+  left: 13%;
+}
+
+.peoplevault-hero-stage .distraction-icon.two {
+  top: 90px;
+  left: 25%;
+}
+
+.peoplevault-hero-stage .distraction-icon.three {
+  top: 45px;
+  right: 25%;
+}
+
+.peoplevault-hero-stage .distraction-icon.four {
+  top: 150px;
+  right: 13%;
+}
+
+.peoplevault-hero-stage .distraction-icon.five {
+  bottom: 80px;
+  left: 20%;
+}
+
+.peoplevault-hero-stage .distraction-icon.six {
+  bottom: 80px;
+  right: 20%;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+  .peoplevault-hero {
+    padding-top: 50px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .peoplevault-hero-stage {
+    min-height: 520px;
+    padding-top: 100px;
+  }
+
+  .peoplevault-hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .peoplevault-hero-content h1 {
+    font-size: 52px;
+  }
+
+  .peoplevault-hero-content p {
+    font-size: 16px;
+  }
+
+  .peoplevault-hero-background {
+    height: 320px;
+  }
+
+  .peoplevault-hero-background img {
+    height: 320px;
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+
+  .peoplevault-hero {
+    padding-top: 30px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .peoplevault-hero-stage {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+
+  .peoplevault-hero-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .peoplevault-hero-content h1 {
+    font-size: 40px;
+    line-height: 1.12;
+  }
+
+  .peoplevault-hero-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .peoplevault-hero-background {
+    height: 250px;
+  }
+
+  .peoplevault-hero-background img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  /* Hide decorative icons on mobile */
+  .peoplevault-hero-stage .distraction-icon {
+    display: none;
+  }
+
+  .peoplevault-hero-content .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 575px) {
+
+  .peoplevault-hero-stage {
+    padding-top: 60px;
+  }
+
+  .peoplevault-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .peoplevault-hero-content p {
+    font-size: 14px;
+  }
+
+  .peoplevault-hero-content .d-flex {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+/* =========================================================
+   PEOPLEVAULT MODULES
+========================================================= */
+
+.peoplevault-modules-section {
+  position: relative;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.peoplevault-modules-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 24px;
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.peoplevault-module-card {
+  width: 100%;
+
+  min-width: 0;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0 !important;
+
+  background: transparent;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD INNER
+========================================================= */
+
+.peoplevault-module-card-inner {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  width: 100%;
+
+  min-height: 500px;
+
+  padding: 55px 30px 40px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ebf2;
+
+  border-radius: 20px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.peoplevault-module-card-inner:hover {
+
+  transform: translateY(-7px);
+
+  border-color: #d4e0f4;
+
+  box-shadow: 0 18px 45px rgba(20, 40, 80, 0.10);
+
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.peoplevault-module-icon {
+
+  width: 125px;
+
+  height: 125px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  flex-shrink: 0;
+}
+
+
+.peoplevault-module-icon img {
+
+  width: 125px;
+
+  height: 125px;
+
+  object-fit: contain;
+
+  display: block;
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.peoplevault-module-title {
+
+  margin: 0 0 18px !important;
+
+  font-size: 27px !important;
+
+  line-height: 1.3 !important;
+
+  font-weight: 700 !important;
+
+  color: #111827 !important;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.peoplevault-module-description {
+
+  margin: 0 !important;
+
+  max-width: 320px;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: #7a8495;
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.peoplevault-module-link {
+
+  margin-top: auto;
+
+  padding-top: 30px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  color: #1557e8 !important;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+
+.peoplevault-module-link i {
+
+  transition: transform 0.25s ease;
+
+}
+
+
+.peoplevault-module-link:hover {
+
+  color: #0d47c9 !important;
+
+}
+
+
+.peoplevault-module-link:hover i {
+
+  transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   DISABLE THEME GRID/BORDER BEHAVIOR
+========================================================= */
+
+.peoplevault-modules-grid .row,
+
+.peoplevault-modules-grid .col-border-wrapper,
+
+.peoplevault-modules-grid [class*="col-"] {
+
+  border: none !important;
+
+  box-shadow: none !important;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .peoplevault-modules-grid {
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .peoplevault-modules-grid {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .peoplevault-modules-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+  }
+
+
+  .peoplevault-module-card-inner {
+
+    min-height: 430px;
+
+    padding: 40px 25px 30px;
+
+  }
+
+
+  .peoplevault-module-icon {
+
+    width: 100px;
+
+    height: 100px;
+
+  }
+
+
+  .peoplevault-module-icon img {
+
+    width: 100px;
+
+    height: 100px;
+
+  }
+
+
+  .peoplevault-module-title {
+
+    font-size: 24px !important;
+
+  }
+
+
+  .peoplevault-module-description {
+
+    font-size: 15px;
+
+  }
+
+}
+/* =========================================================
+   PEOPLEVAULT CTA - FINAL COMPACT FIX
+========================================================= */
+
+.peoplevault-final-cta-box {
+  position: relative !important;
+  overflow: hidden !important;
+
+  padding-top: 42px !important;
+  padding-bottom: 35px !important;
+
+  min-height: 0 !important;
+}
+
+
+/* CTA CONTENT */
+
+.peoplevault-final-cta-content {
+  width: 100% !important;
+  max-width: 100% !important;
+
+  margin: 0 auto !important;
+
+  padding: 0 25px !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.peoplevault-final-cta-content > div:first-child {
+  margin-bottom: 18px !important;
+
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+
+  font-size: 14px !important;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.peoplevault-final-cta-content .peoplevault-cta-title {
+  display: block !important;
+
+  width: 100% !important;
+
+  max-width: 850px !important;
+
+  margin: 0 auto !important;
+
+  padding: 0 !important;
+
+  font-size: 46px !important;
+
+  line-height: 1.08 !important;
+
+  font-weight: 700 !important;
+
+  text-align: center !important;
+
+  white-space: normal !important;
+
+  overflow: visible !important;
+}
+
+
+/* Yellow second line */
+
+.peoplevault-final-cta-content .peoplevault-cta-title .text-yellow {
+  display: inline !important;
+
+  white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.peoplevault-final-cta-content > p {
+  display: block !important;
+
+  max-width: 700px !important;
+
+  margin: 16px auto 0 !important;
+
+  padding: 0 !important;
+
+  color: rgba(255, 255, 255, 0.82) !important;
+
+  font-size: 15px !important;
+
+  line-height: 1.5 !important;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.peoplevault-cta-buttons {
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 18px !important;
+
+  width: 100% !important;
+
+  margin: 24px auto 0 !important;
+
+  padding: 0 !important;
+}
+
+
+.peoplevault-cta-btn {
+  display: inline-flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  width: 220px !important;
+
+  min-width: 220px !important;
+
+  max-width: 220px !important;
+
+  height: 52px !important;
+
+  min-height: 52px !important;
+
+  max-height: 52px !important;
+
+  margin: 0 !important;
+
+  padding: 0 20px !important;
+
+  box-sizing: border-box !important;
+
+  white-space: nowrap !important;
+
+  line-height: 1 !important;
+
+  font-size: 15px !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .peoplevault-final-cta-box {
+    padding-top: 38px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .peoplevault-final-cta-content .peoplevault-cta-title {
+    max-width: 750px !important;
+
+    font-size: 40px !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .peoplevault-final-cta-box {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+
+  .peoplevault-final-cta-content {
+    padding: 0 18px !important;
+  }
+
+  .peoplevault-final-cta-content .peoplevault-cta-title {
+    max-width: 100% !important;
+
+    font-size: 34px !important;
+
+    line-height: 1.12 !important;
+  }
+
+  .peoplevault-final-cta-content .peoplevault-cta-title .text-yellow {
+    white-space: normal !important;
+  }
+
+  .peoplevault-cta-buttons {
+    flex-direction: column !important;
+
+    gap: 12px !important;
+
+    margin-top: 22px !important;
+  }
+
+  .peoplevault-cta-btn {
+    width: 100% !important;
+
+    max-width: 280px !important;
+
+    min-width: 0 !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .peoplevault-final-cta-content .peoplevault-cta-title {
+    font-size: 29px !important;
+  }
+
+}
