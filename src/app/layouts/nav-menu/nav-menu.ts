@@ -180,7 +180,7 @@ export class NavMenu implements OnInit, OnDestroy {
 
   // Check if Home is active
   isHomeActive(): boolean {
-    const homeRoutes = ['/', '/index', '/index-2', '/index-3', '/index-4', '/index-5', '/index-6'];
+    const homeRoutes = ['/', '/index', '/index-2', '/index-3', '/home', '/index-5', '/index-6'];
 
     const currentPath = this.router.url;
 

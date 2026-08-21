@@ -1,0 +1,888 @@
+/* =========================================================
+   PEOPLEVAULT CONTACT PAGE
+========================================================= */
+
+.peoplevault-contact-hero {
+  position: relative;
+  padding: 105px 20px 85px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(91, 76, 255, 0.08), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(38, 198, 218, 0.08), transparent 30%),
+    #f8faff;
+}
+
+.peoplevault-contact-hero-content {
+  max-width: 850px;
+}
+
+.peoplevault-contact-badge,
+.peoplevault-small-heading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: rgba(91, 76, 255, 0.09);
+  color: #5b4cff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 20px;
+}
+
+.peoplevault-contact-hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.08;
+  font-weight: 800;
+  color: #171a2b;
+  letter-spacing: -2px;
+}
+
+.peoplevault-contact-hero h1 span {
+  display: block;
+  background: linear-gradient(90deg, #5b4cff, #8c5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.peoplevault-contact-hero p {
+  max-width: 720px;
+  margin: 25px auto 0;
+  color: #687087;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.peoplevault-contact-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  margin-top: 30px;
+}
+
+.peoplevault-contact-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #555d73;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.peoplevault-contact-meta i {
+  color: #5b4cff;
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.peoplevault-contact-cards {
+  position: relative;
+  margin-top: -35px;
+  padding-bottom: 100px;
+  z-index: 5;
+}
+
+.peoplevault-contact-card {
+  height: 100%;
+  min-height: 255px;
+  padding: 38px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #edf0f7;
+  border-radius: 22px;
+  box-shadow: 0 18px 55px rgba(31, 42, 75, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.peoplevault-contact-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(91, 76, 255, 0.2);
+  box-shadow: 0 25px 65px rgba(31, 42, 75, 0.13);
+}
+
+.peoplevault-contact-card-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(91, 76, 255, 0.1),
+    rgba(140, 92, 255, 0.16)
+  );
+}
+
+.peoplevault-contact-card-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.peoplevault-contact-card-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #8a91a5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.peoplevault-contact-card h4 {
+  margin-bottom: 14px;
+  color: #171a2b;
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.peoplevault-contact-card-values {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.peoplevault-contact-card-values p,
+.peoplevault-contact-card-values a {
+  margin: 0;
+  color: #687087;
+  font-size: 15px;
+  line-height: 1.7;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.peoplevault-contact-card-values a:hover {
+  color: #5b4cff;
+}
+
+
+/* =========================================================
+   WHY CONTACT PEOPLEVAULT
+========================================================= */
+
+.peoplevault-contact-reasons {
+  padding: 110px 20px;
+  background: #ffffff;
+}
+
+.peoplevault-section-heading {
+  max-width: 720px;
+}
+
+.peoplevault-section-heading > span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #5b4cff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.peoplevault-section-heading h2 {
+  margin-bottom: 18px;
+  color: #171a2b;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.peoplevault-section-heading h2 strong {
+  color: #5b4cff;
+}
+
+.peoplevault-section-heading p {
+  margin: 0 auto;
+  color: #737b90;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.peoplevault-reason-card {
+  height: 100%;
+  padding: 32px 28px;
+  border: 1px solid #edf0f7;
+  border-radius: 20px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.peoplevault-reason-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(91, 76, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(31, 42, 75, 0.09);
+}
+
+.peoplevault-reason-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  background: #f1efff;
+  color: #5b4cff;
+  font-size: 25px;
+}
+
+.peoplevault-reason-card h5 {
+  margin-bottom: 12px;
+  color: #171a2b;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.peoplevault-reason-card p {
+  margin-bottom: 18px;
+  color: #737b90;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.peoplevault-reason-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #5b4cff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.peoplevault-reason-link i {
+  transition: transform 0.2s ease;
+}
+
+.peoplevault-reason-link:hover i {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   MAIN CONTACT
+========================================================= */
+
+.peoplevault-main-contact {
+  padding: 120px 20px;
+  background: #f7f8fc;
+}
+
+.peoplevault-contact-information {
+  padding-right: 35px;
+}
+
+.peoplevault-contact-information h2 {
+  margin: 0 0 20px;
+  color: #171a2b;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.peoplevault-contact-information h2 span {
+  display: block;
+  color: #5b4cff;
+}
+
+.peoplevault-contact-description {
+  max-width: 600px;
+  margin-bottom: 40px;
+  color: #737b90;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION GRID
+========================================================= */
+
+.peoplevault-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.peoplevault-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #e9ecf3;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.peoplevault-info-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #f1efff;
+  color: #5b4cff;
+  font-size: 20px;
+}
+
+.peoplevault-info-content h6 {
+  margin: 0 0 5px;
+  color: #171a2b;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.peoplevault-info-content p {
+  margin: 0 0 4px;
+  color: #858ca0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.peoplevault-info-content strong {
+  display: block;
+  color: #454c61;
+  font-size: 13px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.peoplevault-social-section {
+  margin-top: 35px;
+}
+
+.peoplevault-social-section h6 {
+  margin-bottom: 15px;
+  color: #171a2b;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.peoplevault-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.peoplevault-social-links a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e1e4ed;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #596075;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.peoplevault-social-links a:hover {
+  border-color: #5b4cff;
+  background: #5b4cff;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CONTACT FORM CARD
+========================================================= */
+
+.peoplevault-contact-form-card {
+  padding: 45px;
+  border: 1px solid #e9ecf3;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(31, 42, 75, 0.09);
+}
+
+.peoplevault-form-header {
+  margin-bottom: 30px;
+}
+
+.peoplevault-form-header > span {
+  color: #5b4cff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.peoplevault-form-header h3 {
+  margin: 8px 0 8px;
+  color: #171a2b;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.peoplevault-form-header p {
+  margin: 0;
+  color: #7b8295;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.peoplevault-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.peoplevault-form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #343a4d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.peoplevault-form-group label span {
+  color: #ef4444;
+}
+
+.peoplevault-input-wrapper {
+  position: relative;
+}
+
+.peoplevault-input-wrapper > i {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  z-index: 2;
+  color: #8b92a6;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.peoplevault-input-wrapper input,
+.peoplevault-input-wrapper select,
+.peoplevault-input-wrapper textarea {
+  width: 100%;
+  border: 1px solid #e2e5ed;
+  border-radius: 12px;
+  outline: none;
+  background: #fafbfe;
+  color: #33394c;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.peoplevault-input-wrapper input,
+.peoplevault-input-wrapper select {
+  height: 54px;
+  padding: 0 17px 0 48px;
+}
+
+.peoplevault-input-wrapper textarea {
+  min-height: 125px;
+  padding: 16px 17px 16px 48px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.peoplevault-input-wrapper select {
+  appearance: auto;
+  cursor: pointer;
+}
+
+.peoplevault-input-wrapper input::placeholder,
+.peoplevault-input-wrapper textarea::placeholder {
+  color: #a2a8b7;
+}
+
+.peoplevault-input-wrapper input:focus,
+.peoplevault-input-wrapper select:focus,
+.peoplevault-input-wrapper textarea:focus {
+  border-color: #5b4cff;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(91, 76, 255, 0.08);
+}
+
+.peoplevault-textarea-wrapper > i {
+  top: 18px;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.peoplevault-submit-btn {
+  width: 100%;
+  min-height: 56px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #5b4cff, #805cff);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(91, 76, 255, 0.25);
+  transition: all 0.25s ease;
+}
+
+.peoplevault-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 17px 35px rgba(91, 76, 255, 0.32);
+}
+
+.peoplevault-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.peoplevault-submit-btn > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.peoplevault-loading {
+  gap: 10px !important;
+}
+
+.peoplevault-form-note {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7px;
+  margin: 0;
+  color: #858ca0;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.peoplevault-form-note i {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: #31a56d;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.peoplevault-contact-cta {
+  padding: 110px 20px;
+  background: #ffffff;
+}
+
+.peoplevault-cta-box {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 60px;
+  border-radius: 30px;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 255, 255, 0.15),
+      transparent 25%
+    ),
+    linear-gradient(135deg, #151b3a, #29215c);
+  box-shadow: 0 25px 70px rgba(25, 30, 65, 0.18);
+}
+
+.peoplevault-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.peoplevault-cta-content > span {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #bdb4ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.peoplevault-cta-content h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.peoplevault-cta-content p {
+  max-width: 620px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.peoplevault-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.peoplevault-primary-btn,
+.peoplevault-secondary-btn {
+  min-height: 52px;
+  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.peoplevault-primary-btn {
+  background: #ffffff;
+  color: #25204f;
+}
+
+.peoplevault-primary-btn:hover {
+  transform: translateY(-3px);
+  background: #f0edff;
+  color: #25204f;
+}
+
+.peoplevault-secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.peoplevault-secondary-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CTA TAGS
+========================================================= */
+
+.peoplevault-cta-tags {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  max-width: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  opacity: 0.8;
+}
+
+.peoplevault-cta-tags span {
+  padding: 7px 15px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .peoplevault-contact-information {
+    padding-right: 0;
+  }
+
+  .peoplevault-cta-tags {
+    max-width: 300px;
+  }
+
+}
+
+
+@media (max-width: 991px) {
+
+  .peoplevault-contact-hero {
+    padding: 80px 20px 70px;
+  }
+
+  .peoplevault-contact-cards {
+    margin-top: 0;
+    padding-top: 70px;
+  }
+
+  .peoplevault-main-contact {
+    padding: 90px 20px;
+  }
+
+  .peoplevault-contact-form-card {
+    padding: 35px 30px;
+  }
+
+  .peoplevault-contact-information {
+    margin-bottom: 20px;
+  }
+
+  .peoplevault-cta-box {
+    padding: 60px 40px;
+  }
+
+  .peoplevault-cta-tags {
+    position: static;
+    margin-top: 35px;
+    justify-content: flex-start;
+    max-width: none;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .peoplevault-contact-hero {
+    padding: 65px 15px 55px;
+  }
+
+  .peoplevault-contact-hero h1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .peoplevault-contact-hero p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .peoplevault-contact-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .peoplevault-contact-cards {
+    padding: 55px 15px 75px;
+  }
+
+  .peoplevault-contact-reasons {
+    padding: 75px 15px;
+  }
+
+  .peoplevault-main-contact {
+    padding: 75px 15px;
+  }
+
+  .peoplevault-contact-information h2 {
+    font-size: 36px;
+  }
+
+  .peoplevault-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .peoplevault-contact-form-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .peoplevault-form-header h3 {
+    font-size: 26px;
+  }
+
+  .peoplevault-contact-cta {
+    padding: 75px 15px;
+  }
+
+  .peoplevault-cta-box {
+    padding: 45px 25px;
+    border-radius: 22px;
+  }
+
+  .peoplevault-cta-content h2 {
+    font-size: 34px;
+  }
+
+  .peoplevault-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .peoplevault-primary-btn,
+  .peoplevault-secondary-btn {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .peoplevault-contact-hero h1 {
+    font-size: 34px;
+  }
+
+  .peoplevault-contact-card {
+    padding: 30px 20px;
+  }
+
+  .peoplevault-section-heading h2 {
+    font-size: 32px;
+  }
+
+  .peoplevault-contact-information h2 {
+    font-size: 31px;
+  }
+
+  .peoplevault-contact-card-values p,
+  .peoplevault-contact-card-values a {
+    font-size: 14px;
+  }
+
+  .peoplevault-info-item {
+    padding: 16px;
+  }
+
+  .peoplevault-info-icon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+}

@@ -1,0 +1,892 @@
+/* =========================================================
+   PEOPLEVAULT BLOG PAGE
+========================================================= */
+
+.peoplevault-blog-section {
+  position: relative;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   BLOG HEADER
+========================================================= */
+
+.peoplevault-blog-header {
+  max-width: 850px;
+  margin: 0 auto 70px;
+}
+
+.peoplevault-blog-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+  margin-bottom: 20px;
+
+  border-radius: 50px;
+
+  background: #eef4ff;
+  color: #1557e8;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.peoplevault-blog-heading {
+  margin: 0 0 22px;
+
+  color: #111827;
+
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.peoplevault-blog-heading span {
+  display: block;
+
+  background: linear-gradient(
+    90deg,
+    #1557e8 0%,
+    #6957e8 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.peoplevault-blog-intro {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  color: #6b7280;
+
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BLOG CARD
+========================================================= */
+
+.peoplevault-blog-card {
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+.peoplevault-blog-image {
+  position: relative;
+
+  width: 100%;
+  height: 380px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #f4f7fb;
+}
+
+.peoplevault-blog-image a {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.peoplevault-blog-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.peoplevault-blog-card:hover
+.peoplevault-blog-image img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CATEGORY BADGE
+========================================================= */
+
+.peoplevault-blog-category {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 17px;
+
+  border-radius: 50px;
+
+  background: #ffffff;
+
+  color: #1557e8;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow: 0 8px 25px rgba(20, 40, 80, 0.12);
+}
+
+
+/* =========================================================
+   BLOG CONTENT
+========================================================= */
+
+.peoplevault-blog-content {
+  padding: 27px 8px 0;
+}
+
+.peoplevault-blog-title {
+  margin: 0 0 14px;
+}
+
+.peoplevault-blog-title a {
+  display: inline-block;
+
+  color: #111827;
+
+  font-size: 29px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.peoplevault-blog-title a:hover {
+  color: #1557e8;
+}
+
+.peoplevault-blog-excerpt {
+  max-width: 720px;
+
+  margin: 0 0 20px;
+
+  color: #6b7280;
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   READ ARTICLE
+========================================================= */
+
+.peoplevault-read-more {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #1557e8;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.peoplevault-read-more i {
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+.peoplevault-read-more:hover {
+  color: #0d47c9;
+}
+
+.peoplevault-read-more:hover i {
+  transform: translate(4px, -3px);
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.peoplevault-sidebar {
+  position: sticky;
+  top: 110px;
+}
+
+.peoplevault-sidebar-card {
+  width: 100%;
+
+  padding: 28px;
+
+  margin-bottom: 24px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e8edf5;
+
+  border-radius: 22px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BRAND / AUTHOR CARD
+========================================================= */
+
+.peoplevault-author-card {
+  text-align: center;
+}
+
+.peoplevault-brand-icon {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 17px;
+
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e8edf5;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(20, 40, 80, 0.08);
+
+  box-sizing: border-box;
+}
+
+.peoplevault-brand-icon img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.peoplevault-author-card h5 {
+  margin: 0 0 5px;
+
+  color: #111827;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.peoplevault-author-card > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #1557e8;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.peoplevault-author-card p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.peoplevault-socials {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin: 20px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.peoplevault-socials li {
+  margin: 0;
+  padding: 0;
+}
+
+.peoplevault-socials a {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf2;
+
+  color: #1557e8;
+
+  font-size: 18px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.peoplevault-socials a:hover {
+  background: #1557e8;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SIDEBAR TITLES
+========================================================= */
+
+.peoplevault-sidebar-title {
+  position: relative;
+
+  margin: 0 0 22px;
+
+  padding-left: 14px;
+
+  color: #111827;
+
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.peoplevault-sidebar-title::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 2px;
+
+  width: 4px;
+  height: 22px;
+
+  border-radius: 10px;
+
+  background: #1557e8;
+}
+
+
+/* =========================================================
+   RECENT ARTICLES
+========================================================= */
+
+.peoplevault-recent-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.peoplevault-recent-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 0;
+}
+
+.peoplevault-recent-image {
+  width: 75px;
+  height: 65px;
+
+  flex: 0 0 75px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #eef2f7;
+}
+
+.peoplevault-recent-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.peoplevault-recent-image:hover img {
+  transform: scale(1.08);
+}
+
+.peoplevault-recent-content {
+  min-width: 0;
+}
+
+.peoplevault-recent-content span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #1557e8;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+}
+
+.peoplevault-recent-content h6 {
+  margin: 0;
+}
+
+.peoplevault-recent-content h6 a {
+  color: #111827;
+
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.peoplevault-recent-content h6 a:hover {
+  color: #1557e8;
+}
+
+
+/* =========================================================
+   CATEGORY LIST
+========================================================= */
+
+.peoplevault-category-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.peoplevault-category-list a {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 14px;
+
+  border: 1px solid #e7ecf3;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.peoplevault-category-list a:hover {
+  background: #1557e8;
+
+  border-color: #1557e8;
+
+  color: #ffffff;
+
+  transform: translateX(4px);
+}
+
+.category-count {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eef4ff;
+
+  color: #1557e8;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition: all 0.25s ease;
+}
+
+.peoplevault-category-list a:hover .category-count {
+  background: rgba(255, 255, 255, 0.2);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   POPULAR TAGS
+========================================================= */
+
+.peoplevault-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.peoplevault-tags a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 13px;
+
+  border-radius: 50px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf2;
+
+  color: #4b5563;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.peoplevault-tags a:hover {
+  background: #1557e8;
+
+  border-color: #1557e8;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
+.peoplevault-blog-cta {
+  padding: 80px 0 110px;
+}
+
+.peoplevault-cta-box {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 75px 30px;
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #1557e8 0%,
+      #4939c7 100%
+    );
+
+  box-shadow: 0 25px 60px rgba(21, 87, 232, 0.18);
+}
+
+.peoplevault-cta-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.peoplevault-cta-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px;
+
+  margin-bottom: 18px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.peoplevault-cta-content h2 {
+  margin: 0 0 17px;
+
+  color: #ffffff;
+
+  font-size: clamp(34px, 4vw, 52px);
+
+  line-height: 1.15;
+
+  font-weight: 700;
+}
+
+.peoplevault-cta-content p {
+  max-width: 620px;
+
+  margin: 0 auto 30px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.peoplevault-cta-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 13px;
+}
+
+.peoplevault-primary-btn,
+.peoplevault-secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 50px;
+
+  padding: 0 23px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.peoplevault-primary-btn {
+  background: #ffffff;
+
+  color: #1557e8;
+}
+
+.peoplevault-primary-btn:hover {
+  color: #1557e8;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.peoplevault-secondary-btn {
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  color: #ffffff;
+}
+
+.peoplevault-secondary-btn:hover {
+  background: #ffffff;
+
+  color: #1557e8;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .peoplevault-blog-header {
+    margin-bottom: 50px;
+  }
+
+  .peoplevault-blog-image {
+    height: 330px;
+  }
+
+  .peoplevault-blog-title a {
+    font-size: 26px;
+  }
+
+  .peoplevault-sidebar {
+    position: static;
+    margin-top: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .peoplevault-blog-section {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+
+  .peoplevault-blog-header {
+    margin-bottom: 40px;
+  }
+
+  .peoplevault-blog-heading {
+    font-size: 36px;
+  }
+
+  .peoplevault-blog-intro {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .peoplevault-blog-image {
+    height: 240px;
+
+    border-radius: 18px;
+  }
+
+  .peoplevault-blog-category {
+    top: 14px;
+    left: 14px;
+
+    padding: 7px 13px;
+
+    font-size: 11px;
+  }
+
+  .peoplevault-blog-content {
+    padding: 20px 3px 0;
+  }
+
+  .peoplevault-blog-title a {
+    font-size: 23px;
+  }
+
+  .peoplevault-blog-excerpt {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .peoplevault-sidebar-card {
+    padding: 23px 20px;
+
+    border-radius: 18px;
+  }
+
+  .peoplevault-cta-box {
+    padding: 55px 20px;
+
+    border-radius: 22px;
+  }
+
+  .peoplevault-cta-content h2 {
+    font-size: 32px;
+  }
+
+  .peoplevault-cta-content p {
+    font-size: 15px;
+  }
+
+  .peoplevault-primary-btn,
+  .peoplevault-secondary-btn {
+    width: 100%;
+  }
+
+}
