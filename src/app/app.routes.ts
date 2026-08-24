@@ -317,10 +317,10 @@ export const routes: Routes = [
             headerClass:
               'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
             logoText: 'logo-four.png',
-            navMenu: 'nav-menu-three',
+            navMenu: 'nav-menu',
             btnClass: 'tw-rounded-xl btn-main-two hover-style-two',
           },
-          footer: 'footer3',
+          footer: 'footer4',
           footerProps: {
             sectionClass: 'bg-neutral-light',
           },
@@ -393,10 +393,10 @@ export const routes: Routes = [
             headerClass:
               'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
             logoText: 'logo-four.png',
-            navMenu: 'nav-menu-three',
+            navMenu: 'nav-menu',
             btnClass: 'tw-rounded-xl btn-main-two hover-style-two',
           },
-          footer: 'footer3',
+          footer: 'footer4',
           footerProps: {
             sectionClass: 'bg-neutral-light',
           },

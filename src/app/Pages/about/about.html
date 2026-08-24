@@ -163,29 +163,44 @@
       </p>
     </div>
 
-    <div class="row gy-4">
-      <div *ngFor="let value of values"
-           class="col-xl-4 col-md-6"
-           data-aos="fade-up"
-           data-aos-anchor-placement="top-bottom"
-           [attr.data-aos-duration]="value.duration">
+   <!-- ================== VALUE CARDS ====================== -->
 
-        <div class="tw-rounded-2xl bg-white bg-hover-app-landing tw-py-12 tw-px-7 border border-neutral-200 group animation-item group-item tw-transition tw-duration-200 h-100">
-          <span class="tw-w-76-px tw-h-76-px rounded-circle d-flex align-items-center justify-content-center common-shadow-fifteen tw-mb-8 bg-white">
-            <i [class]="value.icon"
-               class="text-gradient-teal tw-text-3xl group-hover-item-text-invert tw-transition tw-duration-200"></i>
-          </span>
+<div class="about-values-grid">
 
-          <h5 class="tw-mb-5 group-hover-text-white tw-transition tw-duration-200">
-            {{ value.title }}
-          </h5>
+  <div
+    *ngFor="let value of values"
+    class="value-card-column"
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    [attr.data-aos-duration]="value.duration">
 
-          <p class="group-hover-text-white fw-medium text-neutral-500 tw-transition tw-duration-200 mb-0">
-            {{ value.description }}
-          </p>
-        </div>
+    <div class="about-value-card">
+
+      <!-- ICON -->
+      <span class="about-value-icon">
+
+        <i [class]="value.icon"></i>
+
+      </span>
+
+      <!-- CONTENT -->
+      <div class="about-value-content">
+
+        <h5>
+          {{ value.title }}
+        </h5>
+
+        <p>
+          {{ value.description }}
+        </p>
+
       </div>
+
     </div>
+
+  </div>
+
+</div>
   </div>
 </section>
 <!-- ================== Why PeopleVault End ====================== -->
