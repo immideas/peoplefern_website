@@ -1,0 +1,1915 @@
+/* =========================================================
+   PRICING SECTION
+========================================================= */
+
+.pricing-section {
+  background: #f7f9fc;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-section::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -180px;
+  left: -180px;
+  border-radius: 50%;
+  background: rgba(10, 168, 137, 0.04);
+  pointer-events: none;
+}
+
+.pricing-section::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -180px;
+  bottom: -180px;
+  border-radius: 50%;
+  background: rgba(10, 168, 137, 0.04);
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.pricing-header {
+  max-width: 760px;
+  margin-bottom: 55px;
+  position: relative;
+  z-index: 2;
+}
+
+.pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 8px 18px;
+
+  border-radius: 50px;
+
+  background: #e9fdf8;
+  color: #087f6c;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.pricing-title {
+  margin: 0 0 18px;
+
+  color: #17212f;
+
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.pricing-title span,
+.comparison-header h2 span {
+  color: #0aa889;
+}
+
+.pricing-description {
+  max-width: 650px;
+  margin: auto;
+
+  color: #697586;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PRICING ROW
+========================================================= */
+
+.pricing-row {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PRICING CARD
+========================================================= */
+
+.pricing-card {
+  width: 100%;
+  height: 100%;
+
+  min-height: 720px;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ebf0;
+  border-radius: 26px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 45px rgba(23, 33, 47, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pricing-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: #e7ebf0;
+
+  transition: background 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(10, 168, 137, 0.25);
+
+  box-shadow:
+    0 24px 60px rgba(23, 33, 47, 0.12);
+}
+
+.pricing-card:hover::before,
+.pricing-card.recommended::before {
+  background: #0aa889;
+}
+
+.pricing-card.recommended {
+  border-color: rgba(10, 168, 137, 0.35);
+
+  box-shadow:
+    0 18px 55px rgba(10, 168, 137, 0.10);
+}
+
+
+/* =========================================================
+   CARD TOP ROW
+========================================================= */
+
+.card-top-row {
+  min-height: 28px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   PLAN BADGES
+========================================================= */
+
+.plan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 12px;
+
+  border-radius: 30px;
+
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.recommended-badge {
+  background: #e9fdf8;
+  color: #087f6c;
+}
+
+.popular-badge {
+  background: #fff4df;
+  color: #b86b00;
+}
+
+
+/* =========================================================
+   PLAN TOP
+========================================================= */
+
+.plan-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   PLAN ICON
+========================================================= */
+
+.plan-icon-wrapper {
+  width: 56px;
+  height: 56px;
+
+  flex: 0 0 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-icon-default {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #e9fdf8,
+    #f4fffc
+  );
+
+  border: 1px solid rgba(10, 168, 137, 0.15);
+
+  color: #0aa889;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 8px 20px rgba(10, 168, 137, 0.08);
+}
+
+
+/* =========================================================
+   BILLING SWITCH
+========================================================= */
+
+.billing-switch {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px;
+
+  background: #f5f7fa;
+
+  border: 1px solid #e6eaf0;
+
+  border-radius: 50px;
+}
+
+.billing-switch button {
+  border: 0;
+
+  background: transparent;
+
+  color: #667085;
+
+  padding: 8px 12px;
+
+  min-width: 70px;
+
+  border-radius: 40px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.billing-switch button:hover {
+  color: #087f6c;
+}
+
+.billing-switch button.active {
+  color: #ffffff;
+
+  background: #0aa889;
+
+  box-shadow:
+    0 5px 14px rgba(10, 168, 137, 0.22);
+}
+
+.save-text {
+  display: inline-block;
+
+  margin-left: 3px;
+
+  color: inherit;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SINGLE BILLING LABEL
+========================================================= */
+
+.billing-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 12px;
+
+  border-radius: 30px;
+
+  background: #f4f7fa;
+
+  color: #667085;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PLAN INFORMATION
+========================================================= */
+
+.plan-information {
+  min-height: 92px;
+}
+
+.plan-name {
+  margin: 0 0 9px;
+
+  color: #17212f;
+
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.plan-description {
+  margin: 0;
+
+  color: #7b8491;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   PRICE AREA
+========================================================= */
+
+.price-area {
+  margin-top: 22px;
+
+  min-height: 105px;
+}
+
+.price-line {
+  display: flex;
+  align-items: baseline;
+
+  flex-wrap: wrap;
+}
+
+.currency {
+  margin-right: 3px;
+
+  color: #17212f;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.plan-price {
+  color: #17212f;
+
+  font-size: 44px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+.price-period {
+  margin-left: 6px;
+
+  color: #7b8491;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.not-available {
+  color: #98a2b3;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   USER LIMIT
+========================================================= */
+
+.plan-limit {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 14px;
+
+  color: #475467;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.limit-icon {
+  width: 24px;
+  height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9fdf8;
+
+  color: #0aa889;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.pricing-cta {
+  width: 100%;
+  height: 54px;
+
+  margin-top: 20px;
+
+  padding: 0 8px 0 20px;
+
+  border: 0;
+  border-radius: 13px;
+
+  background: #0aa889;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.pricing-cta:hover:not(:disabled) {
+  background: #087f6c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(10, 168, 137, 0.22);
+}
+
+.pricing-cta:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+.cta-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.pricing-cta:hover:not(:disabled) .cta-icon {
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   SECURITY TEXT
+========================================================= */
+
+.secure-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 12px;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.secure-text i {
+  color: #0aa889;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.pricing-divider {
+  height: 1px;
+
+  background: #edf0f3;
+
+  margin: 26px 0;
+}
+
+
+/* =========================================================
+   FEATURES HEADING
+========================================================= */
+
+.features-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.features-eyebrow {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #0aa889;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.features-heading h4 {
+  margin: 0;
+
+  color: #17212f;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.feature-count {
+  min-width: 30px;
+  height: 30px;
+
+  padding: 0 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f0fbf8;
+
+  color: #087f6c;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.feature-row {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 2px 0;
+
+  transition: transform 0.2s ease;
+}
+
+.feature-row:hover {
+  transform: translateX(3px);
+}
+
+.feature-check {
+  flex: 0 0 23px;
+
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9fdf8;
+
+  color: #0aa889;
+
+  font-size: 11px;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  padding-top: 1px;
+}
+
+.feature-name {
+  color: #344054;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  font-weight: 600;
+}
+
+.feature-value {
+  color: #0aa889;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.feature-disabled .feature-check {
+  background: #f2f4f7;
+  color: #98a2b3;
+}
+
+.feature-disabled .feature-name {
+  color: #98a2b3;
+}
+
+
+/* =========================================================
+   EMPTY FEATURES
+========================================================= */
+
+.empty-features {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #98a2b3;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.card-footer-note {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: auto;
+  padding-top: 24px;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.card-footer-note i {
+  color: #0aa889;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.pricing-loading {
+  padding: 80px 20px;
+
+  color: #667085;
+}
+
+.pricing-loading .spinner-border {
+  width: 40px;
+  height: 40px;
+
+  color: #0aa889;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.pricing-error {
+  max-width: 520px;
+
+  margin: 40px auto;
+
+  padding: 35px 25px;
+
+  border-radius: 20px;
+
+  background: #fff5f5;
+
+  border: 1px solid #fee4e2;
+
+  color: #b42318;
+}
+
+.error-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fee4e2;
+
+  font-size: 26px;
+}
+
+.pricing-error h4 {
+  margin-bottom: 8px;
+
+  color: #912018;
+
+  font-weight: 700;
+}
+
+.pricing-error p {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   NO PLANS
+========================================================= */
+
+.no-plans {
+  max-width: 550px;
+
+  margin: 40px auto;
+
+  padding: 45px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ebf0;
+
+  border-radius: 20px;
+}
+
+.no-plans-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #e9fdf8;
+
+  color: #0aa889;
+
+  font-size: 30px;
+}
+
+.no-plans h4 {
+  color: #17212f;
+
+  margin-bottom: 8px;
+}
+
+.no-plans p {
+  margin: 0;
+
+  color: #7b8491;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   COMPARISON SECTION
+========================================================= */
+
+.comparison-section {
+  margin-top: 110px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.comparison-header {
+  max-width: 680px;
+
+  margin: 0 auto 45px;
+}
+
+.comparison-header h2 {
+  margin: 0 0 15px;
+
+  color: #17212f;
+
+  font-size: 36px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.comparison-header p {
+  margin: 0;
+
+  color: #697586;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   COMPARISON TABLE
+========================================================= */
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ebf0;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 15px 50px rgba(23, 33, 47, 0.07);
+}
+
+.comparison-table {
+  width: 100%;
+
+  min-width: 950px;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 20px;
+
+  border-bottom: 1px solid #edf0f3;
+
+  text-align: center;
+}
+
+.comparison-table thead th {
+  background: #f8fafc;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.comparison-table tbody tr:hover td {
+  background: #fbfefd;
+}
+
+
+/* =========================================================
+   FEATURE COLUMN
+========================================================= */
+
+.feature-column {
+  width: 30%;
+
+  text-align: left !important;
+
+  color: #344054;
+
+  font-weight: 700;
+}
+
+.comparison-feature-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #17212f;
+}
+
+.comparison-feature-heading i {
+  color: #0aa889;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   PLAN COLUMN
+========================================================= */
+
+.plan-column {
+  min-width: 200px;
+}
+
+.comparison-plan {
+  position: relative;
+}
+
+.comparison-popular {
+  display: inline-flex;
+
+  margin-bottom: 6px;
+
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  background: #fff4df;
+
+  color: #b86b00;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.comparison-plan-name {
+  color: #17212f;
+
+  font-size: 16px;
+
+  font-weight: 800;
+}
+
+.comparison-billing {
+  margin-top: 4px;
+}
+
+.comparison-billing-label {
+  color: #98a2b3;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.comparison-price {
+  margin-top: 7px;
+
+  color: #0aa889;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.comparison-price small {
+  color: #98a2b3;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   COMPARISON FEATURE
+========================================================= */
+
+.comparison-feature {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.comparison-feature-icon {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9fdf8;
+
+  color: #0aa889;
+
+  font-size: 11px;
+}
+
+.comparison-feature-name {
+  color: #344054;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   COMPARISON VALUE
+========================================================= */
+
+.comparison-feature-value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.comparison-check {
+  width: 29px;
+  height: 29px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9fdf8;
+
+  color: #0aa889;
+
+  font-size: 12px;
+}
+
+.comparison-value {
+  color: #475467;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.comparison-cross {
+  width: 29px;
+  height: 29px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f2f4f7;
+
+  color: #98a2b3;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   COMPARISON FOOTER
+========================================================= */
+
+.comparison-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  margin-top: 20px;
+}
+
+.comparison-footer-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #667085;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.comparison-footer-item > i {
+  color: #0aa889;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .pricing-card {
+    padding: 27px;
+  }
+
+  .plan-price {
+    font-size: 40px;
+  }
+
+  .billing-switch button {
+    min-width: 64px;
+    padding: 8px 9px;
+  }
+
+}
+
+
+@media (max-width: 991px) {
+
+  .pricing-title {
+    font-size: 38px;
+  }
+
+  .pricing-card {
+    min-height: auto;
+  }
+
+  .comparison-section {
+    margin-top: 80px;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .pricing-header {
+    margin-bottom: 40px;
+  }
+
+  .pricing-title {
+    font-size: 34px;
+  }
+
+  .pricing-description {
+    font-size: 14px;
+  }
+
+  .pricing-card {
+    padding: 25px 22px;
+
+    border-radius: 20px;
+  }
+
+  .plan-top {
+    align-items: flex-start;
+  }
+
+  .billing-switch {
+    max-width: 150px;
+  }
+
+  .billing-switch button {
+    min-width: 60px;
+
+    padding: 8px 8px;
+
+    font-size: 10px;
+  }
+
+  .plan-name {
+    font-size: 22px;
+  }
+
+  .plan-price {
+    font-size: 38px;
+  }
+
+  .comparison-section {
+    margin-top: 70px;
+  }
+
+  .comparison-header h2 {
+    font-size: 30px;
+  }
+
+}
+
+
+@media (max-width: 575px) {
+
+  .pricing-section {
+    padding-top: 65px !important;
+    padding-bottom: 65px !important;
+  }
+
+  .pricing-title {
+    font-size: 29px;
+  }
+
+  .pricing-description {
+    font-size: 13px;
+  }
+
+  .pricing-card {
+    padding: 22px 18px;
+
+    border-radius: 18px;
+  }
+
+  .plan-top {
+    gap: 10px;
+  }
+
+  .plan-icon-wrapper {
+    width: 48px;
+    height: 48px;
+
+    flex-basis: 48px;
+  }
+
+  .plan-icon-default {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+  }
+
+  .billing-switch button {
+    min-width: 55px;
+
+    padding: 7px 7px;
+
+    font-size: 9px;
+  }
+
+  .save-text {
+    display: none;
+  }
+
+  .billing-label {
+    padding: 7px 9px;
+
+    font-size: 10px;
+  }
+
+  .plan-name {
+    font-size: 21px;
+  }
+
+  .plan-description {
+    font-size: 13px;
+  }
+
+  .plan-price {
+    font-size: 35px;
+  }
+
+  .currency {
+    font-size: 19px;
+  }
+
+  .price-period {
+    font-size: 12px;
+  }
+
+  .features-heading h4 {
+    font-size: 14px;
+  }
+
+  .feature-name {
+    font-size: 12px;
+  }
+
+  .pricing-cta {
+    height: 50px;
+
+    font-size: 13px;
+  }
+
+  .cta-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .comparison-header h2 {
+    font-size: 27px;
+  }
+
+  .comparison-header p {
+    font-size: 13px;
+  }
+
+  .comparison-footer {
+    gap: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .pricing-card,
+  .pricing-cta,
+  .feature-row,
+  .billing-switch button {
+    transition: none;
+  }
+
+}
+
+/* =========================================================
+   FINAL COMPACT PRICING CARDS
+========================================================= */
+
+.pricing-row {
+  --bs-gutter-x: 16px;
+  --bs-gutter-y: 20px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.pricing-card {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 22px 20px 18px;
+
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 100%
+  );
+
+  box-shadow:
+    0 8px 30px rgba(23, 33, 47, 0.055);
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 45px rgba(23, 33, 47, 0.10);
+}
+
+.pricing-card.recommended {
+  border-color: rgba(10, 168, 137, 0.45);
+
+  box-shadow:
+    0 12px 40px rgba(10, 168, 137, 0.12);
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.card-top-row {
+  min-height: 24px;
+
+  margin-bottom: 12px;
+}
+
+.plan-badge {
+  padding: 5px 9px;
+
+  font-size: 10px;
+}
+
+.plan-top {
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.plan-icon-wrapper {
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+}
+
+.plan-icon-default {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 13px;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   BILLING SWITCH
+========================================================= */
+
+.billing-switch {
+  padding: 3px;
+}
+
+.billing-switch button {
+  min-width: 58px;
+
+  padding: 6px 8px;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   PLAN INFO
+========================================================= */
+
+.plan-information {
+  min-height: 0 !important;
+
+  margin-bottom: 0;
+}
+
+.plan-name {
+  margin-bottom: 5px;
+
+  font-size: 21px;
+}
+
+.plan-description {
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price-area {
+  margin-top: 14px;
+
+  min-height: 0 !important;
+
+  margin-bottom: 0;
+}
+
+.currency {
+  font-size: 18px;
+}
+
+.plan-price {
+  font-size: 36px;
+
+  letter-spacing: -0.8px;
+}
+
+.price-period {
+  margin-left: 4px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   USER LIMIT
+========================================================= */
+
+.plan-limit {
+  margin-top: 8px;
+
+  font-size: 11px;
+}
+
+.limit-icon {
+  width: 21px;
+  height: 21px;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.pricing-cta {
+  height: 46px;
+
+  margin-top: 14px;
+
+  padding-left: 16px;
+
+  border-radius: 11px;
+
+  font-size: 12px;
+}
+
+.cta-icon {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.secure-text {
+  margin-top: 9px;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.pricing-divider {
+  margin: 17px 0 15px;
+}
+
+
+/* =========================================================
+   FEATURE HEADER
+========================================================= */
+
+.features-heading {
+  margin-bottom: 12px;
+}
+
+.features-eyebrow {
+  font-size: 9px;
+}
+
+.features-heading h4 {
+  font-size: 14px;
+}
+
+.feature-count {
+  min-width: 27px;
+  height: 27px;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.feature-list {
+  gap: 8px;
+
+  flex: none !important;
+}
+
+.feature-row {
+  gap: 8px;
+
+  padding: 1px 0;
+}
+
+.feature-check {
+  width: 20px;
+  height: 20px;
+
+  flex: 0 0 20px;
+
+  font-size: 9px;
+}
+
+.feature-name {
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+.feature-value {
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   MORE FEATURES
+========================================================= */
+
+.more-features {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 12px;
+
+  padding-top: 11px;
+
+  border-top: 1px dashed #e5e9ed;
+}
+
+.more-features-count {
+  color: #667085;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.view-features-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #0aa889;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.view-features-btn:hover {
+  color: #087f6c;
+}
+
+.view-features-btn i {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.card-footer-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 12px !important;
+
+  padding-top: 0 !important;
+
+  color: #98a2b3;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+.card-footer-note i {
+  color: #0aa889;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   IMPORTANT
+   REMOVE FLEX PUSHING
+========================================================= */
+
+.pricing-card .card-footer-note {
+  margin-top: 12px !important;
+}
+
+.pricing-card .feature-list {
+  flex: none !important;
+}
+
+
+/* =========================================================
+   4 COLUMN DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .pricing-row {
+    --bs-gutter-x: 16px;
+  }
+
+  .pricing-card {
+    padding: 20px 18px 17px;
+  }
+
+  .plan-name {
+    font-size: 20px;
+  }
+
+  .plan-price {
+    font-size: 34px;
+  }
+
+  .feature-name {
+    font-size: 10.5px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .pricing-card {
+    padding: 24px 20px 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .pricing-card {
+    padding: 24px 20px;
+
+    border-radius: 20px;
+  }
+
+  .plan-price {
+    font-size: 38px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .pricing-card {
+    padding: 22px 18px;
+
+    border-radius: 18px;
+  }
+
+  .plan-price {
+    font-size: 35px;
+  }
+
+  .more-features {
+    margin-top: 12px;
+  }
+
+  .more-features-count,
+  .view-features-btn {
+    font-size: 10px;
+  }
+
+}

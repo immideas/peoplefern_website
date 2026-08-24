@@ -1,219 +1,347 @@
-import { Component } from '@angular/core';
-import { Breadcrumb } from '../../component/breadcrumb/breadcrumb';
 import { CommonModule } from '@angular/common';
+import { Component, AfterViewInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Breadcrumb } from '../../component/breadcrumb/breadcrumb';
 import { AnimationService } from '../../services/animation';
-import { ToastService } from '../../services/toast.service';
-import { FormsModule } from '@angular/forms';
+
+interface ComparisonFeature {
+  name: string;
+  description: string;
+  peopleVault: boolean | string;
+  traditional: boolean | string;
+  spreadsheets: boolean | string;
+  disconnected: boolean | string;
+}
 
 @Component({
   selector: 'app-cart',
-  imports: [Breadcrumb, CommonModule, RouterLink, FormsModule],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterLink,
+    Breadcrumb
+  ],
   templateUrl: './cart.html',
-   standalone: true,
   styleUrl: './cart.css'
 })
-export class Cart {
-  cartItems = [
+export class Cart implements AfterViewInit {
+
+  /*
+  ============================================================
+  HERO / PRODUCT OPTIONS
+  ============================================================
+  */
+
+  comparisonProducts = [
     {
-      id: 1,
-      name: 'Apple Watch',
-      price: 12.00,
-      quantity: 1,
-      total: 12.00,
-      img: 'assets/images/thumbs/cart-img1.png',
-      link: 'shop-details'
+      name: 'PeopleVault',
+      subtitle: 'Connected HRMS',
+      description:
+        'A centralized HRMS for managing employee information and core HR operations.',
+      badge: 'Recommended',
+      highlighted: true
     },
     {
-      id: 2,
-      name: 'Sumsang Hand Set',
-      price: 34.00,
-      quantity: 2,
-      total: 68.00,
-      img: 'assets/images/thumbs/cart-img2.png',
-      link: 'shop-details'
+      name: 'Traditional HR Software',
+      subtitle: 'Standard HR Platform',
+      description:
+        'Core HR capabilities with workflows that may vary by configuration.',
+      badge: '',
+      highlighted: false
     },
     {
-      id: 3,
-      name: 'Tata Brand Car',
-      price: 345.00,
-      quantity: 1,
-      total: 345.00,
-      img: 'assets/images/thumbs/cart-img3.png',
-      link: 'shop-details'
+      name: 'Spreadsheet-Based HR',
+      subtitle: 'Manual Management',
+      description:
+        'Employee and HR information managed through spreadsheets and manual processes.',
+      badge: '',
+      highlighted: false
     },
     {
-      id: 4,
-      name: 'Sumsang Hand Set',
-      price: 34.00,
-      quantity: 2,
-      total: 68.00,
-      img: 'assets/images/thumbs/cart-img4.png',
-      link: 'shop-details'
+      name: 'Disconnected Tools',
+      subtitle: 'Multiple Systems',
+      description:
+        'Different HR activities managed across separate applications and tools.',
+      badge: '',
+      highlighted: false
     }
   ];
 
-  // Coupon code
-  couponCode = '';
+  /*
+  ============================================================
+  COMPARISON FEATURES
+  ============================================================
+  */
 
-  // Calculate totals
-  get subtotal(): number {
-    return this.cartItems.reduce((sum, item) => sum + item.total, 0);
-  }
+  comparisonFeatures: ComparisonFeature[] = [
 
-  get total(): number {
-    return this.subtotal + 105; // Adding shipping cost
-  }
+    {
+      name: 'Employee Management',
+      description:
+        'Centralized employee profiles, employment information and workforce records.',
+      peopleVault: true,
+      traditional: true,
+      spreadsheets: true,
+      disconnected: 'Partial'
+    },
 
-   tags2 = [
-  { label: 'Project management', textColor: 'text-white', bgClass: 'gradient-bg-six' },
-  { label: 'Technology', textColor: 'text-heading', bgClass: 'bg-paste' },
-  { label: 'Technology', textColor: 'text-heading', bgClass: 'gradient-bg-six' },
-  { label: 'Project management', textColor: 'text-heading', bgClass: 'bg-yellow' },
-  { label: 'Technology', textColor: 'text-heading', bgClass: 'bg-orange' },
-  { label: 'Technology', textColor: 'text-heading', bgClass: 'gradient-bg-six' },
-  { label: 'Project management', textColor: 'text-heading', bgClass: 'bg-orange' },
-  { label: 'Technology', textColor: 'text-heading', bgClass: 'gradient-bg-six' },
-  { label: 'Project management', textColor: 'text-heading', bgClass: 'bg-paste' },
-  { label: 'Technology', textColor: 'text-heading', bgClass: 'bg-pink' }
-];
+    {
+      name: 'Attendance Management',
+      description:
+        'Centralized attendance information and workforce tracking.',
+      peopleVault: true,
+      traditional: true,
+      spreadsheets: 'Manual',
+      disconnected: 'Partial'
+    },
+
+    {
+      name: 'Leave Management',
+      description:
+        'Leave configuration, requests, balances and approval workflows.',
+      peopleVault: true,
+      traditional: true,
+      spreadsheets: 'Manual',
+      disconnected: 'Partial'
+    },
+
+    {
+      name: 'Payroll',
+      description:
+        'Salary structures, salary components, deductions and payroll information.',
+      peopleVault: true,
+      traditional: true,
+      spreadsheets: 'Manual',
+      disconnected: 'Partial'
+    },
+
+    {
+      name: 'Company Policies',
+      description:
+        'Create, publish and manage company policies and employee acknowledgments.',
+      peopleVault: true,
+      traditional: 'Partial',
+      spreadsheets: 'Manual',
+      disconnected: 'Partial'
+    },
+
+    {
+      name: 'KYC & Documents',
+      description:
+        'Maintain employee KYC information and supporting documents.',
+      peopleVault: true,
+      traditional: 'Partial',
+      spreadsheets: 'Manual',
+      disconnected: 'Partial'
+    },
+
+    {
+      name: 'Roles & Permissions',
+      description:
+        'Control what users can access and manage according to their responsibilities.',
+      peopleVault: true,
+      traditional: true,
+      spreadsheets: 'Limited',
+      disconnected: 'Partial'
+    },
+
+    {
+      name: 'Reports & Analytics',
+      description:
+        'Access consolidated workforce and HR information through reports.',
+      peopleVault: true,
+      traditional: true,
+      spreadsheets: 'Manual',
+      disconnected: 'Partial'
+    },
+
+    {
+      name: 'Centralized Workforce Data',
+      description:
+        'Bring employee and HR information together in one platform.',
+      peopleVault: true,
+      traditional: true,
+      spreadsheets: 'Limited',
+      disconnected: false
+    },
+
+    {
+      name: 'Connected HR Workflows',
+      description:
+        'Connect important HR activities within one centralized environment.',
+      peopleVault: true,
+      traditional: 'Partial',
+      spreadsheets: false,
+      disconnected: false
+    },
+
+    {
+      name: 'Scalable for Growing Teams',
+      description:
+        'Designed to support organizations as their workforce and HR processes grow.',
+      peopleVault: true,
+      traditional: true,
+      spreadsheets: 'Limited',
+      disconnected: 'Partial'
+    }
+  ];
+
+  /*
+  ============================================================
+  HIGHLIGHTS
+  ============================================================
+  */
+
+  highlights = [
+    {
+      icon: 'ph-users-three',
+      title: 'One Employee Record',
+      description:
+        'Keep employee information organized in one centralized environment.'
+    },
+    {
+      icon: 'ph-arrows-clockwise',
+      title: 'Connected Workflows',
+      description:
+        'Bring core HR processes together instead of managing them separately.'
+    },
+    {
+      icon: 'ph-shield-check',
+      title: 'Controlled Access',
+      description:
+        'Manage access according to configured roles and responsibilities.'
+    },
+    {
+      icon: 'ph-chart-line-up',
+      title: 'Better Visibility',
+      description:
+        'Get a consolidated view of workforce information and HR operations.'
+    }
+  ];
+
+  /*
+  ============================================================
+  STATS
+  ============================================================
+  */
+
+  stats = [
+    {
+      value: '1',
+      suffix: '',
+      label: 'Centralized Platform'
+    },
+    {
+      value: '8',
+      suffix: '+',
+      label: 'Core HR Areas'
+    },
+    {
+      value: '1',
+      suffix: '',
+      label: 'Connected Workforce View'
+    },
+    {
+      value: '24/7',
+      suffix: '',
+      label: 'Access to HR Information'
+    }
+  ];
+
+  /*
+  ============================================================
+  FAQ
+  ============================================================
+  */
+
+  faqs = [
+    {
+      question: 'Why compare PeopleVault with spreadsheets?',
+      answer:
+        'Spreadsheets can be useful for simple record keeping, but PeopleVault is designed to bring employee information and core HR workflows together in one centralized environment.',
+      expanded: true
+    },
+
+    {
+      question: 'Can PeopleVault manage multiple HR processes?',
+      answer:
+        'Yes. PeopleVault brings employee management, attendance, leave, payroll, policies, KYC and documents, roles and permissions, and reports into one HRMS environment.',
+      expanded: false
+    },
+
+    {
+      question: 'Can different users have different access?',
+      answer:
+        'Yes. Roles and permissions can be configured so users receive access according to their responsibilities.',
+      expanded: false
+    },
+
+    {
+      question: 'Is PeopleVault suitable for growing organizations?',
+      answer:
+        'PeopleVault is designed around centralized workforce information and connected HR workflows, making it suitable for organizations looking to organize their HR operations as they grow.',
+      expanded: false
+    }
+  ];
+
   constructor(
-    private animationService: AnimationService,
-    private toastService: ToastService
+    private animationService: AnimationService
   ) {}
 
   ngAfterViewInit(): void {
     this.animationService.initAnimations();
   }
 
-  // TrackBy function for ngFor performance
-  trackByItemId(index: number, item: any): number {
-    return item.id;
+  /*
+  ============================================================
+  HELPERS
+  ============================================================
+  */
+
+  trackByFeature(index: number, feature: ComparisonFeature): string {
+    return feature.name;
   }
 
-  // Delete item from cart
-  deleteItem(itemId: number) {
-    const item = this.cartItems.find(item => item.id === itemId);
-    if (item) {
-      this.cartItems = this.cartItems.filter(item => item.id !== itemId);
-
-      // Show success toast
-      this.toastService.error(
-        'Item Deleted',
-        `You deleted ${item.name} successfully!`,
-        'ph-bold ph-trash'
-      );
-    }
+  isBoolean(value: boolean | string): boolean {
+    return typeof value === 'boolean';
   }
 
-  // Increment quantity
-  incrementQuantity(itemId: number) {
-    const item = this.cartItems.find(item => item.id === itemId);
-    if (item) {
-      item.quantity++;
-      item.total = item.price * item.quantity;
+  getStatusClass(value: boolean | string): string {
 
-      this.toastService.info(
-        'Quantity Updated',
-        `${item.name} quantity increased to ${item.quantity}`,
-        'ph-bold ph-plus-circle'
-      );
+    if (value === true) {
+      return 'status-yes';
     }
+
+    if (value === false) {
+      return 'status-no';
+    }
+
+    return 'status-partial';
   }
 
-  // Decrement quantity
-  decrementQuantity(itemId: number) {
-    const item = this.cartItems.find(item => item.id === itemId);
-    if (item && item.quantity > 1) {
-      item.quantity--;
-      item.total = item.price * item.quantity;
+  getStatusIcon(value: boolean | string): string {
 
-      this.toastService.info(
-        'Quantity Updated',
-        `${item.name} quantity decreased to ${item.quantity}`,
-        'ph-bold ph-minus-circle'
-      );
-    } else if (item && item.quantity === 1) {
-      // If quantity is 1, delete the item
-      this.deleteItem(itemId);
+    if (value === true) {
+      return 'ph-check-circle';
     }
+
+    if (value === false) {
+      return 'ph-x-circle';
+    }
+
+    return 'ph-minus-circle';
   }
 
-  // Update quantity manually
-  updateQuantity(itemId: number, newQuantity: number) {
-    const item = this.cartItems.find(item => item.id === itemId);
-    if (item) {
-      if (newQuantity <= 0) {
-        this.deleteItem(itemId);
-      } else {
-        item.quantity = newQuantity;
-        item.total = item.price * item.quantity;
+  getStatusText(value: boolean | string): string {
 
-        this.toastService.info(
-          'Quantity Updated',
-          `${item.name} quantity updated to ${item.quantity}`,
-          'ph-bold ph-pencil'
-        );
-      }
-    }
-  }
-
-  // Apply coupon code
-  applyCoupon(event: Event) {
-    event.preventDefault();
-
-    if (!this.couponCode) {
-      this.toastService.error(
-        'Coupon Code Required',
-        'Please enter a coupon code',
-        'ph-bold ph-ticket'
-      );
-      return;
+    if (value === true) {
+      return 'Included';
     }
 
-    // Simulate coupon validation
-    const validCoupons = ['SAVE10', 'DISCOUNT20', 'WELCOME15'];
-    if (validCoupons.includes(this.couponCode.toUpperCase())) {
-      this.toastService.success(
-        'Coupon Applied',
-        `Coupon code "${this.couponCode}" has been applied successfully!`,
-        'ph-bold ph-check-circle'
-      );
-      this.couponCode = '';
-    } else {
-      this.toastService.error(
-        'Invalid Coupon',
-        'The coupon code you entered is not valid',
-        'ph-bold ph-x-circle'
-      );
-    }
-  }
-
-  // Update cart
-  updateCart() {
-    this.toastService.success(
-      'Cart Updated',
-      'Your cart has been updated successfully!',
-      'ph-bold ph-check-circle'
-    );
-  }
-
-  // Clear entire cart
-  clearCart() {
-    if (this.cartItems.length === 0) {
-      this.toastService.warning(
-        'Cart Empty',
-        'Your cart is already empty',
-        'ph-bold ph-shopping-cart'
-      );
-      return;
+    if (value === false) {
+      return 'Not available';
     }
 
-    this.cartItems = [];
-    this.toastService.error(
-      'Cart Cleared',
-      'All items have been removed from your cart',
-      'ph-bold ph-trash'
-    );
+    return value;
   }
 }

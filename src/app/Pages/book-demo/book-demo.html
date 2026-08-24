@@ -1,0 +1,673 @@
+<app-breadcrumb title="Book a Demo"></app-breadcrumb>
+
+<!-- =========================================================
+     PEOPLEVAULT BOOK DEMO PAGE
+========================================================= -->
+
+<section class="peoplevault-demo-section">
+
+  <div class="container">
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <div
+      class="peoplevault-demo-hero text-center"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+
+      <span class="peoplevault-demo-badge">
+        PEOPLEVAULT HRMS
+      </span>
+
+      <h1 class="peoplevault-demo-title">
+        See How PeopleVault Can
+        <span>Simplify Your HR.</span>
+      </h1>
+
+      <p class="peoplevault-demo-subtitle">
+        Book a personalized demo and discover how PeopleVault can help
+        your organization manage employees, attendance, leave,
+        HR operations and workforce information from one centralized platform.
+      </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN DEMO AREA
+    ====================================================== -->
+
+    <div class="row g-4 g-xl-5 align-items-stretch">
+
+      <!-- ===================================================
+           LEFT INFORMATION
+      ==================================================== -->
+
+      <div class="col-lg-5">
+
+        <div
+          class="peoplevault-demo-info"
+          data-aos="fade-right"
+          data-aos-duration="900"
+        >
+
+          <span class="peoplevault-info-label">
+            WHY PEOPLEVAULT?
+          </span>
+
+          <h2>
+            One Platform for
+            <span>Modern HR Teams.</span>
+          </h2>
+
+          <p class="peoplevault-info-description">
+            Get a closer look at how PeopleVault can bring your
+            employee information and HR processes together in one
+            organized and easy-to-manage platform.
+          </p>
+
+
+          <!-- Feature 1 -->
+
+          <div class="peoplevault-demo-feature">
+
+            <div class="peoplevault-feature-icon">
+              <i class="ph ph-users-three"></i>
+            </div>
+
+            <div>
+              <h5>Centralized Employee Management</h5>
+
+              <p>
+                Manage employee profiles, roles, designations,
+                employment information and documents.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Feature 2 -->
+
+          <div class="peoplevault-demo-feature">
+
+            <div class="peoplevault-feature-icon">
+              <i class="ph ph-calendar-check"></i>
+            </div>
+
+            <div>
+              <h5>Attendance & Leave</h5>
+
+              <p>
+                Simplify attendance tracking, leave requests,
+                approvals and workforce management.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Feature 3 -->
+
+          <div class="peoplevault-demo-feature">
+
+            <div class="peoplevault-feature-icon">
+              <i class="ph ph-shield-check"></i>
+            </div>
+
+            <div>
+              <h5>Secure HR Operations</h5>
+
+              <p>
+                Use structured access control and permissions
+                to help protect workforce information.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Trust -->
+
+          <div class="peoplevault-demo-trust">
+
+            <div class="peoplevault-trust-icon">
+              <i class="ph ph-check-circle"></i>
+            </div>
+
+            <div>
+              <strong>No complicated setup</strong>
+
+              <span>
+                Get a guided walkthrough from our team.
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===================================================
+           RIGHT DEMO FORM
+      ==================================================== -->
+
+      <div class="col-lg-7">
+
+        <div
+          class="peoplevault-demo-form-card"
+          data-aos="fade-left"
+          data-aos-duration="900"
+        >
+
+          <!-- Form Header -->
+
+          <div class="peoplevault-form-header">
+
+            <div>
+
+              <span>
+                REQUEST A DEMO
+              </span>
+
+              <h3>
+                Let's Talk About Your HR Needs
+              </h3>
+
+            </div>
+
+            <div class="peoplevault-form-header-icon">
+              <i class="ph ph-calendar-plus"></i>
+            </div>
+
+          </div>
+
+
+          <!-- Form -->
+
+          <form
+            #demoForm="ngForm"
+            (ngSubmit)="onDemoSubmit()"
+            novalidate
+          >
+
+            <div class="row g-4">
+
+
+              <!-- First Name -->
+
+              <div class="col-md-6">
+
+                <label for="firstName">
+                  First Name
+                  <span>*</span>
+                </label>
+
+                <div class="peoplevault-input">
+
+                  <i class="ph ph-user"></i>
+
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    [(ngModel)]="demoFormData.firstName"
+                    placeholder="Enter first name"
+                    required
+                  >
+
+                </div>
+
+              </div>
+
+
+              <!-- Last Name -->
+
+              <div class="col-md-6">
+
+                <label for="lastName">
+                  Last Name
+                  <span>*</span>
+                </label>
+
+                <div class="peoplevault-input">
+
+                  <i class="ph ph-user"></i>
+
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    [(ngModel)]="demoFormData.lastName"
+                    placeholder="Enter last name"
+                    required
+                  >
+
+                </div>
+
+              </div>
+
+
+              <!-- Work Email -->
+
+              <div class="col-md-6">
+
+                <label for="email">
+                  Work Email
+                  <span>*</span>
+                </label>
+
+                <div class="peoplevault-input">
+
+                  <i class="ph ph-envelope"></i>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    [(ngModel)]="demoFormData.email"
+                    placeholder="you@company.com"
+                    required
+                  >
+
+                </div>
+
+              </div>
+
+
+              <!-- Phone -->
+
+              <div class="col-md-6">
+
+                <label for="phone">
+                  Phone Number
+                  <span>*</span>
+                </label>
+
+                <div class="peoplevault-input">
+
+                  <i class="ph ph-phone"></i>
+
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    [(ngModel)]="demoFormData.phone"
+                    placeholder="+91 98765 43210"
+                    required
+                  >
+
+                </div>
+
+              </div>
+
+
+              <!-- Company -->
+
+              <div class="col-md-6">
+
+                <label for="company">
+                  Company Name
+                  <span>*</span>
+                </label>
+
+                <div class="peoplevault-input">
+
+                  <i class="ph ph-buildings"></i>
+
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    [(ngModel)]="demoFormData.company"
+                    placeholder="Your company name"
+                    required
+                  >
+
+                </div>
+
+              </div>
+
+
+              <!-- Employees -->
+
+              <div class="col-md-6">
+
+                <label for="employees">
+                  Number of Employees
+                  <span>*</span>
+                </label>
+
+                <div class="peoplevault-input">
+
+                  <i class="ph ph-users"></i>
+
+                  <select
+                    id="employees"
+                    name="employees"
+                    [(ngModel)]="demoFormData.employees"
+                    required
+                  >
+
+                    <option value="" disabled>
+                      Select employee count
+                    </option>
+
+                    <option value="1-25">
+                      1 - 25
+                    </option>
+
+                    <option value="26-100">
+                      26 - 100
+                    </option>
+
+                    <option value="101-250">
+                      101 - 250
+                    </option>
+
+                    <option value="251-500">
+                      251 - 500
+                    </option>
+
+                    <option value="501-1000">
+                      501 - 1,000
+                    </option>
+
+                    <option value="1000+">
+                      1,000+
+                    </option>
+
+                  </select>
+
+                </div>
+
+              </div>
+
+
+              <!-- Interested In -->
+
+              <div class="col-12">
+
+                <label for="interest">
+                  What would you like to explore?
+                </label>
+
+                <div class="peoplevault-input">
+
+                  <i class="ph ph-sparkle"></i>
+
+                  <select
+                    id="interest"
+                    name="interest"
+                    [(ngModel)]="demoFormData.interest"
+                  >
+
+                    <option value="">
+                      Select an area
+                    </option>
+
+                    <option value="employee-management">
+                      Employee Management
+                    </option>
+
+                    <option value="attendance">
+                      Attendance Management
+                    </option>
+
+                    <option value="leave">
+                      Leave Management
+                    </option>
+
+                    <option value="payroll">
+                      Payroll
+                    </option>
+
+                    <option value="reports">
+                      HR Reports & Analytics
+                    </option>
+
+                    <option value="security">
+                      HR Data Security
+                    </option>
+
+                    <option value="complete-hrms">
+                      Complete HRMS
+                    </option>
+
+                  </select>
+
+                </div>
+
+              </div>
+
+
+              <!-- Message -->
+
+              <div class="col-12">
+
+                <label for="message">
+                  Tell us about your requirements
+                </label>
+
+                <div class="peoplevault-textarea">
+
+                  <i class="ph ph-note-pencil"></i>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    [(ngModel)]="demoFormData.message"
+                    placeholder="Tell us about your HR requirements..."
+                  ></textarea>
+
+                </div>
+
+              </div>
+
+
+              <!-- Consent -->
+
+              <div class="col-12">
+
+                <label class="peoplevault-checkbox">
+
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    [(ngModel)]="demoFormData.consent"
+                  >
+
+                  <span class="peoplevault-checkmark"></span>
+
+                  <span>
+                    I agree to be contacted by PeopleVault regarding
+                    this demo request.
+                  </span>
+
+                </label>
+
+              </div>
+
+
+              <!-- Submit -->
+
+              <div class="col-12">
+
+                <button
+                  type="submit"
+                  class="peoplevault-demo-submit"
+                  [disabled]="isLoading"
+                >
+
+                  <span *ngIf="!isLoading">
+                    Request My Demo
+                  </span>
+
+                  <span *ngIf="isLoading">
+                    Sending Request...
+                  </span>
+
+                  <i
+                    *ngIf="!isLoading"
+                    class="ph ph-arrow-up-right"
+                  ></i>
+
+                  <i
+                    *ngIf="isLoading"
+                    class="ph ph-spinner"
+                  ></i>
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+
+          <!-- Security Note -->
+
+          <div class="peoplevault-form-security">
+
+            <i class="ph ph-lock-key"></i>
+
+            <span>
+              Your information is handled responsibly and used
+              only to respond to your demo request.
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     BOTTOM BENEFITS
+========================================================= -->
+
+<section class="peoplevault-demo-benefits">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+
+        <div class="peoplevault-benefit-card">
+
+          <div class="peoplevault-benefit-icon">
+            <i class="ph ph-presentation-chart"></i>
+          </div>
+
+          <h5>Personalized Walkthrough</h5>
+
+          <p>
+            See the platform through the lens of your organization's
+            HR requirements.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4">
+
+        <div class="peoplevault-benefit-card">
+
+          <div class="peoplevault-benefit-icon">
+            <i class="ph ph-chats-circle"></i>
+          </div>
+
+          <h5>Discuss Your Requirements</h5>
+
+          <p>
+            Talk with our team about your workforce processes,
+            challenges and goals.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4">
+
+        <div class="peoplevault-benefit-card">
+
+          <div class="peoplevault-benefit-icon">
+            <i class="ph ph-rocket-launch"></i>
+          </div>
+
+          <h5>Plan Your Next Step</h5>
+
+          <p>
+            Understand how PeopleVault can fit into your HR
+            operations and growth plans.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="peoplevault-demo-cta">
+
+  <div class="container">
+
+    <div class="peoplevault-demo-cta-box">
+
+      <div>
+
+        <span>
+          PEOPLEVAULT HRMS
+        </span>
+
+        <h2>
+          Ready to modernize your HR operations?
+        </h2>
+
+        <p>
+          Let's explore how PeopleVault can help your organization
+          build a simpler and more organized HR experience.
+        </p>
+
+      </div>
+
+      <a
+        routerLink="/features"
+        class="peoplevault-demo-cta-btn"
+      >
+        Explore Features
+        <i class="ph ph-arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

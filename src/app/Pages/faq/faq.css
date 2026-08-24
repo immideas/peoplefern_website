@@ -1,0 +1,836 @@
+/* =========================================================
+   PEOPLEVAULT FAQ PAGE
+========================================================= */
+
+.peoplevault-faq-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0 110px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(93, 211, 158, 0.16), transparent 30%),
+    radial-gradient(circle at 85% 10%, rgba(74, 144, 226, 0.12), transparent 28%),
+    linear-gradient(135deg, #f4fbf8 0%, #f8fbff 55%, #f5f8ff 100%);
+}
+
+.peoplevault-faq-hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 1px solid rgba(33, 173, 121, 0.12);
+  top: -160px;
+  left: -120px;
+}
+
+.peoplevault-faq-hero::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(33, 173, 121, 0.10);
+  right: -100px;
+  bottom: -130px;
+}
+
+.peoplevault-faq-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.peoplevault-faq-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  background: rgba(31, 180, 126, 0.10);
+  color: #149567;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  margin-bottom: 22px;
+}
+
+.peoplevault-faq-badge i {
+  font-size: 18px;
+}
+
+.peoplevault-faq-hero h1 {
+  margin: 0;
+  color: #172b4d;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -1.8px;
+}
+
+.peoplevault-faq-hero h1 span {
+  display: block;
+  background: linear-gradient(90deg, #16a978, #1187c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.peoplevault-faq-hero p {
+  max-width: 700px;
+  margin: 22px auto 0;
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FAQ SEARCH
+========================================================= */
+
+.peoplevault-faq-search {
+  position: relative;
+  max-width: 720px;
+  margin: 38px auto 0;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 8px;
+  box-shadow: 0 18px 50px rgba(24, 56, 82, 0.12);
+  border: 1px solid rgba(30, 100, 120, 0.08);
+}
+
+.peoplevault-faq-search .search-icon {
+  position: absolute;
+  left: 25px;
+  color: #8b98a9;
+  font-size: 22px;
+  z-index: 2;
+}
+
+.peoplevault-faq-search input {
+  width: 100%;
+  height: 58px;
+  border: 0;
+  outline: 0;
+  padding: 0 150px 0 58px;
+  color: #172b4d;
+  font-size: 15px;
+  background: transparent;
+}
+
+.peoplevault-faq-search input::placeholder {
+  color: #98a2b3;
+}
+
+.peoplevault-faq-search button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  bottom: 8px;
+  border: 0;
+  border-radius: 13px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #18aa78, #087f9e);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.peoplevault-faq-search button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(20, 160, 120, 0.25);
+}
+
+
+/* =========================================================
+   POPULAR SEARCH
+========================================================= */
+
+.peoplevault-popular-search {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.peoplevault-popular-search > span {
+  color: #344054;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.peoplevault-popular-search button {
+  border: 1px solid #e4e9ef;
+  background: #fff;
+  color: #667085;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.peoplevault-popular-search button:hover {
+  color: #fff;
+  background: #16a978;
+  border-color: #16a978;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   QUICK HELP CARDS
+========================================================= */
+
+.peoplevault-faq-benefits {
+  position: relative;
+  z-index: 5;
+  margin-top: -35px;
+  padding-bottom: 30px;
+}
+
+.peoplevault-faq-benefit-card {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #edf1f5;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(20, 42, 70, 0.07);
+  transition: all 0.3s ease;
+}
+
+.peoplevault-faq-benefit-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(20, 42, 70, 0.12);
+  border-color: rgba(22, 169, 120, 0.25);
+}
+
+.faq-benefit-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #e5f9f1, #e8f6ff);
+  color: #15976f;
+  font-size: 25px;
+}
+
+.peoplevault-faq-benefit-card h5 {
+  margin: 0 0 7px;
+  color: #172b4d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.peoplevault-faq-benefit-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   MAIN FAQ SECTION
+========================================================= */
+
+.peoplevault-faq-section {
+  background: #fff;
+}
+
+.peoplevault-faq-section-alt {
+  background: #f8fafc;
+}
+
+.peoplevault-faq-intro {
+  position: sticky;
+  top: 110px;
+}
+
+.faq-section-label {
+  display: inline-block;
+  color: #16a978;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.peoplevault-faq-intro h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 40px;
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.peoplevault-faq-intro h2 span {
+  color: #16a978;
+}
+
+.peoplevault-faq-intro > p {
+  margin: 20px 0 0;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   INFO BOX
+========================================================= */
+
+.faq-info-box {
+  margin-top: 28px;
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  border-radius: 16px;
+  background: #f1faf6;
+  border: 1px solid #d8f1e6;
+}
+
+.faq-info-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #fff;
+  color: #16a978;
+  font-size: 21px;
+}
+
+.faq-info-box strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #172b4d;
+  font-size: 14px;
+}
+
+.faq-info-box span {
+  display: block;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FAQ BUTTON
+========================================================= */
+
+.peoplevault-faq-button {
+  margin-top: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 21px;
+  border-radius: 12px;
+  color: #fff;
+  background: #172b4d;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.peoplevault-faq-button:hover {
+  color: #fff;
+  background: #16a978;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FAQ ACCORDION
+========================================================= */
+
+.peoplevault-faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.peoplevault-faq-item {
+  padding: 22px 25px !important;
+  border: 1px solid #e9edf2 !important;
+  border-radius: 17px !important;
+  background: #fff !important;
+  box-shadow: 0 8px 25px rgba(20, 42, 70, 0.04);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.peoplevault-faq-item:hover {
+  border-color: rgba(22, 169, 120, 0.25) !important;
+}
+
+.peoplevault-faq-item:has(.accordion-collapse.show) {
+  border-color: rgba(22, 169, 120, 0.35) !important;
+  box-shadow: 0 15px 35px rgba(20, 42, 70, 0.08);
+}
+
+.faq-item-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+  color: #16a978;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.faq-item-category i {
+  font-size: 15px;
+}
+
+.peoplevault-faq-item .accordion-header {
+  margin: 0;
+}
+
+.peoplevault-faq-item .accordion-button {
+  width: 100%;
+  color: #172b4d;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.peoplevault-faq-item .accordion-button:not(.collapsed) {
+  color: #16a978;
+  background: transparent;
+  box-shadow: none;
+}
+
+.peoplevault-faq-item .accordion-button::after {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f0f8f5;
+  background-size: 12px;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.peoplevault-faq-item .accordion-button:not(.collapsed)::after {
+  background-color: #16a978;
+  filter: brightness(0) invert(1);
+}
+
+.peoplevault-faq-item .accordion-body {
+  padding: 0 !important;
+  margin-top: 12px;
+  max-width: 700px;
+}
+
+.peoplevault-faq-item .accordion-body p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   SEARCH RESULT
+========================================================= */
+
+.faq-search-result-info {
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: #f1faf6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.faq-search-result-info strong {
+  color: #172b4d;
+}
+
+.faq-search-result-info button {
+  border: 0;
+  background: transparent;
+  color: #16a978;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SECURITY CARD
+========================================================= */
+
+.faq-security-card {
+  margin-top: 28px;
+  padding: 22px;
+  display: flex;
+  gap: 15px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #172b4d, #123f56);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(23, 43, 77, 0.15);
+}
+
+.faq-security-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #66e0b4;
+  font-size: 24px;
+}
+
+.faq-security-card strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.faq-security-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   NO RESULTS
+========================================================= */
+
+.peoplevault-no-faq {
+  padding: 60px 25px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e9edf2;
+  border-radius: 18px;
+}
+
+.no-faq-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f1faf6;
+  color: #16a978;
+  font-size: 27px;
+}
+
+.peoplevault-no-faq h4 {
+  color: #172b4d;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.peoplevault-no-faq p {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  color: #667085;
+  line-height: 1.7;
+}
+
+.peoplevault-no-faq button {
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #16a978;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   FAQ CTA
+========================================================= */
+
+.peoplevault-faq-cta {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.peoplevault-faq-cta-box {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 35px 35px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(91, 230, 177, 0.18), transparent 25%),
+    radial-gradient(circle at 85% 20%, rgba(74, 190, 220, 0.18), transparent 25%),
+    linear-gradient(135deg, #12283f, #123e4b);
+  box-shadow: 0 25px 70px rgba(18, 40, 63, 0.18);
+}
+
+.peoplevault-faq-cta-box::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  left: -180px;
+  bottom: -230px;
+}
+
+.peoplevault-cta-label {
+  display: inline-block;
+  color: #62ddb0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.peoplevault-faq-cta-box h2 {
+  position: relative;
+  color: #fff;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.peoplevault-faq-cta-box > div > p {
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.peoplevault-faq-cta-buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.faq-primary-btn,
+.faq-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.faq-primary-btn {
+  background: #fff;
+  color: #142c43;
+}
+
+.faq-primary-btn:hover {
+  color: #142c43;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.faq-secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.faq-secondary-btn:hover {
+  color: #fff;
+  background: #16a978;
+  border-color: #16a978;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.peoplevault-faq-tags {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 55px;
+}
+
+.peoplevault-faq-tags span {
+  padding: 9px 17px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform 0.25s ease;
+}
+
+.peoplevault-faq-tags span:hover {
+  transform: translateY(-4px) rotate(-2deg);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .peoplevault-faq-hero {
+    padding: 120px 0 90px;
+  }
+
+  .peoplevault-faq-intro {
+    position: static;
+  }
+
+  .peoplevault-faq-intro h2 {
+    font-size: 34px;
+  }
+
+  .peoplevault-faq-benefits {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .peoplevault-faq-hero {
+    padding: 100px 0 70px;
+  }
+
+  .peoplevault-faq-hero h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .peoplevault-faq-hero p {
+    font-size: 15px;
+  }
+
+  .peoplevault-faq-search {
+    display: block;
+    padding: 7px;
+  }
+
+  .peoplevault-faq-search input {
+    height: 52px;
+    padding-right: 15px;
+  }
+
+  .peoplevault-faq-search button {
+    position: static;
+    width: 100%;
+    height: 48px;
+    margin-top: 5px;
+  }
+
+  .peoplevault-faq-search .search-icon {
+    top: 23px;
+  }
+
+  .peoplevault-faq-item {
+    padding: 18px !important;
+  }
+
+  .peoplevault-faq-item .accordion-button {
+    font-size: 15px;
+  }
+
+  .peoplevault-faq-cta {
+    padding: 70px 0;
+  }
+
+  .peoplevault-faq-cta-box {
+    padding: 60px 20px 25px;
+    border-radius: 22px;
+  }
+
+  .peoplevault-faq-cta-buttons {
+    flex-direction: column;
+  }
+
+  .faq-primary-btn,
+  .faq-secondary-btn {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .peoplevault-faq-hero h1 {
+    font-size: 32px;
+  }
+
+  .peoplevault-faq-intro h2 {
+    font-size: 29px;
+  }
+
+  .peoplevault-popular-search {
+    gap: 6px;
+  }
+
+  .peoplevault-popular-search button {
+    padding: 7px 11px;
+  }
+
+  .peoplevault-faq-benefit-card {
+    padding: 20px;
+  }
+
+  .faq-search-result-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}

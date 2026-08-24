@@ -7,11 +7,11 @@
     <div class="container">
       <div class="text-center">
         <span class="text-capitalize font-caveat fw-bold tw-mb-6 h3">With the world's favorite
-          CRM</span>
+          HRMS</span>
         <div class="">
           <div class="position-relative d-inline-block">
-            <h1 class="splitTextStyleOne text-capitalize fw-bold tw-leading-none tw-pb-205"> The
-              next gen of CRM.</h1>
+            <h1 class="splitTextStyleOne text-capitalize fw-bold tw-leading-none tw-pb-205"> Simplify HR.<br>
+              <span class="text-hrms">Empower People.</span></h1>
             <div class="text-end svg-line d-sm-block d-none">
               <svg xmlns="http://www.w3.org/2000/svg" width="489" height="18" viewBox="0 0 489 18" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -22,55 +22,648 @@
           </div>
         </div>
         <p class="splitTextStyleOne text-neutral-600 tw-text-lg tw-mt-405 tw-mt-8 max-w-672-px mx-auto fw-medium">
-          Sassly-CRM in the past allowing you to focus more on your business or simply enjoy your
-          newfound legal time to reflect leaving pen-and-paper.</p>
+          PeopleVault HRMS brings employee management, attendance, leave, payroll and workforce operations together in one secure platform.</p>
 
         <div class="d-inline-flex align-items-center tw-gap-5 tw-mt-8 flex-wrap" data-aos="fade-up"
           data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-          <a [routerLink]="'/#'"
+          <a [routerLink]="'/book-demo'"
             class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-main-two hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold"
             data-block="button">
             <span class="button__flair"></span>
-            <span class="button__label">Schedule a Demo</span>
+            <span class="button__label">Book a Demo</span>
           </a>
-          <a [routerLink]="'/#'"
+          <a [routerLink]="'/'"
             class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-orange-outline hover-style-five hover-text-white button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold bg-white"
             data-block="button">
             <span class="button__flair"></span>
-            <span class="button__label">Contact Sales</span>
+            <span class="button__label">Explore PeopleVault</span>
           </a>
         </div>
 
-        <div class="tw-mt-132-px">
-          <ul
-            class="nav nav-pills d-inline-flex flex-wrap align-items-center tw-mb-8 tw-gap-4 active-bg-blue active-text-white"
-            id="pills-tab" role="tablist" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-            data-aos-duration="800">
-            <li class="nav-item" role="presentation" *ngFor="let tab of tabs">
-              <button
-                class="nav-link tw-py-105 text-capitalize tw-px-5 common-shadow-twentyThree bg-white text-heading fw-medium tw-text-base tw-rounded-md active-triangle-arrow position-relative"
-                [class.active]="tab.active" id="{{tab.id}}-tab" data-bs-toggle="pill" [attr.data-bs-target]="'#' + tab.id"
-  
-                type="button" role="tab" [attr.aria-controls]="tab.id" aria-selected="{{tab.active}}">
-                {{ tab.label }}
-              </button>
-            </li>
-          </ul>
+       <!-- =========================================================
+     PEOPLEVAULT HRMS PRODUCT PREVIEW
+========================================================= -->
 
-          <div class="tab-content" id="pills-tabContent" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-            data-aos-duration="1000">
-            <div *ngFor="let tab of tabs" [id]="tab.id" [class]=" 'tab-pane fade' + (tab.active ? ' show active' : '') "
-              role="tabpanel" [attr.aria-labelledby]="tab.id + '-tab'" tabindex="0">
-              <div
-                class="shadow-lg tw-p-405 tw-rounded-3xl bg-white-gradient common-shadow-eleven backdrop-blur-20 border border-white-02">
-                <div class="common-shadow-twentyTwo tw-rounded-xl">
-                  <img src="assets/images/thumbs/banner-dashboard.png" alt="Dashboard Thumb" class="w-100 h-100" />
-                </div>
-              </div>
-            </div>
+<div class="tw-mt-132-px peoplevault-product-preview">
+
+  <!-- FEATURE TABS -->
+  <ul
+    class="nav nav-pills peoplevault-feature-tabs"
+    id="pills-tab"
+    role="tablist"
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    data-aos-duration="800">
+
+    <li
+      class="nav-item"
+      role="presentation"
+      *ngFor="let tab of tabs">
+
+      <button
+        type="button"
+        role="tab"
+        class="nav-link peoplevault-feature-tab"
+        [class.active]="tab.active"
+        [id]="tab.id + '-tab'"
+        [attr.aria-controls]="tab.id"
+        [attr.aria-selected]="tab.active"
+        (click)="selectTab(tab)">
+
+        {{ tab.label }}
+
+      </button>
+
+    </li>
+
+  </ul>
+
+
+  <!-- PRODUCT WINDOW -->
+  <div
+    class="peoplevault-product-window"
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    data-aos-duration="1000">
+
+    <!-- Browser top bar -->
+    <div class="peoplevault-browser-bar">
+
+      <div class="peoplevault-browser-dots">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+      <div class="peoplevault-browser-address">
+
+        <span>🔒</span>
+
+        app.peoplevault.com
+
+      </div>
+
+      <div class="peoplevault-browser-actions">
+
+        <span>↗</span>
+        <span>+</span>
+        <span>□</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- APPLICATION -->
+    <div class="peoplevault-app">
+
+
+      <!-- SIDEBAR -->
+      <aside class="peoplevault-sidebar">
+
+        <!-- Logo -->
+        <div class="peoplevault-logo">
+
+          <div class="peoplevault-logo-icon">
+            P
+          </div>
+
+          <span>
+            PeopleVault
+          </span>
+
+        </div>
+
+
+        <!-- Sidebar menu -->
+        <div class="peoplevault-sidebar-menu">
+
+          <div class="peoplevault-menu-item active">
+            <span>▣</span>
+            Dashboard
+          </div>
+
+          <div class="peoplevault-menu-item">
+            <span>♙</span>
+            Employees
+          </div>
+
+          <div class="peoplevault-menu-item">
+            <span>◷</span>
+            Attendance
+          </div>
+
+          <div class="peoplevault-menu-item">
+            <span>▤</span>
+            Leave
+          </div>
+
+          <div class="peoplevault-menu-item">
+            <span>₹</span>
+            Payroll
+          </div>
+
+          <div class="peoplevault-menu-item">
+            <span>▥</span>
+            Policies
+          </div>
+
+          <div class="peoplevault-menu-item">
+            <span>▦</span>
+            Reports
+          </div>
+
+          <div class="peoplevault-menu-item">
+            <span>⚙</span>
+            Settings
           </div>
 
         </div>
+
+      </aside>
+
+
+      <!-- DASHBOARD CONTENT -->
+      <div class="peoplevault-dashboard">
+
+
+        <!-- Dashboard header -->
+        <div class="peoplevault-dashboard-header">
+
+          <div>
+
+            <span class="peoplevault-dashboard-label">
+              PeopleVault HRMS
+            </span>
+
+            <h3>
+             {{ getPreviewTitle() }}
+            </h3>
+
+            <p>
+             {{ getPreviewDescription() }}
+            </p>
+
+          </div>
+
+
+          <div class="peoplevault-user-area">
+
+            <span class="peoplevault-notification">
+              ♢
+            </span>
+
+            <div class="peoplevault-avatar">
+              R
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATISTICS -->
+        <div class="peoplevault-stat-grid">
+
+
+          <!-- Employees -->
+          <div class="peoplevault-stat-card">
+
+            <div class="peoplevault-stat-header">
+
+              <span>
+                Total Employees
+              </span>
+
+              <div class="peoplevault-stat-icon">
+                ♙
+              </div>
+
+            </div>
+
+            <strong>
+              2,486
+            </strong>
+
+            <small>
+              ↑ 12.5% this month
+            </small>
+
+          </div>
+
+
+          <!-- Attendance -->
+          <div class="peoplevault-stat-card">
+
+            <div class="peoplevault-stat-header">
+
+              <span>
+                Present Today
+              </span>
+
+              <div class="peoplevault-stat-icon green">
+                ✓
+              </div>
+
+            </div>
+
+            <strong>
+              2,318
+            </strong>
+
+            <small>
+              93.2% attendance
+            </small>
+
+          </div>
+
+
+          <!-- Leave -->
+          <div class="peoplevault-stat-card">
+
+            <div class="peoplevault-stat-header">
+
+              <span>
+                Leave Requests
+              </span>
+
+              <div class="peoplevault-stat-icon orange">
+                ◷
+              </div>
+
+            </div>
+
+            <strong>
+              86
+            </strong>
+
+            <small>
+              12 pending approval
+            </small>
+
+          </div>
+
+
+          <!-- Payroll -->
+          <div class="peoplevault-stat-card">
+
+            <div class="peoplevault-stat-header">
+
+              <span>
+                Payroll
+              </span>
+
+              <div class="peoplevault-stat-icon purple">
+                ₹
+              </div>
+
+            </div>
+
+            <strong>
+              ₹98.7K
+            </strong>
+
+            <small>
+              Processed this month
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- MIDDLE SECTION -->
+        <div class="peoplevault-middle-grid">
+
+
+          <!-- Attendance -->
+          <div class="peoplevault-panel">
+
+            <div class="peoplevault-panel-header">
+
+              <div>
+
+                <h4>
+                  Attendance Overview
+                </h4>
+
+                <span>
+                  Weekly attendance
+                </span>
+
+              </div>
+
+              <button type="button">
+                This Week ▾
+              </button>
+
+            </div>
+
+
+            <div class="peoplevault-chart">
+
+              <div class="peoplevault-chart-bars">
+
+                <div class="peoplevault-bar-group">
+
+                  <div
+                    class="peoplevault-bar"
+                    style="height:55%;">
+                  </div>
+
+                  <span>Mon</span>
+
+                </div>
+
+
+                <div class="peoplevault-bar-group">
+
+                  <div
+                    class="peoplevault-bar"
+                    style="height:72%;">
+                  </div>
+
+                  <span>Tue</span>
+
+                </div>
+
+
+                <div class="peoplevault-bar-group">
+
+                  <div
+                    class="peoplevault-bar"
+                    style="height:62%;">
+                  </div>
+
+                  <span>Wed</span>
+
+                </div>
+
+
+                <div class="peoplevault-bar-group">
+
+                  <div
+                    class="peoplevault-bar"
+                    style="height:85%;">
+                  </div>
+
+                  <span>Thu</span>
+
+                </div>
+
+
+                <div class="peoplevault-bar-group">
+
+                  <div
+                    class="peoplevault-bar"
+                    style="height:76%;">
+                  </div>
+
+                  <span>Fri</span>
+
+                </div>
+
+
+                <div class="peoplevault-bar-group">
+
+                  <div
+                    class="peoplevault-bar"
+                    style="height:91%;">
+                  </div>
+
+                  <span>Sat</span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Leave -->
+          <div class="peoplevault-panel">
+
+            <div class="peoplevault-panel-header">
+
+              <div>
+
+                <h4>
+                  Leave Summary
+                </h4>
+
+                <span>
+                  This month
+                </span>
+
+              </div>
+
+              <span>
+                •••
+              </span>
+
+            </div>
+
+
+            <div class="peoplevault-leave">
+
+              <div class="peoplevault-donut">
+
+                <div>
+
+                  <strong>
+                    142
+                  </strong>
+
+                  <small>
+                    Total
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <div class="peoplevault-leave-list">
+
+                <div>
+                  <span class="approved-dot"></span>
+                  Approved
+                  <strong>92</strong>
+                </div>
+
+                <div>
+                  <span class="pending-dot"></span>
+                  Pending
+                  <strong>28</strong>
+                </div>
+
+                <div>
+                  <span class="rejected-dot"></span>
+                  Rejected
+                  <strong>22</strong>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- BOTTOM SECTION -->
+        <div class="peoplevault-bottom-grid">
+
+
+          <!-- Recent activities -->
+          <div class="peoplevault-panel">
+
+            <div class="peoplevault-panel-header">
+
+              <div>
+
+                <h4>
+                  Recent Activities
+                </h4>
+
+                <span>
+                  Latest HR activities
+                </span>
+
+              </div>
+
+              <a href="javascript:void(0)">
+                View All
+              </a>
+
+            </div>
+
+
+            <div class="peoplevault-activity">
+
+              <div class="peoplevault-activity-icon">
+                +
+              </div>
+
+              <div>
+
+                <strong>
+                  New employee added
+                </strong>
+
+                <small>
+                  2 minutes ago
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <div class="peoplevault-activity">
+
+              <div class="peoplevault-activity-icon">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Attendance updated
+                </strong>
+
+                <small>
+                  15 minutes ago
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <div class="peoplevault-activity">
+
+              <div class="peoplevault-activity-icon">
+                ₹
+              </div>
+
+              <div>
+
+                <strong>
+                  Payroll processed
+                </strong>
+
+                <small>
+                  1 hour ago
+                </small>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Quick actions -->
+          <div class="peoplevault-panel">
+
+            <div class="peoplevault-panel-header">
+
+              <div>
+
+                <h4>
+                  Quick Actions
+                </h4>
+
+                <span>
+                  Common HR tasks
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="peoplevault-quick-actions">
+
+              <button type="button">
+                <span>+</span>
+                Add Employee
+              </button>
+
+              <button type="button">
+                <span>◷</span>
+                Apply Leave
+              </button>
+
+              <button type="button">
+                <span>₹</span>
+                Run Payroll
+              </button>
+
+              <button type="button">
+                <span>▤</span>
+                View Reports
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 
       </div>
@@ -84,8 +677,7 @@
   <div class="container">
     <div class="text-center tw-mb-16" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
       data-aos-duration="1000">
-      <h4 class="mb-0 fw-bold line-clamp-1 font-caveat">Loved by next-gen B2B <span class="text-orange">SaaS</span>
-        companies.....</h4>
+      <h4 class="mb-0 fw-bold line-clamp-1 font-caveat">Built for modern teams that put people first</h4>
     </div>
     <div class="brand-three-slider swiper left-right-gradient gradient-width-200 position-relative" #brandSlider>
       <div class="swiper-wrapper">
@@ -128,15 +720,13 @@
       <div class="col-lg-6">
         <div class="ps-xl-5">
           <div class="tw-mb-10">
-            <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-crm">with
-              the world's favorite CRM</h4>
+            <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-hrms">with
+              the world's favorite HRMS</h4>
             <h2 class="splitTextStyleOne text-heading text-capitalize">
-              improve <span class="text-crm">customer</span>
-              relationships today
+              Make HR simple, connected and <span class="text-hrms">people-first</span>
             </h2>
             <p class="splitTextStyleOne text-neutral-500 tw-mt-8 max-w-570-px fw-medium tw-text-lg">
-              Sassly-CRM in the past allowing you to focus more on your business simply enjoy
-              your newfound legal time to reflect leaving pen</p>
+              From employee records to payroll and policies, PeopleVault helps HR teams manage everyday operations with less manual work.</p>
           </div>
 
           <div class="accordion common-accordion">
@@ -178,10 +768,10 @@
     <div class="max-w-1820-px mx-auto">
       <div class="container">
         <div class="tw-mb-12 max-w-570-px">
-          <h4 class="tw-mb-4 fw-bold line-clamp-1 font-caveat text-capitalize text-crm">with the
-            world's favorite CRM</h4>
+          <h4 class="tw-mb-4 fw-bold line-clamp-1 font-caveat text-capitalize text-hrms">with the
+            world's favorite HRMS</h4>
           <h2 class="splitTextStyleOne text-heading text-capitalize">
-            improve customer relationships today
+            Powerful HR tools for your entire workforce
           </h2>
         </div>
 
@@ -193,8 +783,8 @@
               <h3 class="tw-mb-4 fw-semibold splitTextStyleOne" [ngClass]="feature.titleClass">{{
                 feature.title }}</h3>
               <p class="text-neutral-600 tw-text-lg fw-medium">{{ feature.paragraph }}</p>
-              <a [routerLink]="'/#'"
-                class="hover--translate-y-1 active--translate-y-scale-9 text-crm fw-bold tw-text-base text-blue text-decoration-underline tw-mt-12 hover-underline-none">
+              <a [routerLink]="'/'"
+                class="hover--translate-y-1 active--translate-y-scale-9 text-hrms fw-bold tw-text-base text-blue text-decoration-underline tw-mt-12 hover-underline-none">
                 {{ feature.link }}
               </a>
               <img *ngIf="feature.image1" [src]="feature.image1" alt="Thumbnail" [ngClass]="feature.image1Class">
@@ -238,13 +828,12 @@
         <div class="ps-xl-5">
           <div class="tw-mb-10">
             <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-orange">
-              with the world's favorite CRM</h4>
+              Everything you need to manage your workforce</h4>
             <h2 class="splitTextStyleOne text-heading text-capitalize max-w-532-px">
-              Simple set up,easy to stay organized
+              One connected platform for your complete HR lifecycle
             </h2>
             <p class="splitTextStyleOne text-neutral-500 tw-mt-8 max-w-570-px fw-medium tw-text-lg">
-              Sassly-CRM in the past allowing you to focus more on your business simply enjoy
-              your newfound legal time to reflect leaving pen</p>
+              From employee records to payroll and policies, PeopleVault helps HR teams manage everyday operations with less manual work.</p>
           </div>
 
           <div class="d-flex flex-column tw-gap-5">
@@ -254,7 +843,7 @@
                 class="tw-w-8 tw-h-8 bg-neutral-200 text-heading d-flex justify-content-center align-items-center rounded-circle">
                 <i class="ph-bold ph-check"></i>
               </span>
-              <p class="fw-bold text-heading tw-text-lg">Customizable pipeline views</p>
+              <p class="fw-bold text-heading tw-text-lg">Centralized employee records and lifecycle management</p>
             </div>
             <div class="d-flex align-items-center tw-gap-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
               data-aos-duration="700">
@@ -262,8 +851,7 @@
                 class="tw-w-8 tw-h-8 bg-neutral-200 text-heading d-flex justify-content-center align-items-center rounded-circle">
                 <i class="ph-bold ph-check"></i>
               </span>
-              <p class="fw-bold text-heading tw-text-lg">Increase your lead-to-deal conversion
-                rates.</p>
+              <p class="fw-bold text-heading tw-text-lg">Attendance, leave and workforce scheduling in one place.</p>
             </div>
             <div class="d-flex align-items-center tw-gap-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
               data-aos-duration="800">
@@ -271,8 +859,7 @@
                 class="tw-w-8 tw-h-8 bg-neutral-200 text-heading d-flex justify-content-center align-items-center rounded-circle">
                 <i class="ph-bold ph-check"></i>
               </span>
-              <p class="fw-bold text-heading tw-text-lg">Streamline data and tracking between
-                softwares</p>
+              <p class="fw-bold text-heading tw-text-lg">Payroll, policies and HR workflows with controlled access.</p>
             </div>
           </div>
           <div class="tw-mt-9" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
@@ -303,13 +890,13 @@
         <div class="col-lg-6">
           <div class="pe-xl-5">
             <div class="tw-mb-10">
-              <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-crm">
-                with the world's favorite CRM</h4>
+              <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-hrms">
+                Everything you need to manage your workforce</h4>
               <h2 class="splitTextStyleOne text-heading text-capitalize">
-                Perfectly-timed and personal outreach
+                HR workflows that keep your organization moving
               </h2>
               <p class="splitTextStyleOne text-neutral-500 tw-mt-8 max-w-570-px fw-medium tw-text-lg">
-                Sassly-CRM in the past allowing you to focus more on your business simply
+                PeopleVault HRMS in the past allowing you to focus more on your business simply
                 enjoy your newfound legal time to reflect leaving pen</p>
             </div>
 
@@ -320,14 +907,12 @@
                   <button class="accordion-button tw-py-6 shadow-none px-0 bg-transparent h5 collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseTwoo" aria-expanded="false"
                     aria-controls="collapseTwoo" data-img="assets/images/thumbs/faq-thumb2.png">
-                    Automate everything
+                    Automate everyday HR tasks
                   </button>
                 </h5>
                 <div id="collapseTwoo" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
                   <div class="accordion-body ps-0 pt-0 pe-0 tw-pb-6">
-                    <p class="text-neutral-500">ERP provides a complete leave management
-                      system for your HR. Upcoming holidays and remaining leave
-                      balances.</p>
+                    <p class="text-neutral-500">Manage employee information, attendance, leave requests, approvals and HR processes from a single platform.</p>
                   </div>
                 </div>
               </div>
@@ -337,14 +922,12 @@
                   <button class="accordion-button tw-py-6 shadow-none px-0 bg-transparent h5" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseOnee" aria-expanded="true"
                     aria-controls="collapseOnee" data-img="assets/images/thumbs/faq-thumb1.png">
-                    Deploy AI
+                    Connect your people and processes
                   </button>
                 </h5>
                 <div id="collapseOnee" class="accordion-collapse collapse show" data-bs-parent="#accordionExampleTwo">
                   <div class="accordion-body ps-0 pt-0 pe-0 tw-pb-6">
-                    <p class="text-neutral-500">ERP provides a complete leave management
-                      system for your HR. Upcoming holidays and remaining leave
-                      balances.</p>
+                    <p class="text-neutral-500">Manage employee information, attendance, leave requests, approvals and HR processes from a single platform.</p>
                   </div>
                 </div>
               </div>
@@ -354,14 +937,12 @@
                   <button class="accordion-button tw-py-6 shadow-none px-0 bg-transparent h5 collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseThreee" aria-expanded="false"
                     aria-controls="collapseThreee" data-img="assets/images/thumbs/faq-thumb3.png">
-                    Powerful reporting
+                    Make decisions with better HR insights
                   </button>
                 </h5>
                 <div id="collapseThreee" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
                   <div class="accordion-body ps-0 pt-0 pe-0 tw-pb-6">
-                    <p class="text-neutral-500">ERP provides a complete leave management
-                      system for your HR. Upcoming holidays and remaining leave
-                      balances.</p>
+                    <p class="text-neutral-500">Manage employee information, attendance, leave requests, approvals and HR processes from a single platform.</p>
                   </div>
                 </div>
               </div>
@@ -401,14 +982,13 @@
       <div class="col-lg-6">
         <div class="">
           <div class="tw-mb-10">
-            <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-crm">with
-              the world's favorite CRM</h4>
+            <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-hrms">with
+              the world's favorite HRMS</h4>
             <h2 class="splitTextStyleOne text-white text-capitalize">
-              improve customer relationships today
+              Powerful HR tools for your entire workforce
             </h2>
             <p class="splitTextStyleOne text-neutral-300 tw-mt-8 max-w-570-px fw-normal tw-text-lg">
-              Sassly-CRM in the past allowing you to focus more on your business simply enjoy
-              your newfound legal time to reflect leaving pen</p>
+              From employee records to payroll and policies, PeopleVault helps HR teams manage everyday operations with less manual work.</p>
           </div>
           <div class="tw-mt-12 d-flex align-items-center tw-gap-405 flex-sm-nowrap flex-wrap">
             <div class="tw-rounded-xl bg-white-06 tw-py-205 tw-px-5 d-flex align-items-center tw-gap-4">
@@ -528,7 +1108,7 @@
             class="position-absolute top-50 start-50 animation-rotate-left">
           <div class="position-absolute top-50 start-50 translate-middle">
             <h3 class=""><span class="counter" #integrationCounter>{{ formatCounterValue(integrationCount, '+') }}</span></h3>
-            <span class="text-heading">Integration</span>
+            <span class="text-heading">HRMS Integrations</span>
           </div>
         </div>
       </div>
@@ -537,12 +1117,12 @@
           <div class="text-start mx-auto tw-mb-12">
             <div class="tw-mb-10">
               <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-orange">
-                with the world's favorite CRM</h4>
+                Everything you need to manage your workforce</h4>
               <h2 class="splitTextStyleOne text-heading text-capitalize max-w-532-px">
-                Simple set up,easy to stay organized
+                One connected platform for your complete HR lifecycle
               </h2>
               <p class="splitTextStyleOne text-neutral-500 tw-mt-8 max-w-570-px fw-medium tw-text-lg">
-                Sassly-CRM in the past allowing you to focus more on your business simply
+                PeopleVault HRMS in the past allowing you to focus more on your business simply
                 enjoy your newfound legal time to reflect leaving pen</p>
             </div>
             <div class="tw-mt-9" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
@@ -550,7 +1130,7 @@
                 class="hover--translate-y-1 active--translate-y-scale-9 btn button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 tw-py-505 fw-bold rounded-pill btn-main hover-style-one common-shadow-inset-one"
                 data-block="button">
                 <span class="button__flair"></span>
-                <span class="button__label">See all Integrations</span>
+                <span class="button__label">Explore HR capabilities</span>
               </a>
             </div>
           </div>
@@ -563,90 +1143,102 @@
 
 
 
-<!-- ================== Counter Up section Start ====================== -->
-<section class="pt-120">
+<!-- ================== PeopleVault Value Section Start ====================== -->
+<section class="pt-120 pb-120">
   <div class="container">
-    <div class="tw-mb-10 max-w-570-px mx-auto text-center">
-      <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-crm">with the world's
-        favorite CRM</h4>
+    <div class="tw-mb-12 max-w-780-px mx-auto text-center">
+      <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-crm">
+        PeopleVault HRMS
+      </h4>
       <h2 class="splitTextStyleOne text-heading text-capitalize">
-        Trueted CRM tools by the <span class="fw-normal"> happy users</span>
+        HR that works for <span class="fw-normal">people and business</span>
       </h2>
+      <p class="text-neutral-500 tw-text-lg tw-mt-6 fw-medium">
+        Bring your people, processes and HR data together with a modern experience
+        designed for growing organizations.
+      </p>
     </div>
 
-    <div class="border-top border-bottom d-flex justify-content-center flex-sm-nowrap flex-wrap tw-gap-148-px">
-      <div
-        class="text-center tw-pt-13 tw-pb-9 d-flex flex-column justify-content-center align-items-center tw-transition tw-duration-200">
-        <h2 class="h1">
-          <span class="counter" #clientsCounter1>{{ formatCounterValue(clientsCount1, '+') }}</span>
-        </h2>
-        <span class="h6 text-uppercase tw-text-base tw-mt-5 d-sm-block d-none">worldwide
-          clients</span>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="bg-white tw-rounded-3xl tw-p-10 h-100 common-shadow-eleven text-center"
+             data-aos="fade-up" data-aos-duration="700">
+          <div class="tw-w-16 tw-h-16 rounded-circle bg-neutral-100 d-flex align-items-center justify-content-center mx-auto tw-mb-6">
+            <i class="ph-bold ph-users-three tw-text-3xl text-crm"></i>
+          </div>
+          <h4 class="fw-bold">One employee hub</h4>
+          <p class="text-neutral-500 tw-mt-4 mb-0">
+            Keep employee profiles, roles, departments and HR information organized in one place.
+          </p>
+        </div>
       </div>
 
-      <div class="d-flex">
-        <div class="tw-w-1-px h-100 bg-neutral-200"></div>
+      <div class="col-md-4">
+        <div class="bg-white tw-rounded-3xl tw-p-10 h-100 common-shadow-eleven text-center"
+             data-aos="fade-up" data-aos-duration="800">
+          <div class="tw-w-16 tw-h-16 rounded-circle bg-neutral-100 d-flex align-items-center justify-content-center mx-auto tw-mb-6">
+            <i class="ph-bold ph-calendar-check tw-text-3xl text-crm"></i>
+          </div>
+          <h4 class="fw-bold">Smarter HR workflows</h4>
+          <p class="text-neutral-500 tw-mt-4 mb-0">
+            Simplify attendance, leave, approvals, policies and everyday workforce operations.
+          </p>
+        </div>
       </div>
 
-      <div
-        class="text-center tw-pt-13 tw-pb-9 d-flex flex-column justify-content-center align-items-center tw-transition tw-duration-200">
-        <h2 class="h1">
-          <span class="counter" #percentageCounter>{{ formatCounterValue(percentageCount, '%') }}</span>
-        </h2>
-        <span class="h6 text-uppercase tw-text-base tw-mt-5 d-sm-block d-none">worldwide
-          clients</span>
-      </div>
-
-      <div class="d-flex">
-        <div class="tw-w-1-px h-100 bg-neutral-200"></div>
-      </div>
-
-      <div
-        class="text-center tw-pt-13 tw-pb-9 d-flex flex-column justify-content-center align-items-center tw-transition tw-duration-200">
-        <h2 class="h1">
-          <span class="counter" #clientsCounter2>{{ formatCounterValue(clientsCount2, '+') }}</span>
-        </h2>
-        <span class="h6 text-uppercase tw-text-base tw-mt-5 d-sm-block d-none">worldwide
-          clients</span>
+      <div class="col-md-4">
+        <div class="bg-white tw-rounded-3xl tw-p-10 h-100 common-shadow-eleven text-center"
+             data-aos="fade-up" data-aos-duration="900">
+          <div class="tw-w-16 tw-h-16 rounded-circle bg-neutral-100 d-flex align-items-center justify-content-center mx-auto tw-mb-6">
+            <i class="ph-bold ph-chart-line-up tw-text-3xl text-crm"></i>
+          </div>
+          <h4 class="fw-bold">Actionable insights</h4>
+          <p class="text-neutral-500 tw-mt-4 mb-0">
+            Give HR and leadership a clearer view of workforce activity and organizational performance.
+          </p>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
-<!-- ================== Counter Up section End ====================== -->
+<!-- ================== PeopleVault Value Section End ====================== -->
 
-<!-- ================== Driven section Start ====================== -->
+<!-- ================== PeopleVault Final CTA Start ====================== -->
 <section class="py-120">
   <div class="container">
-    <div class="">
-      <img src="assets/images/thumbs/driven-img.png" alt="Thumb">
-      <div class="max-w-780-px text-center mx-auto">
-        <div class="tw-mb-10 max-w-672-px mx-auto text-center">
-          <h4 class="tw-mb-2 fw-bold line-clamp-1 font-caveat text-capitalize text-crm">with the
-            world's favorite CRM</h4>
-          <h2 class="splitTextStyleOne text-heading text-capitalize">
-            The <span class="fw-normal">CRM</span> behind thousand of companies
-          </h2>
-        </div>
-        <div class="d-flex align-items-center tw-gap-4 justify-content-center tw-mt-10">
-          <div class="d-inline-flex align-items-center tw-gap-5 tw-mt-8 flex-wrap" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-            <a [routerLink]="'/#'"
-              class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-main-two hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold"
-              data-block="button">
-              <span class="button__flair"></span>
-              <span class="button__label">Schedule a Demo</span>
-            </a>
-            <a [routerLink]="'/#'"
-              class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-orange-outline hover-style-five hover-text-white button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold bg-white"
-              data-block="button">
-              <span class="button__flair"></span>
-              <span class="button__label">Contact Sales</span>
-            </a>
-          </div>
+    <div class="position-relative overflow-hidden tw-rounded-3xl bg-neutral-900 tw-py-120 tw-px-5 text-center">
+      <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25"
+           style="background: radial-gradient(circle at 50% 0%, rgba(255,126,62,.55), transparent 55%);"></div>
+
+      <div class="position-relative max-w-780-px mx-auto">
+        <h4 class="tw-mb-3 fw-bold font-caveat text-capitalize text-orange">
+          Ready to simplify HR?
+        </h4>
+
+        <h2 class="splitTextStyleOne text-white text-capitalize">
+          Build a better employee experience with PeopleVault
+        </h2>
+
+        <p class="text-neutral-300 tw-text-lg tw-mt-6 max-w-672-px mx-auto">
+          Bring your HR operations together and give your people a simpler,
+          more connected experience.
+        </p>
+
+        <div class="d-inline-flex align-items-center tw-gap-5 tw-mt-10 flex-wrap justify-content-center">
+          <a [routerLink]="'/book-demo'"
+             class="btn btn-main-two hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group tw-px-10 rounded-pill tw-py-505 fw-bold">
+            <span class="button__flair"></span>
+            <span class="button__label">Book a Demo</span>
+          </a>
+
+          <a [routerLink]="'/'"
+             class="btn btn-orange-outline hover-style-five hover-text-white button--stroke align-items-center justify-content-center tw-gap-5 group tw-px-10 rounded-pill tw-py-505 fw-bold bg-white">
+            <span class="button__flair"></span>
+            <span class="button__label">Get Started</span>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- ================== Driven section End ====================== -->
+<!-- ================== PeopleVault Final CTA End ====================== -->

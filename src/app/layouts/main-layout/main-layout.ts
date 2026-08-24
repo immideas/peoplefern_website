@@ -56,10 +56,34 @@ export class MainLayout implements AfterViewInit {
     topHeader2: TopHeaderTwo,
   };
 
-  constructor(private router: Router, private route: ActivatedRoute, private animationService: AnimationService) {
-    this.router.events.pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe(() => this.loadLayoutComponents());
-  }
+ constructor(
+  private router: Router,
+  private route: ActivatedRoute,
+  private animationService: AnimationService
+) {
+  this.router.events
+    .pipe(
+      filter(
+        (event): event is NavigationEnd =>
+          event instanceof NavigationEnd
+      )
+    )
+    .subscribe(() => {
+
+      // Reload header/footer according to new route
+      this.loadLayoutComponents();
+
+      // Always start the new page from the top
+      if (typeof window !== 'undefined') {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'auto'
+        });
+      }
+
+    });
+}
 
   ngOnInit() {
     this.loadLayoutComponents();

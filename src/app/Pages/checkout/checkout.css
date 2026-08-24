@@ -1,0 +1,996 @@
+/* =========================================================
+   PEOPLEVAULT SECURITY & COMPLIANCE
+   CHECKOUT COMPONENT CSS
+========================================================= */
+
+:host {
+  display: block;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.security-hero-section,
+.security-features-section,
+.security-protected-section,
+.security-principles-section,
+.security-faq-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.security-hero-section {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(80, 170, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 10% 80%, rgba(118, 92, 255, 0.08), transparent 30%),
+    #f8fbff;
+}
+
+.security-section-badge,
+.security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: rgba(54, 125, 255, 0.08);
+  color: #367dff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.security-badge i {
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.security-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.security-hero-title {
+  margin: 22px 0 20px;
+  max-width: 760px;
+  font-size: clamp(42px, 5vw, 70px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #172033;
+}
+
+.security-hero-title span,
+.security-section-header h2 span,
+.security-protected-title span,
+.security-principles-title span,
+.security-faq-title span,
+.security-cta-box h2 span {
+  background: linear-gradient(
+    90deg,
+    #367dff 0%,
+    #6957ff 50%,
+    #a84cff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.security-hero-description {
+  max-width: 690px;
+  margin-bottom: 32px;
+  color: #687386;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.security-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.security-primary-btn,
+.security-secondary-btn {
+  min-height: 56px;
+  padding: 0 26px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.security-primary-btn {
+  color: #fff;
+  background: linear-gradient(135deg, #367dff, #6957ff);
+  border: 0;
+  box-shadow: 0 15px 35px rgba(54, 125, 255, 0.22);
+}
+
+.security-primary-btn:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(54, 125, 255, 0.30);
+}
+
+.security-secondary-btn {
+  color: #253047;
+  background: #fff;
+  border: 1px solid #e3e9f2;
+}
+
+.security-secondary-btn:hover {
+  color: #367dff;
+  border-color: #367dff;
+  transform: translateY(-3px);
+}
+
+.security-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.security-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #657083;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.security-trust-item i {
+  color: #35b982;
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   HERO SECURITY CARD
+========================================================= */
+
+.security-hero-card {
+  position: relative;
+  padding: 42px 36px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.96),
+      rgba(242,247,255,0.92)
+    );
+  box-shadow:
+    0 30px 80px rgba(30, 55, 100, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  overflow: hidden;
+}
+
+.security-card-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -80px;
+  right: -70px;
+  border-radius: 50%;
+  background: rgba(54, 125, 255, 0.14);
+  filter: blur(20px);
+}
+
+.security-shield-icon {
+  position: relative;
+  z-index: 1;
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #367dff, #6957ff);
+  color: #fff;
+  box-shadow: 0 15px 30px rgba(54, 125, 255, 0.24);
+}
+
+.security-shield-icon i {
+  font-size: 40px;
+}
+
+.security-hero-card h4 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px;
+  color: #172033;
+  font-size: 25px;
+  font-weight: 750;
+}
+
+.security-hero-card > p {
+  position: relative;
+  z-index: 1;
+  color: #718096;
+  line-height: 1.7;
+}
+
+.security-card-list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.security-card-list-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.security-small-icon {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #edf4ff;
+  color: #367dff;
+}
+
+.security-small-icon i {
+  font-size: 21px;
+}
+
+.security-card-list-item h6 {
+  margin: 0 0 3px;
+  color: #202b3f;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.security-card-list-item p {
+  margin: 0;
+  color: #7b8798;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.security-stats-section {
+  position: relative;
+  z-index: 3;
+  margin-top: -35px;
+}
+
+.security-stats-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px;
+  border: 1px solid #edf1f7;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(25, 45, 80, 0.10);
+}
+
+.security-stat-item {
+  position: relative;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.security-stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 55px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #e7ebf2;
+}
+
+.security-stat-item h3 {
+  margin: 0 0 5px;
+  color: #367dff;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.security-stat-item p {
+  margin: 0;
+  color: #778297;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.security-section-header {
+  max-width: 760px;
+}
+
+.security-section-header h2 {
+  margin: 18px 0;
+  color: #172033;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.security-section-header p {
+  color: #748094;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   SECURITY FEATURE CARDS
+========================================================= */
+
+.security-feature-card {
+  position: relative;
+  height: 100%;
+  padding: 32px;
+  border: 1px solid #e9eef5;
+  border-radius: 22px;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.security-feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(54, 125, 255, 0.25);
+  box-shadow: 0 25px 60px rgba(29, 58, 105, 0.10);
+}
+
+.security-feature-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 17px;
+  background: linear-gradient(
+    135deg,
+    rgba(54,125,255,.12),
+    rgba(105,87,255,.10)
+  );
+  color: #367dff;
+}
+
+.security-feature-icon i {
+  font-size: 28px;
+}
+
+.security-feature-number {
+  position: absolute;
+  top: 25px;
+  right: 28px;
+  color: #edf1f7;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.security-feature-card h5 {
+  position: relative;
+  margin-bottom: 12px;
+  color: #202b3f;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.security-feature-card p {
+  position: relative;
+  margin: 0;
+  color: #778397;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.security-feature-arrow {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+  border-radius: 50%;
+  background: #f1f5fb;
+  color: #367dff;
+  transition: all .3s ease;
+}
+
+.security-feature-card:hover .security-feature-arrow {
+  background: #367dff;
+  color: #fff;
+}
+
+
+/* =========================================================
+   PROTECTED SECTION
+========================================================= */
+
+.security-protected-section {
+  background: #f7faff;
+}
+
+.security-protected-title {
+  margin: 18px 0;
+  color: #172033;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.security-protected-description {
+  max-width: 530px;
+  color: #758196;
+  line-height: 1.8;
+}
+
+.security-protected-points {
+  display: grid;
+  gap: 13px;
+  margin-top: 25px;
+}
+
+.security-protected-points div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #38445a;
+  font-weight: 600;
+}
+
+.security-protected-points i {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e7f9f1;
+  color: #27a875;
+  font-size: 14px;
+}
+
+.protected-area-card {
+  height: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #e6ebf3;
+  background: #fff;
+  transition: .3s ease;
+}
+
+.protected-area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(25, 55, 100, .08);
+}
+
+.protected-area-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background: #edf4ff;
+  color: #367dff;
+}
+
+.protected-area-icon i {
+  font-size: 26px;
+}
+
+.protected-area-card h5 {
+  margin-bottom: 10px;
+  color: #202b3f;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.protected-area-card p {
+  margin-bottom: 18px;
+  color: #7b8799;
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+.protected-area-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #367dff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PRINCIPLES
+========================================================= */
+
+.security-principles-title {
+  max-width: 700px;
+  margin-top: 18px;
+  color: #172033;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.security-principles-intro {
+  color: #758196;
+  line-height: 1.8;
+}
+
+.security-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.security-principle-card {
+  position: relative;
+  min-height: 270px;
+  padding: 30px;
+  border-radius: 22px;
+  background: #172033;
+  overflow: hidden;
+  transition: .35s ease;
+}
+
+.security-principle-card::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  right: -60px;
+  bottom: -60px;
+  border-radius: 50%;
+  background: rgba(54,125,255,.20);
+  filter: blur(5px);
+}
+
+.security-principle-card:hover {
+  transform: translateY(-8px);
+}
+
+.security-principle-number {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: rgba(255,255,255,.12);
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.security-principle-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.10);
+  color: #77aaff;
+}
+
+.security-principle-icon i {
+  font-size: 24px;
+}
+
+.security-principle-card h5 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.security-principle-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: rgba(255,255,255,.64);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.security-faq-section {
+  background: #f7faff;
+}
+
+.security-faq-title {
+  margin: 18px 0;
+  color: #172033;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.security-faq-section > .container .col-lg-5 > p {
+  max-width: 500px;
+  color: #758196;
+  line-height: 1.8;
+}
+
+.security-faq-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px 22px;
+  border-radius: 11px;
+  background: #172033;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: .3s ease;
+}
+
+.security-faq-contact-btn:hover {
+  background: #367dff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.security-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.security-faq-item {
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+.security-faq-item.active {
+  border-color: rgba(54,125,255,.30);
+  box-shadow: 0 12px 35px rgba(30,60,100,.06);
+}
+
+.security-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 21px 24px;
+  border: 0;
+  background: transparent;
+  color: #263248;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.security-faq-toggle {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #edf4ff;
+  color: #367dff;
+}
+
+.security-faq-answer {
+  padding: 0 24px 22px;
+}
+
+.security-faq-answer p {
+  margin: 0;
+  color: #788497;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.security-cta-section {
+  padding: 100px 0;
+  background: #f7faff;
+}
+
+.security-cta-box {
+  position: relative;
+  padding: 65px 70px;
+  border-radius: 30px;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(105,87,255,.30),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #172033, #25385b);
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(23,32,51,.18);
+}
+
+.security-cta-glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  right: -100px;
+  bottom: -130px;
+  border-radius: 50%;
+  background: rgba(54,125,255,.25);
+  filter: blur(15px);
+}
+
+.security-cta-badge {
+  display: inline-flex;
+  padding: 7px 15px;
+  border-radius: 50px;
+  background: rgba(255,255,255,.10);
+  color: #a9c7ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.security-cta-box h2 {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 18px 0 15px;
+  color: #fff;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.security-cta-box p {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0;
+  color: rgba(255,255,255,.68);
+  line-height: 1.8;
+}
+
+.security-cta-buttons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.security-cta-primary,
+.security-cta-secondary {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 22px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.security-cta-primary {
+  border: 0;
+  background: #fff;
+  color: #172033;
+}
+
+.security-cta-primary:hover {
+  color: #367dff;
+  transform: translateY(-3px);
+}
+
+.security-cta-secondary {
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.06);
+  color: #fff;
+}
+
+.security-cta-secondary:hover {
+  background: rgba(255,255,255,.12);
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.security-tags-section {
+  padding: 25px 0 80px;
+  background: #f7faff;
+}
+
+.security-tags-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.security-tag {
+  padding: 9px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .security-principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .security-hero-title {
+    font-size: 54px;
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .security-hero-section {
+    padding-top: 90px;
+  }
+
+  .security-stats-section {
+    margin-top: 0;
+    padding-top: 30px;
+    background: #f8fbff;
+  }
+
+  .security-stats-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .security-stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .security-cta-box {
+    padding: 50px 40px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .security-hero-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  .security-hero-description {
+    font-size: 16px;
+  }
+
+  .security-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .security-primary-btn,
+  .security-secondary-btn {
+    width: 100%;
+  }
+
+  .security-trust-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .security-hero-card {
+    padding: 30px 25px;
+    border-radius: 22px;
+  }
+
+  .security-stats-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 22px;
+  }
+
+  .security-stat-item {
+    padding: 15px;
+  }
+
+  .security-stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .security-principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .security-cta-box {
+    padding: 40px 25px;
+    border-radius: 22px;
+  }
+
+}
+
+@media (max-width: 575px) {
+
+  .security-hero-title {
+    font-size: 36px;
+  }
+
+  .security-section-header h2,
+  .security-protected-title,
+  .security-principles-title,
+  .security-faq-title {
+    font-size: 32px;
+  }
+
+  .security-feature-card,
+  .protected-area-card {
+    padding: 25px;
+  }
+
+  .security-faq-question {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .security-faq-answer {
+    padding: 0 18px 18px;
+  }
+
+}

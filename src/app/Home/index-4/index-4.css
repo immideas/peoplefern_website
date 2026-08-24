@@ -1,0 +1,970 @@
+/* =========================================================
+   PEOPLEVAULT PRODUCT PREVIEW
+========================================================= */
+
+.peoplevault-product-preview {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 30px 80px;
+  box-sizing: border-box;
+}
+
+
+
+/* =========================================================
+   PEOPLEVAULT PRODUCT PREVIEW HEADING
+========================================================= */
+
+.peoplevault-preview-heading {
+  position: relative;
+  z-index: 4;
+  max-width: 760px;
+  margin: 85px auto 30px;
+  text-align: center;
+}
+
+.peoplevault-preview-heading span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.peoplevault-preview-heading h2 {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.peoplevault-preview-heading p {
+  max-width: 650px;
+  margin: 14px auto 0;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FEATURE TABS
+========================================================= */
+
+.peoplevault-feature-tabs {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 75px auto 35px;
+  padding: 0;
+  list-style: none;
+}
+
+.peoplevault-feature-tab {
+  position: relative;
+  border: 1px solid #e8eaf0 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  color: #252b3a !important;
+  padding: 13px 22px !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 8px 25px rgba(28, 37, 54, 0.07);
+  transition: all 0.3s ease;
+}
+
+.peoplevault-feature-tab:hover {
+  color: #ffffff !important;
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  transform: translateY(-2px);
+}
+
+.peoplevault-feature-tab.active {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+}
+
+.peoplevault-feature-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #2563eb;
+}
+
+
+/* =========================================================
+   PRODUCT WINDOW
+========================================================= */
+
+.peoplevault-product-window {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow:
+    0 35px 80px rgba(43, 52, 92, 0.16),
+    0 10px 30px rgba(43, 52, 92, 0.08);
+}
+
+
+/* =========================================================
+   BROWSER BAR
+========================================================= */
+
+.peoplevault-browser-bar {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  background: #ffffff;
+  border-bottom: 1px solid #e9ebef;
+}
+
+.peoplevault-browser-dots {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.peoplevault-browser-dots span {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #d7d9de;
+}
+
+.peoplevault-browser-address {
+  min-width: 310px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: #f4f5f7;
+  color: #737b89;
+  text-align: center;
+  font-size: 12px;
+}
+
+.peoplevault-browser-address span {
+  margin-right: 7px;
+}
+
+.peoplevault-browser-actions {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 17px;
+  color: #687080;
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   APPLICATION
+========================================================= */
+
+.peoplevault-app {
+  display: flex;
+  width: 100%;
+  min-height: 560px;
+  max-height: 650px;
+  overflow: hidden;
+  background: #f6f8fb;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.peoplevault-sidebar {
+  width: 195px;
+  min-width: 195px;
+  padding: 25px 14px;
+  background: #111827;
+  color: #ffffff;
+}
+
+.peoplevault-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px 27px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.peoplevault-logo-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.peoplevault-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.peoplevault-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 43px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  color: #aeb8ca;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.peoplevault-menu-item span {
+  width: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.peoplevault-menu-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.peoplevault-menu-item.active {
+  background: rgba(99, 102, 241, 0.22);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.peoplevault-dashboard {
+  flex: 1;
+  min-width: 0;
+  padding: 24px;
+}
+
+.peoplevault-dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.peoplevault-dashboard-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #818999;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.peoplevault-dashboard-header h3 {
+  margin: 0 0 5px;
+  color: #161c27;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.peoplevault-dashboard-header p {
+  margin: 0;
+  color: #818999;
+  font-size: 12px;
+}
+
+.peoplevault-user-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.peoplevault-notification {
+  color: #687080;
+  font-size: 20px;
+}
+
+.peoplevault-avatar {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ebe9ff;
+  color: #5b55d9;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.peoplevault-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.peoplevault-stat-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #edf0f4;
+  border-radius: 13px;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.peoplevault-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(20, 30, 50, 0.06);
+}
+
+.peoplevault-stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #778092;
+  font-size: 11px;
+}
+
+.peoplevault-stat-card strong {
+  display: block;
+  margin: 9px 0 5px;
+  color: #151b26;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.peoplevault-stat-card small {
+  color: #20a66a;
+  font-size: 10px;
+}
+
+.peoplevault-stat-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 14px;
+}
+
+.peoplevault-stat-icon.green {
+  background: #e9faf2;
+  color: #16a66a;
+}
+
+.peoplevault-stat-icon.orange {
+  background: #fff4e5;
+  color: #f59e0b;
+}
+
+.peoplevault-stat-icon.purple {
+  background: #f4edff;
+  color: #8b5cf6;
+}
+
+
+/* =========================================================
+   MIDDLE + BOTTOM GRID
+========================================================= */
+
+.peoplevault-middle-grid,
+.peoplevault-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.peoplevault-panel {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #edf0f4;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.peoplevault-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.peoplevault-panel-header h4 {
+  margin: 0 0 4px;
+  color: #161c27;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.peoplevault-panel-header span {
+  color: #8b94a4;
+  font-size: 10px;
+}
+
+.peoplevault-panel-header button {
+  border: 1px solid #e5e8ed;
+  border-radius: 7px;
+  padding: 6px 10px;
+  background: #ffffff;
+  color: #687080;
+  font-size: 10px;
+}
+
+.peoplevault-panel-header a {
+  color: #4f46e5;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ATTENDANCE CHART
+========================================================= */
+
+.peoplevault-chart {
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.peoplevault-chart-bars {
+  width: 100%;
+  height: 155px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  border-bottom: 1px solid #e6e8ec;
+}
+
+.peoplevault-bar-group {
+  height: 100%;
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.peoplevault-bar {
+  width: 25px;
+  min-height: 20px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(
+    180deg,
+    #6366f1,
+    #8b5cf6
+  );
+}
+
+.peoplevault-bar-group span {
+  color: #8c95a4;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   LEAVE SUMMARY
+========================================================= */
+
+.peoplevault-leave {
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.peoplevault-donut {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: conic-gradient(
+    #22c55e 0 65%,
+    #f59e0b 65% 85%,
+    #ef4444 85% 100%
+  );
+}
+
+.peoplevault-donut > div {
+  width: 82px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.peoplevault-donut strong {
+  color: #171d28;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.peoplevault-donut small {
+  margin-top: 5px;
+  color: #8b94a4;
+  font-size: 9px;
+}
+
+.peoplevault-leave-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.peoplevault-leave-list div {
+  display: grid;
+  grid-template-columns: 9px 65px 25px;
+  align-items: center;
+  gap: 7px;
+  color: #687080;
+  font-size: 10px;
+}
+
+.peoplevault-leave-list strong {
+  color: #171d28;
+}
+
+.approved-dot,
+.pending-dot,
+.rejected-dot {
+  width: 7px;
+  height: 7px;
+  display: block;
+  border-radius: 50%;
+}
+
+.approved-dot {
+  background: #22c55e;
+}
+
+.pending-dot {
+  background: #f59e0b;
+}
+
+.rejected-dot {
+  background: #ef4444;
+}
+
+
+/* =========================================================
+   RECENT ACTIVITIES
+========================================================= */
+
+.peoplevault-activity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.peoplevault-activity:last-child {
+  border-bottom: 0;
+}
+
+.peoplevault-activity-icon {
+  width: 31px;
+  height: 31px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 13px;
+}
+
+.peoplevault-activity strong {
+  display: block;
+  color: #363e4c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.peoplevault-activity small {
+  display: block;
+  margin-top: 3px;
+  color: #9aa2af;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.peoplevault-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.peoplevault-quick-actions button {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #edf0f4;
+  border-radius: 9px;
+  padding: 10px;
+  background: #fafbfc;
+  color: #454d5a;
+  font-size: 10px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.peoplevault-quick-actions button:hover {
+  border-color: #6366f1;
+  background: #f7f7ff;
+  color: #4f46e5;
+}
+
+.peoplevault-quick-actions button span {
+  color: #4f46e5;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .peoplevault-feature-tabs {
+    gap: 8px;
+  }
+
+  .peoplevault-feature-tab {
+    padding: 11px 15px !important;
+    font-size: 12px;
+  }
+
+  .peoplevault-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .peoplevault-sidebar {
+    width: 180px;
+    min-width: 180px;
+  }
+
+  .peoplevault-dashboard {
+    padding: 22px;
+  }
+
+  .peoplevault-middle-grid,
+  .peoplevault-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .peoplevault-browser-address {
+    min-width: 230px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .peoplevault-product-preview {
+    padding: 0 15px 55px;
+  }
+
+  .peoplevault-preview-heading {
+    margin: 60px auto 25px;
+  }
+
+  .peoplevault-preview-heading h2 {
+    font-size: 30px;
+  }
+
+  .peoplevault-preview-heading p {
+    font-size: 14px;
+  }
+
+  .peoplevault-feature-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin-top: 45px;
+    padding: 5px 5px 15px;
+    scrollbar-width: none;
+  }
+
+  .peoplevault-feature-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .peoplevault-feature-tab {
+    flex: 0 0 auto;
+    padding: 10px 14px !important;
+    font-size: 11px;
+  }
+
+  .peoplevault-product-window {
+    border-radius: 15px;
+  }
+
+  .peoplevault-browser-bar {
+    height: 48px;
+    padding: 0 12px;
+  }
+
+  .peoplevault-browser-dots {
+    width: auto;
+  }
+
+  .peoplevault-browser-address {
+    min-width: 0;
+    width: 170px;
+    margin: 0 auto;
+    padding: 6px 10px;
+    font-size: 9px;
+  }
+
+  .peoplevault-browser-actions {
+    display: none;
+  }
+
+  .peoplevault-app {
+    min-height: 500px;
+    max-height: none;
+  }
+
+  .peoplevault-sidebar {
+    display: none;
+  }
+
+  .peoplevault-dashboard {
+    padding: 18px;
+  }
+
+  .peoplevault-dashboard-header h3 {
+    font-size: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .peoplevault-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .peoplevault-dashboard-header {
+    align-items: flex-start;
+  }
+
+  .peoplevault-user-area {
+    gap: 8px;
+  }
+
+  .peoplevault-notification {
+    display: none;
+  }
+
+  .peoplevault-panel {
+    padding: 15px;
+  }
+
+  .peoplevault-leave {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .peoplevault-quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================================================
+   FIX PEOPLEVAULT FINAL CTA
+========================================================= */
+
+.peoplevault-final-cta-fix {
+    /* not needed if you don't add class */
+}
+
+
+/* CTA outer section */
+section.py-120:has(.bg-neutral-900) {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+
+
+/* Dark CTA box */
+section.py-120:has(.bg-neutral-900) 
+.bg-neutral-900 {
+    padding-top: 60px !important;
+    padding-bottom: 50px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+
+    min-height: 380px;
+    box-sizing: border-box;
+}
+
+
+/* Heading */
+section.py-120:has(.bg-neutral-900) h2 {
+    font-size: clamp(34px, 4vw, 56px) !important;
+    line-height: 1.15 !important;
+
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Description */
+section.py-120:has(.bg-neutral-900) p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* Buttons container */
+section.py-120:has(.bg-neutral-900) 
+.d-inline-flex {
+    margin-top: 25px !important;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* Buttons */
+section.py-120:has(.bg-neutral-900) 
+.d-inline-flex .btn {
+    padding: 14px 28px !important;
+
+    min-height: 52px;
+
+    font-size: 16px !important;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    section.py-120:has(.bg-neutral-900) {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    section.py-120:has(.bg-neutral-900)
+    .bg-neutral-900 {
+        padding: 40px 20px !important;
+
+        min-height: auto;
+    }
+
+    section.py-120:has(.bg-neutral-900) h2 {
+        font-size: 32px !important;
+    }
+
+    section.py-120:has(.bg-neutral-900)
+    .d-inline-flex {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 12px !important;
+    }
+
+    section.py-120:has(.bg-neutral-900)
+    .d-inline-flex .btn {
+        width: 100%;
+        max-width: 260px;
+    }
+}

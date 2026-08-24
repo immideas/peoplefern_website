@@ -1,135 +1,123 @@
 <!-- Nav menu Start -->
 <ul class="nav-menu d-lg-flex align-items-center" [ngClass]="menuClass">
-  <li class="nav-menu__item has-submenu" [class.activePage]="isHomeActive()" [class.active]="isSubmenuActive('home')"
-      (mouseenter)="onSubmenuMouseEnter('home')" (mouseleave)="onSubmenuMouseLeave()">
-      <a href="javascript:void(0)" (click)="toggleSubmenu($event, 'home')"
-          class="nav-menu__link hover--translate-y-1 tw-pe-5 text-heading tw-py-9 fw-semibold w-100">Home</a>
-      <app-mega-menu [show]="isSubmenuActive('home')"
-          [class.show]="isSubmenuActive('home')"
-          [style.display]="isSubmenuActive('home') ? 'block' : 'none'"
-          (mouseenter)="onSubmenuMouseEnter('home')" (mouseleave)="onSubmenuMouseLeave()"
-          (navLinkClick)="onNavLinkClick()"></app-mega-menu>
+
+  <!-- ================= HOME ================= -->
+  <li
+    class="nav-menu__item"
+    [class.activePage]="isHomeActive()"
+    [routerLinkActive]="'activePage'">
+
+    <a
+      [routerLink]="'/home'"
+      (click)="onNavLinkClick()"
+      class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100">
+      Home
+    </a>
+
   </li>
-  <li class="nav-menu__item has-submenu position-relative" [class.activePage]="isPagesActive()" [class.active]="isSubmenuActive('pages')"
-      (mouseenter)="onSubmenuMouseEnter('pages')" (mouseleave)="onSubmenuMouseLeave()">
-      <a href="javascript:void(0)" (click)="toggleSubmenu($event, 'pages')"
-          class="nav-menu__link hover--translate-y-1 tw-pe-5 text-heading tw-py-9 fw-semibold w-100">Pages</a>
-      <ul
-          class="nav-submenu scroll-sm position-absolute tw-start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99"
-          [class.show]="isSubmenuActive('pages')"
-          [style.display]="isSubmenuActive('pages') ? 'block' : 'none'"
-          (mouseenter)="onSubmenuMouseEnter('pages')" (mouseleave)="onSubmenuMouseLeave()">
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/pricing-plan'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Pricing
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/about'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  About Us
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/app-intigration'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  App Integration
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/intigration-details'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Integration Details
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/policy-privacy'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Privacy Policy
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/faq'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  FAQ
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/project-details'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Project Details
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/service-details'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Service Details
-              </a>
-          </li>
-      </ul>
+
+
+  <!-- ================= FEATURES ================= -->
+  <li
+    class="nav-menu__item has-submenu position-relative"
+    [class.activePage]="isFeaturesActive()"
+    [class.active]="isSubmenuActive('features')"
+    (mouseenter)="onSubmenuMouseEnter('features')"
+    (mouseleave)="onSubmenuMouseLeave()">
+
+    <a
+      href="javascript:void(0)"
+      (click)="toggleSubmenu($event, 'features')"
+      class="nav-menu__link hover--translate-y-1 tw-pe-5 text-heading tw-py-9 fw-semibold w-100">
+      Features
+    </a>
+
+    <ul
+      class="nav-submenu scroll-sm position-absolute tw-start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99"
+      [class.show]="isSubmenuActive('features')"
+      [style.display]="isSubmenuActive('features') ? 'block' : 'none'"
+      (mouseenter)="onSubmenuMouseEnter('features')"
+      (mouseleave)="onSubmenuMouseLeave()">
+
+      <!-- Product Overview -->
+      <li
+        class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative"
+        [routerLinkActive]="'activePage'">
+
+        <a
+          [routerLink]="'/features'"
+          (click)="onNavLinkClick()"
+          class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+          Product Overview
+        </a>
+
+      </li>
+
+
+      <!-- Feature Details -->
+      <!-- <li
+        class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative"
+        [routerLinkActive]="'activePage'">
+
+        <a
+          [routerLink]="'/feature-details'"
+          (click)="onNavLinkClick()"
+          class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+          Feature Details
+        </a>
+
+      </li> -->
+
+
+      <!-- Compare -->
+      <li
+        class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative"
+        [routerLinkActive]="'activePage'">
+
+        <a
+          [routerLink]="'/compare'"
+          (click)="onNavLinkClick()"
+          class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+          Compare
+        </a>
+
+      </li>
+
+    </ul>
+
   </li>
-  <li class="nav-menu__item has-submenu position-relative" [class.activePage]="isShopActive()" [class.active]="isSubmenuActive('shop')"
-      (mouseenter)="onSubmenuMouseEnter('shop')" (mouseleave)="onSubmenuMouseLeave()">
-      <a href="javascript:void(0)" (click)="toggleSubmenu($event, 'shop')"
-          class="nav-menu__link hover--translate-y-1 tw-pe-5 text-heading tw-py-9 fw-semibold w-100">Shop</a>
-      <ul
-          class="nav-submenu scroll-sm position-absolute tw-start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99"
-          [class.show]="isSubmenuActive('shop')"
-          [style.display]="isSubmenuActive('shop') ? 'block' : 'none'"
-          (mouseenter)="onSubmenuMouseEnter('shop')" (mouseleave)="onSubmenuMouseLeave()">
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/shop'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Shop
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/shop-details'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Shop Details
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/cart'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Cart
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/checkout'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Checkout
-              </a>
-          </li>
-      </ul>
+
+
+  <!-- ================= PRICING ================= -->
+  <li
+    class="nav-menu__item"
+    [class.activePage]="isPricingActive()"
+    [routerLinkActive]="'activePage'">
+
+    <a
+      [routerLink]="'/pricing'"
+      (click)="onNavLinkClick()"
+      class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100">
+      Pricing
+    </a>
+
   </li>
-  <li class="nav-menu__item has-submenu position-relative" [class.activePage]="isBlogActive()" [class.active]="isSubmenuActive('blog')"
-      (mouseenter)="onSubmenuMouseEnter('blog')" (mouseleave)="onSubmenuMouseLeave()">
-      <a href="javascript:void(0)" (click)="toggleSubmenu($event, 'blog')"
-          class="nav-menu__link hover--translate-y-1 tw-pe-5 text-heading tw-py-9 fw-semibold w-100">Blog</a>
-      <ul
-          class="nav-submenu scroll-sm position-absolute tw-start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99"
-          [class.show]="isSubmenuActive('blog')"
-          [style.display]="isSubmenuActive('blog') ? 'block' : 'none'"
-          (mouseenter)="onSubmenuMouseEnter('blog')" (mouseleave)="onSubmenuMouseLeave()">
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/blog'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Blog
-              </a>
-          </li>
-          <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative" [routerLinkActive]="'activePage'">
-              <a [routerLink]="'/blog-details'" (click)="onNavLinkClick()"
-                  class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
-                  Blog Details
-              </a>
-          </li>
-      </ul>
+
+
+  <!-- ================= ABOUT US ================= -->
+  <li
+    class="nav-menu__item"
+    [class.activePage]="isAboutActive()"
+    [routerLinkActive]="'activePage'">
+
+    <a
+      [routerLink]="'/about'"
+      (click)="onNavLinkClick()"
+      class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100">
+      About Us
+    </a>
+
   </li>
-  <li class="nav-menu__item" [routerLinkActive]="'activePage'">
-      <a [routerLink]="'/contact'" (click)="onNavLinkClick()"
-          class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100">Contact</a>
-  </li>
+
 </ul>
-<!-- Nav menu End  -->
+<!-- Nav menu End -->

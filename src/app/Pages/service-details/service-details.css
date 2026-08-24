@@ -61,3 +61,393 @@
 .video-close:hover {
   background: rgba(0, 0, 0, 0.8);
 }
+/* =========================================================
+   PEOPLEVAULT SITEMAP
+========================================================= */
+
+.peoplevault-sitemap {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SITEMAP INTRO
+========================================================= */
+
+.peoplevault-sitemap .max-w-760-px {
+  max-width: 700px;
+}
+
+.peoplevault-sitemap h1 {
+  font-size: 46px;
+  line-height: 1.15;
+  margin-bottom: 18px !important;
+}
+
+.peoplevault-sitemap .tw-text-lg {
+  font-size: 16px !important;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.peoplevault-sitemap .row {
+  row-gap: 20px;
+}
+
+
+/* =========================================================
+   SITEMAP CARD
+========================================================= */
+
+.peoplevault-sitemap-card {
+  height: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ebf2;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.peoplevault-sitemap-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #d5e2fa;
+
+  box-shadow: 0 12px 30px rgba(20, 40, 80, 0.08);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.peoplevault-sitemap-card-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding-bottom: 17px;
+
+  margin-bottom: 0;
+
+  border-bottom: 1px solid #eef1f5;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.peoplevault-sitemap-icon {
+  width: 48px;
+
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #eef5ff;
+
+  color: #1557e8;
+
+  font-size: 22px;
+
+  transition: all 0.25s ease;
+}
+
+.peoplevault-sitemap-card:hover .peoplevault-sitemap-icon {
+  background: #1557e8;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.peoplevault-sitemap-card h4 {
+  font-size: 20px !important;
+
+  line-height: 1.3;
+
+  margin-bottom: 3px !important;
+}
+
+.peoplevault-sitemap-card-header p {
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.peoplevault-sitemap-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  padding-top: 12px;
+}
+
+
+.peoplevault-sitemap-link {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 10px 11px;
+
+  border-radius: 9px;
+
+  color: #263247;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+
+.peoplevault-sitemap-link i {
+  font-size: 16px;
+
+  opacity: 0;
+
+  transform: translateX(-4px);
+
+  transition: all 0.2s ease;
+}
+
+
+.peoplevault-sitemap-link:hover {
+  background: #f4f7fc;
+
+  color: #1557e8;
+
+  padding-left: 15px;
+}
+
+
+.peoplevault-sitemap-link:hover i {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.peoplevault-sitemap-cta {
+  margin-top: 30px;
+
+  padding: 24px 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #f3f7ff 0%,
+    #ffffff 100%
+  );
+
+  border: 1px solid #dce7f8;
+
+  border-radius: 18px;
+}
+
+
+/* CTA ICON */
+
+.peoplevault-sitemap-cta-icon {
+  width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background: #1557e8;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  box-shadow: 0 7px 18px rgba(21, 87, 232, 0.16);
+}
+
+
+/* CTA HEADING */
+
+.peoplevault-sitemap-cta h4 {
+  font-size: 19px;
+
+  line-height: 1.3;
+
+  margin-bottom: 5px !important;
+}
+
+
+/* CTA DESCRIPTION */
+
+.peoplevault-sitemap-cta p {
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* CTA BUTTON */
+
+.peoplevault-sitemap-cta .btn {
+  font-size: 14px;
+
+  padding: 11px 20px !important;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .peoplevault-sitemap {
+    padding-top: 60px;
+
+    padding-bottom: 60px;
+  }
+
+  .peoplevault-sitemap h1 {
+    font-size: 40px;
+  }
+
+  .peoplevault-sitemap-cta {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .peoplevault-sitemap {
+    padding-top: 50px;
+
+    padding-bottom: 50px;
+  }
+
+  .peoplevault-sitemap h1 {
+    font-size: 34px;
+  }
+
+  .peoplevault-sitemap-card {
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  .peoplevault-sitemap-card h4 {
+    font-size: 18px !important;
+  }
+
+  .peoplevault-sitemap-link {
+    font-size: 14px;
+
+    padding: 9px 8px;
+  }
+
+  .peoplevault-sitemap-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 22px;
+
+    margin-top: 25px;
+  }
+
+  .peoplevault-sitemap-cta .btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .peoplevault-sitemap h1 {
+    font-size: 30px;
+  }
+
+  .peoplevault-sitemap .tw-text-lg {
+    font-size: 15px !important;
+  }
+
+  .peoplevault-sitemap-card {
+    padding: 18px;
+  }
+
+}

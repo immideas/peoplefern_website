@@ -1,0 +1,637 @@
+<!-- =========================================================
+     HELP CENTER HERO
+========================================================= -->
+
+<section class="help-center-hero">
+
+  <div class="container">
+
+    <div class="help-center-hero-content">
+
+      <span class="help-center-badge">
+        <i class="ph ph-sparkle"></i>
+        PEOPLEVAULT HELP CENTER
+      </span>
+
+      <h1>
+        How can we
+        <span>help you today?</span>
+      </h1>
+
+      <p>
+        Find answers, guides and helpful resources for managing
+        your PeopleVault HRMS platform.
+      </p>
+
+
+      <!-- SEARCH -->
+
+      <form
+        class="help-center-search"
+        (submit)="$event.preventDefault(); searchHelp()"
+      >
+
+        <i class="ph ph-magnifying-glass search-icon"></i>
+
+        <input
+          type="text"
+          name="search"
+          [(ngModel)]="searchTerm"
+          (input)="searchHelp()"
+          placeholder="Search for employees, attendance, payroll..."
+        >
+
+        <button type="submit">
+          Search
+          <i class="ph ph-arrow-right"></i>
+        </button>
+
+      </form>
+
+
+      <!-- POPULAR SEARCHES -->
+
+      <div class="help-popular-searches">
+
+        <span>Popular:</span>
+
+        <button
+          type="button"
+          (click)="searchCategory('Getting Started')"
+        >
+          Getting Started
+        </button>
+
+        <button
+          type="button"
+          (click)="searchCategory('Employee Management')"
+        >
+          Employee Management
+        </button>
+
+        <button
+          type="button"
+          (click)="searchCategory('Attendance & Leave')"
+        >
+          Attendance & Leave
+        </button>
+
+        <button
+          type="button"
+          (click)="searchCategory('Troubleshooting')"
+        >
+          Troubleshooting
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK STATS
+========================================================= -->
+
+<section class="help-stats-section">
+
+  <div class="container">
+
+    <div class="help-stats">
+
+      <div class="help-stat">
+
+        <div class="help-stat-icon">
+          <i class="ph ph-books"></i>
+        </div>
+
+        <div>
+          <strong>30+</strong>
+          <span>Help Articles</span>
+        </div>
+
+      </div>
+
+
+      <div class="help-stat">
+
+        <div class="help-stat-icon">
+          <i class="ph ph-squares-four"></i>
+        </div>
+
+        <div>
+          <strong>8</strong>
+          <span>HRMS Modules</span>
+        </div>
+
+      </div>
+
+
+      <div class="help-stat">
+
+        <div class="help-stat-icon">
+          <i class="ph ph-clock"></i>
+        </div>
+
+        <div>
+          <strong>24/7</strong>
+          <span>Self-Service Help</span>
+        </div>
+
+      </div>
+
+
+      <div class="help-stat">
+
+        <div class="help-stat-icon">
+          <i class="ph ph-headset"></i>
+        </div>
+
+        <div>
+          <strong>Support</strong>
+          <span>When You Need It</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HELP CATEGORIES
+========================================================= -->
+
+<section class="help-categories-section">
+
+  <div class="container">
+
+    <div class="help-section-heading text-center">
+
+      <span>
+        EXPLORE HELP
+      </span>
+
+      <h2>
+        What can we help you with?
+      </h2>
+
+      <p>
+        Browse PeopleVault resources by HRMS module.
+      </p>
+
+    </div>
+
+
+    <div class="row gy-4">
+
+      <div
+        class="col-xl-3 col-lg-4 col-md-6"
+        *ngFor="let category of helpCategories"
+      >
+
+        <div class="help-category-card">
+
+          <div
+            class="help-category-icon"
+            [ngClass]="category.colorClass"
+          >
+
+            <i [class]="category.icon"></i>
+
+          </div>
+
+
+          <div class="help-category-content">
+
+            <span class="help-category-number">
+              {{ category.id === 'gettingStarted' ? '01' :
+                 category.id === 'employeeManagement' ? '02' :
+                 category.id === 'attendanceLeave' ? '03' :
+                 category.id === 'payroll' ? '04' :
+                 category.id === 'policies' ? '05' :
+                 category.id === 'permissions' ? '06' :
+                 category.id === 'subscription' ? '07' : '08' }}
+            </span>
+
+            <h5>
+              {{ category.title }}
+            </h5>
+
+            <p>
+              {{ category.description }}
+            </p>
+
+            <button
+              type="button"
+              (click)="searchCategory(category.title)"
+            >
+              Explore Guides
+
+              <i class="ph ph-arrow-up-right"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     POPULAR GUIDES
+========================================================= -->
+
+<section class="popular-guides-section">
+
+  <div class="container">
+
+    <div class="help-section-heading">
+
+      <span>
+        MOST POPULAR
+      </span>
+
+      <h2>
+        Popular guides
+      </h2>
+
+      <p>
+        Quick answers to some of the most common PeopleVault questions.
+      </p>
+
+    </div>
+
+
+    <div class="row gy-4">
+
+      <div
+        class="col-lg-4 col-md-6"
+        *ngFor="let guide of popularGuides"
+      >
+
+        <div
+          class="popular-guide-card"
+          (click)="openPopularGuide(guide.category)"
+        >
+
+          <div class="popular-guide-icon">
+
+            <i [class]="guide.icon"></i>
+
+          </div>
+
+
+          <div class="popular-guide-content">
+
+            <span>
+              {{ guide.category }}
+            </span>
+
+            <h5>
+              {{ guide.title }}
+            </h5>
+
+            <button type="button">
+              Read Guide
+              <i class="ph ph-arrow-right"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HELP ARTICLES
+========================================================= -->
+
+<section
+  class="help-articles-section"
+  id="help-guides"
+>
+
+  <div class="container">
+
+    <div class="help-articles-wrapper">
+
+      <!-- HEADER -->
+
+      <div class="help-articles-header">
+
+        <div>
+
+          <span>
+            KNOWLEDGE BASE
+          </span>
+
+          <h2>
+            Help & Guides
+          </h2>
+
+          <p>
+            Find answers and walkthroughs for common PeopleVault tasks.
+          </p>
+
+        </div>
+
+
+        <button
+          *ngIf="searchTerm"
+          type="button"
+          class="clear-search-btn"
+          (click)="clearSearch()"
+        >
+          <i class="ph ph-x"></i>
+          Clear Search
+        </button>
+
+      </div>
+
+
+      <!-- NO RESULTS -->
+
+      <div
+        *ngIf="filteredArticles.length === 0"
+        class="help-no-results"
+      >
+
+        <div class="help-no-results-icon">
+
+          <i class="ph ph-magnifying-glass"></i>
+
+        </div>
+
+        <h4>
+          No guides found
+        </h4>
+
+        <p>
+          We couldn't find anything matching
+          "<strong>{{ searchTerm }}</strong>".
+        </p>
+
+        <button
+          type="button"
+          (click)="clearSearch()"
+        >
+          View All Guides
+        </button>
+
+      </div>
+
+
+      <!-- ARTICLE SECTIONS -->
+
+      <div
+        *ngFor="let section of filteredArticles; let sectionIndex = index"
+        class="help-article-section"
+      >
+
+        <div class="help-article-category">
+
+          <div class="category-line"></div>
+
+          <h4>
+            {{ section.category }}
+          </h4>
+
+          <span>
+            {{ section.questions.length }}
+            {{ section.questions.length === 1 ? 'Article' : 'Articles' }}
+          </span>
+
+        </div>
+
+
+        <div class="help-faq-list">
+
+          <div
+            *ngFor="
+              let item of section.questions;
+              let questionIndex = index
+            "
+            class="help-faq-item"
+          >
+
+            <button
+              type="button"
+              class="help-faq-question"
+              data-bs-toggle="collapse"
+              [attr.data-bs-target]="'#' + item.id"
+              [attr.aria-controls]="item.id"
+              [attr.aria-expanded]="questionIndex === 0"
+            >
+
+              <span>
+
+                <i class="ph ph-question"></i>
+
+                {{ item.question }}
+
+              </span>
+
+              <i class="ph ph-plus faq-plus"></i>
+
+            </button>
+
+
+            <div
+              [id]="item.id"
+              class="collapse"
+              [class.show]="questionIndex === 0"
+            >
+
+              <div class="help-faq-answer">
+
+                {{ item.answer }}
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SUPPORT OPTIONS
+========================================================= -->
+
+<section class="support-options-section">
+
+  <div class="container">
+
+    <div class="help-section-heading text-center">
+
+      <span>
+        NEED MORE HELP?
+      </span>
+
+      <h2>
+        We're here to help
+      </h2>
+
+      <p>
+        Can't find what you're looking for?
+        Choose the best way to get support.
+      </p>
+
+    </div>
+
+
+    <div class="row gy-4">
+
+      <!-- CONTACT -->
+
+      <div class="col-lg-6">
+
+        <div class="support-option-card">
+
+          <div class="support-option-icon">
+            <i class="ph ph-headset"></i>
+          </div>
+
+          <div>
+
+            <span>
+              TALK TO SUPPORT
+            </span>
+
+            <h4>
+              Contact our support team
+            </h4>
+
+            <p>
+              Get help from the PeopleVault team
+              when you need additional assistance.
+            </p>
+
+            <a routerLink="/contact">
+              Contact Support
+              <i class="ph ph-arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- DEMO -->
+
+      <div class="col-lg-6">
+
+        <div class="support-option-card">
+
+          <div class="support-option-icon">
+            <i class="ph ph-calendar-check"></i>
+          </div>
+
+          <div>
+
+            <span>
+              PRODUCT DEMO
+            </span>
+
+            <h4>
+              See PeopleVault in action
+            </h4>
+
+            <p>
+              Explore how PeopleVault can simplify
+              your HR and workforce operations.
+            </p>
+
+            <a routerLink="/book-demo">
+              Book a Demo
+              <i class="ph ph-arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TOPICS
+========================================================= -->
+
+<section class="help-topics-section">
+
+  <div class="container">
+
+    <div class="help-topics-box">
+
+      <div class="text-center">
+
+        <span>
+          PEOPLEVAULT RESOURCES
+        </span>
+
+        <h3>
+          Explore more HR topics
+        </h3>
+
+        <p>
+          Discover useful topics across the PeopleVault platform.
+        </p>
+
+      </div>
+
+
+      <div class="help-topic-tags">
+
+        <button
+          *ngFor="let tag of tags2"
+          type="button"
+          [ngClass]="[tag.textColor, tag.bgClass]"
+        >
+          {{ tag.label }}
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

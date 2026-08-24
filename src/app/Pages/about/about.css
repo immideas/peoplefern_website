@@ -1,0 +1,986 @@
+/* =========================================================
+   PEOPLEVAULT - ABOUT US
+   MODERN GREEN HRMS THEME
+========================================================= */
+
+
+/* =========================================================
+   COMMON ABOUT SECTIONS
+========================================================= */
+
+.about-company,
+.about-mission-vision,
+.about-features,
+.about-team {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BRAND COLORS
+========================================================= */
+
+/*
+   Primary Green : #0aa889
+   Dark Green    : #087e6c
+   Light Green   : #ecfbf7
+   Soft Green    : #f4fcf9
+*/
+
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.about-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-banner .section-bg-two {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(10, 168, 137, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(8, 126, 108, 0.09),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f4fcf9 0%,
+      #ffffff 55%,
+      #f0faf7 100%
+    );
+}
+
+
+/* Hero title */
+
+.about-banner h1 {
+  font-size: clamp(42px, 5vw, 72px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+
+  font-weight: 700;
+
+  color: #101828;
+}
+
+
+/* Hero paragraph */
+
+.about-banner p {
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO LOGO
+========================================================= */
+
+.about-banner .text-center > img[alt="PeopleVault"] {
+  width: 150px !important;
+  height: 150px !important;
+
+  max-width: 150px !important;
+  max-height: 150px !important;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 20px !important;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.about-banner .btn {
+  min-width: 155px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-banner .btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(10, 168, 137, 0.18);
+}
+
+
+/* =========================================================
+   WHO WE ARE
+========================================================= */
+
+.about-company {
+  background: #ffffff;
+}
+
+.about-company h3 {
+  font-size: clamp(34px, 4vw, 52px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+}
+
+.about-company p {
+  font-size: 17px;
+
+  line-height: 1.85;
+}
+
+
+/* Right information card */
+
+.about-company .bg-neutral-50 {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7fcfa 0%,
+      #eefaf6 100%
+    );
+
+  border: 1px solid #dcefe9;
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Decorative circle */
+
+.about-company .bg-neutral-50::before {
+  content: "";
+
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  right: -60px;
+  top: -60px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(10, 168, 137, 0.10);
+}
+
+.about-company .bg-neutral-50 h5,
+.about-company .bg-neutral-50 p {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   MISSION & VISION
+========================================================= */
+
+.about-mission-vision {
+  background:
+    linear-gradient(
+      180deg,
+      #f5fcfa 0%,
+      #eef9f6 100%
+    );
+}
+
+.about-mission-vision h3,
+.about-features h3,
+.about-team h3 {
+  font-size: clamp(34px, 4vw, 50px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1.4px;
+}
+
+
+/* Mission / Vision cards */
+
+.about-mission-vision .bg-white {
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(220, 239, 233, 0.95);
+
+  box-shadow:
+    0 20px 55px rgba(15, 23, 42, 0.055);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* Decorative circle */
+
+.about-mission-vision .bg-white::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -100px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(10, 168, 137, 0.055);
+
+  pointer-events: none;
+}
+
+
+/* Hover */
+
+.about-mission-vision .bg-white:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(10, 168, 137, 0.28);
+
+  box-shadow:
+    0 30px 70px rgba(15, 23, 42, 0.10);
+}
+
+.about-mission-vision .bg-white > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+.about-mission-vision h4 {
+  font-size: 25px;
+}
+
+.about-mission-vision p {
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* Mission / Vision icon */
+
+.about-mission-vision .bg-main-50 {
+  background:
+    #ecfbf7 !important;
+}
+
+.about-mission-vision .text-gradient-teal {
+  color:
+    #0aa889 !important;
+}
+
+
+/* =========================================================
+   WHY PEOPLEVAULT
+   5 CARDS = 3 + 2
+========================================================= */
+
+.about-features {
+  position: relative;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   VALUE CARD GRID
+========================================================= */
+
+.about-values-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 24px;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* First 3 cards */
+
+.value-card-column {
+  grid-column: span 2;
+
+  min-width: 0;
+}
+
+
+/* Fourth card */
+
+.value-card-column:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+
+/* Fifth card */
+
+.value-card-column:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+
+/* =========================================================
+   VALUE CARD
+========================================================= */
+
+.about-value-card {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 300px;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 32px 28px;
+
+  border-radius: 22px;
+
+  border:
+    1px solid #dfeee9;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 45px rgba(15, 23, 42, 0.045);
+
+  overflow: visible;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* Decorative circle */
+
+.about-value-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  right: -80px;
+  top: -80px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(10, 168, 137, 0.06);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+
+/* Hover */
+
+.about-value-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(10, 168, 137, 0.30);
+
+  box-shadow:
+    0 25px 65px rgba(15, 23, 42, 0.10);
+}
+
+.about-value-card:hover::before {
+  transform: scale(1.3);
+
+  background:
+    rgba(10, 168, 137, 0.09);
+}
+
+
+/* =========================================================
+   VALUE CARD ICON
+========================================================= */
+
+.about-value-icon {
+  position: relative;
+
+  z-index: 5;
+
+  width: 64px;
+  height: 64px;
+
+  min-width: 64px;
+  min-height: 64px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border-radius: 16px;
+
+  background:
+    #ecfbf7;
+
+  border:
+    1px solid rgba(10, 168, 137, 0.12);
+
+  box-shadow:
+    0 8px 24px rgba(10, 168, 137, 0.08);
+
+  overflow: visible;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Icon */
+
+.about-value-icon i {
+  position: relative;
+
+  z-index: 10;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    #0aa889 !important;
+
+  font-size: 26px;
+
+  line-height: 1;
+
+  opacity: 1 !important;
+
+  visibility: visible !important;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Icon hover */
+
+.about-value-card:hover .about-value-icon {
+  transform: translateY(-3px);
+
+  background:
+    #e4f8f2;
+
+  box-shadow:
+    0 12px 30px rgba(10, 168, 137, 0.13);
+}
+
+.about-value-card:hover .about-value-icon i {
+  color:
+    #087e6c !important;
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   VALUE CARD CONTENT
+========================================================= */
+
+.about-value-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* Title */
+
+.about-value-content h5 {
+  margin-bottom: 12px;
+
+  color:
+    #101828 !important;
+
+  font-size: 21px;
+
+  line-height: 1.35;
+
+  font-weight: 700;
+}
+
+
+/* Description */
+
+.about-value-content p {
+  margin: 0;
+
+  color:
+    #667085 !important;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.about-team {
+  background:
+    linear-gradient(
+      180deg,
+      #f5fcfa 0%,
+      #ffffff 100%
+    );
+}
+
+.about-team .bg-white {
+  border:
+    1px solid #dfeee9;
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-team .bg-white:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(10, 168, 137, 0.22);
+
+  box-shadow:
+    0 30px 70px rgba(15, 23, 42, 0.10);
+}
+
+.about-team h5 {
+  font-size: 24px;
+}
+
+.about-team p {
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.task-management .bg-green-deep {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(34, 197, 160, 0.24),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(10, 168, 137, 0.22),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #087e6c 0%,
+      #096f61 45%,
+      #075b50 100%
+    );
+
+  box-shadow:
+    0 30px 80px rgba(7, 94, 79, 0.20);
+}
+
+
+/* CTA decorative circle */
+
+.task-management .bg-green-deep::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  right: -100px;
+  top: -150px;
+
+  pointer-events: none;
+}
+
+
+/* CTA heading */
+
+.task-management h3 {
+  font-size: clamp(32px, 4vw, 52px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+.task-management p {
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.task-management .btn {
+  min-width: 160px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.task-management .btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+========================================================= */
+
+.about-company::before,
+.about-features::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(10, 168, 137, 0.035);
+
+  left: -140px;
+
+  top: 20%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   GREEN TEXT ACCENTS
+========================================================= */
+
+.about-banner .text-gradient-teal,
+.about-company .text-gradient-teal,
+.about-mission-vision .text-gradient-teal,
+.about-features .text-gradient-teal,
+.about-team .text-gradient-teal {
+  color:
+    #0aa889 !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+   1200px+
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .about-values-grid {
+    grid-template-columns:
+      repeat(6, minmax(0, 1fr));
+
+    gap: 24px;
+  }
+
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .about-value-card {
+    min-height: 290px;
+
+    padding: 30px 25px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   992px - 1199px
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .about-banner h1 {
+    font-size: 48px;
+  }
+
+  .about-company h3,
+  .about-mission-vision h3,
+  .about-features h3,
+  .about-team h3 {
+    font-size: 38px;
+  }
+
+  .about-company,
+  .about-mission-vision,
+  .about-features,
+  .about-team {
+    padding-top: 90px;
+
+    padding-bottom: 90px;
+  }
+
+
+  /* 2 cards per row */
+
+  .about-values-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+
+  .value-card-column,
+  .value-card-column:nth-child(4),
+  .value-card-column:nth-child(5) {
+    grid-column: span 1;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .about-banner h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .about-banner p {
+    font-size: 16px;
+  }
+
+  .about-company h3,
+  .about-mission-vision h3,
+  .about-features h3,
+  .about-team h3 {
+    font-size: 32px;
+  }
+
+  .about-company p,
+  .about-mission-vision p,
+  .about-features p,
+  .about-team p {
+    font-size: 15px;
+  }
+
+
+  .about-banner .btn,
+  .task-management .btn {
+    width: 100%;
+
+    max-width: 260px;
+  }
+
+
+  /* One card per row */
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .value-card-column,
+  .value-card-column:nth-child(4),
+  .value-card-column:nth-child(5) {
+    grid-column: span 1;
+  }
+
+
+  .about-value-card {
+    min-height: auto;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .about-banner h1 {
+    font-size: 32px;
+  }
+
+  .about-company h3,
+  .about-mission-vision h3,
+  .about-features h3,
+  .about-team h3 {
+    font-size: 28px;
+  }
+
+  .about-banner .section-bg-two {
+    border-radius: 20px !important;
+  }
+
+  .about-company,
+  .about-mission-vision,
+  .about-features,
+  .about-team {
+    padding-top: 70px;
+
+    padding-bottom: 70px;
+  }
+
+
+  .about-value-card {
+    padding: 26px 23px;
+
+    border-radius: 20px;
+  }
+
+
+  .about-value-icon {
+    width: 58px;
+    height: 58px;
+
+    min-width: 58px;
+    min-height: 58px;
+
+    margin-bottom: 24px;
+  }
+
+
+  .about-value-icon i {
+    font-size: 23px;
+  }
+
+
+  .about-value-content h5 {
+    font-size: 19px;
+  }
+
+
+  .about-value-content p {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-banner .btn,
+  .about-mission-vision .bg-white,
+  .about-value-card,
+  .about-value-icon,
+  .about-team .bg-white,
+  .task-management .btn {
+    transition: none;
+  }
+
+}
