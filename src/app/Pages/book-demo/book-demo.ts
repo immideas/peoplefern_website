@@ -12,6 +12,8 @@ import { AnimationService } from '../../services/animation';
 
 import { ToastService } from '../../services/toast.service';
 
+import { BookDemoService } from '../../services/book-demo';
+
 @Component({
   selector: 'app-book-demo',
 
@@ -62,6 +64,8 @@ export class BookDemo implements AfterViewInit {
     private animationService: AnimationService,
 
     private toastService: ToastService,
+
+    private bookDemoService: BookDemoService,
   ) {}
 
   // =========================================================
@@ -77,9 +81,17 @@ export class BookDemo implements AfterViewInit {
   // =========================================================
 
   onDemoSubmit(): void {
-    // -------------------------------------------------------
-    // Required fields
-    // -------------------------------------------------------
+    // =======================================================
+    // PREVENT MULTIPLE SUBMISSIONS
+    // =======================================================
+
+    if (this.isLoading) {
+      return;
+    }
+
+    // =======================================================
+    // REQUIRED FIELDS
+    // =======================================================
 
     if (
       !this.demoFormData.firstName.trim() ||
@@ -100,13 +112,13 @@ export class BookDemo implements AfterViewInit {
       return;
     }
 
-    // -------------------------------------------------------
-    // Email validation
-    // -------------------------------------------------------
+    // =======================================================
+    // EMAIL VALIDATION
+    // =======================================================
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailRegex.test(this.demoFormData.email)) {
+    if (!emailRegex.test(this.demoFormData.email.trim())) {
       this.toastService.error(
         'Invalid Email',
 
@@ -118,13 +130,13 @@ export class BookDemo implements AfterViewInit {
       return;
     }
 
-    // -------------------------------------------------------
-    // Phone validation
-    // -------------------------------------------------------
+    // =======================================================
+    // PHONE VALIDATION
+    // =======================================================
 
     const phoneRegex = /^[+]?[0-9\s()-]{7,20}$/;
 
-    if (!phoneRegex.test(this.demoFormData.phone)) {
+    if (!phoneRegex.test(this.demoFormData.phone.trim())) {
       this.toastService.error(
         'Invalid Phone Number',
 
@@ -136,9 +148,9 @@ export class BookDemo implements AfterViewInit {
       return;
     }
 
-    // -------------------------------------------------------
-    // Consent
-    // -------------------------------------------------------
+    // =======================================================
+    // CONSENT
+    // =======================================================
 
     if (!this.demoFormData.consent) {
       this.toastService.error(
@@ -152,52 +164,106 @@ export class BookDemo implements AfterViewInit {
       return;
     }
 
-    // -------------------------------------------------------
-    // Loading
-    // -------------------------------------------------------
+    // =======================================================
+    // PREPARE API PAYLOAD
+    // =======================================================
+
+    const payload = {
+      first_name: this.demoFormData.firstName.trim(),
+
+      last_name: this.demoFormData.lastName.trim(),
+
+      email: this.demoFormData.email.trim().toLowerCase(),
+
+      phone: this.demoFormData.phone.trim(),
+
+      company: this.demoFormData.company.trim(),
+
+      employees: this.demoFormData.employees,
+
+      interest: this.demoFormData.interest?.trim() || '',
+
+      message: this.demoFormData.message?.trim() || '',
+
+      consent: this.demoFormData.consent,
+    };
+
+    // =======================================================
+    // START LOADING
+    // =======================================================
 
     this.isLoading = true;
 
-    // -------------------------------------------------------
-    // Temporary demo submission
-    //
-    // Replace this later with your API service.
-    // -------------------------------------------------------
+    // =======================================================
+    // API CALL
+    // =======================================================
 
-    setTimeout(() => {
-      this.isLoading = false;
+    this.bookDemoService.createDemo(payload).subscribe({
+      // ===================================================
+      // SUCCESS
+      // ===================================================
 
-      this.toastService.success(
-        'Demo Request Received',
+      next: (response: any) => {
+        console.log('Book Demo Response:', response);
 
-        `Thank you ${this.demoFormData.firstName}! Our team will contact you soon.`,
+        this.isLoading = false;
 
-        'ph-bold ph-check-circle',
-      );
+        // =================================================
+        // SUCCESS TOAST
+        // =================================================
 
-      // -----------------------------------------------------
-      // Reset form
-      // -----------------------------------------------------
+        this.toastService.success(
+          'Demo Request Received',
 
-      this.demoFormData = {
-        firstName: '',
+          `Thank you ${this.demoFormData.firstName}! Our team will contact you soon.`,
 
-        lastName: '',
+          'ph-bold ph-check-circle',
+        );
 
-        email: '',
+        // =================================================
+        // RESET FORM
+        // =================================================
 
-        phone: '',
+        this.demoFormData = {
+          firstName: '',
 
-        company: '',
+          lastName: '',
 
-        employees: '',
+          email: '',
 
-        interest: '',
+          phone: '',
 
-        message: '',
+          company: '',
 
-        consent: false,
-      };
-    }, 1500);
+          employees: '',
+
+          interest: '',
+
+          message: '',
+
+          consent: false,
+        };
+      },
+
+      // ===================================================
+      // ERROR
+      // ===================================================
+
+      error: (error: any) => {
+        console.error('Book Demo Error:', error);
+
+        this.isLoading = false;
+
+        this.toastService.error(
+          'Submission Failed',
+
+          error?.error?.message ||
+            error?.error?.error ||
+            'Unable to submit your demo request. Please try again.',
+
+          'ph-bold ph-warning-circle',
+        );
+      },
+    });
   }
 }
