@@ -75,6 +75,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+            "options": {
+    "allowedHosts": [
+      "pants-landmine-sedate.ngrok-free.dev"
+    ]
+  },
           "configurations": {
             "production": {
               "buildTarget": "SaasTech-angular:build:production"

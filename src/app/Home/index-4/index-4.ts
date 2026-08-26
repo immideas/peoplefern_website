@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild, ElementRef } from '@angular/core';
 import { AnimationService } from '../../services/animation';
 import { CounterService } from '../../services/counter.service';
+import { Analytics } from '../../services/analytics';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import Swiper from 'swiper';
@@ -157,8 +158,15 @@ export class Index4 implements AfterViewInit {
 
   constructor(
     private animationService: AnimationService,
-    private counterService: CounterService
+    private counterService: CounterService,
+      private analytics: Analytics
   ) { }
+  trackBookDemoClick(location: string): void {
+  this.analytics.trackEvent('demo_click', {
+    button_location: location,
+    button_text: 'Book a Demo'
+  });
+}
   ngAfterViewInit(): void {
     this.animationService.initAnimations();
     

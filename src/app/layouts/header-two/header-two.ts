@@ -6,6 +6,8 @@ import { NavMenu } from '../nav-menu/nav-menu';
 import { RouterLink } from '@angular/router';
 import { MobileMenuAnimationService } from '../../services/mobile-menu-animation.service';
 import { isPlatformBrowser } from '@angular/common';
+import { Analytics } from '../../services/analytics';
+
 
 @Component({
   selector: 'app-header-two',
@@ -31,6 +33,7 @@ export class HeaderTwo implements OnInit, OnDestroy {
     private elementRef: ElementRef,
     private mobileMenuAnimationService: MobileMenuAnimationService,
     private renderer: Renderer2,
+      private analytics: Analytics,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
@@ -43,7 +46,15 @@ export class HeaderTwo implements OnInit, OnDestroy {
     this.closeMobileMenu();
     this.mobileMenuAnimationService.destroy();
   }
-
+  /**
+   * GA4 - Track Header Book a Demo click
+   */
+  trackBookDemoClick(): void {
+    this.analytics.trackEvent('demo_click', {
+      button_location: 'header',
+      button_text: 'Book a Demo'
+    });
+  }
   @HostListener('window:scroll')
   onWindowScroll() {
     if (!isPlatformBrowser(this.platformId)) return;
